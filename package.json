@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cannon": "^0.6.2",
-    "three": "^0.102.1"
+    "three": "^0.102.1",
+    "three-bas": "^2.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

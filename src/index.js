@@ -1,7 +1,8 @@
 import * as THREE from "three";
 import * as CANNON from "cannon";
-let world, scene, camera, renderer, sphereCM
-let atLeft = true
+import { Ball } from "./Ball";
+export let world, scene, camera, renderer
+export let atLeft = true
 const timeStep = 1.0 / 60.0
 
 const balls = []
@@ -10,56 +11,6 @@ function init() {
     initGraphics()
     initPhysics()
     createBalls()
-}
-
-class Ball {
-    sphere
-    sphereBody
-    scene
-    world
-    radius
-    constructor(scene, world) {
-        this.scene = scene
-        this.world = world
-        this.radius = Math.max(Math.random(), .5)
-        this.initGraphics()
-        this.initPhysics()
-    }
-    initGraphics() {
-        let sphereGeometry = new THREE.SphereGeometry(this.radius, 32, 32)
-        let sphereMaterial = new THREE.MeshPhysicalMaterial({ 
-            color: 0x33aaaa,
-            emissive: 0x364a55,
-            roughness: 0,
-            metalness: .65,
-            reflectivity: 1,
-            transparent: true,
-            opacity: .9,
-            clearCoat: 1,
-            clearCoatRoughness: .5,
-        })
-        this.sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
-        this.sphere.castShadow = true
-        this.scene.add(this.sphere)
-    }
-    initPhysics() {
-        let sphereShape = new CANNON.Sphere(this.radius)
-        // let sphereCM = new CANNON.Material()
-        const speed = 40
-        this.sphereBody = new CANNON.Body({
-            mass: 5,
-            shape: sphereShape,
-            position: new CANNON.Vec3(
-                0,
-                5,
-                (atLeft) ? 10 : -10
-            ),
-            material: sphereCM,
-            velocity: new CANNON.Vec3(1, 0, (atLeft) ? -speed : speed)
-        })
-        atLeft = !atLeft
-        this.world.add(this.sphereBody)
-    }
 }
 
 function createBalls() {
@@ -127,12 +78,12 @@ function initPhysics() {
     world.broadphase = new CANNON.NaiveBroadphase()
 
     // let sphereShape = new CANNON.Sphere(1)
-    sphereCM = new CANNON.Material()
+    Ball.sphereCM = new CANNON.Material()
     // sphereBody = new CANNON.Body({
     //     mass: 5,
     //     shape: sphereShape,
     //     position: new CANNON.Vec3(0, 10, 0),
-    //     material: sphereCM
+    //     material: Ball.sphereCM
     // })
     // world.addBody(sphereBody)
 
@@ -146,7 +97,7 @@ function initPhysics() {
     groundBody.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2)
     world.addBody(groundBody)
 
-    // let sphereGroundContact = new CANNON.ContactMaterial(groundCM, sphereCM, {
+    // let sphereGroundContact = new CANNON.ContactMaterial(groundCM, Ball.sphereCM, {
     //     friction: 0,
     //     restitution: .7
     // })
