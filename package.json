@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cannon": "^0.6.2",
-    "three": "^0.102.1",
+    "smoothie": "^1.35.0",
+    "three": "^0.118.1",
     "three-bas": "^2.8.1"
   },
   "devDependencies": {
@@ -20,8 +21,10 @@
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "babel-loader": "^8.0.5",
-    "dat.gui": "^0.7.5",
+    "dat.gui": "^0.7.7",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.7",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
