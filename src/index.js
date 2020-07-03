@@ -8,16 +8,33 @@ import { RoughnessMipmapper } from './RoughnessMipmapper.js';
 import { RGBELoader } from './RGBELoader.js';
 // import hollowBall from "./halfsphere.gltf";
 import hdr from './royal_esplanade_1k.hdr'
+import Stats from './stats.module.js';
+import { GUI } from 'dat.gui';
 
 let world, scene, camera, renderer, pmremGenerator
-// export let atLeft = true
+let stats;
 const timeStep = 1.0 / 60.0
 
 const balls = []
 
+const guiData = {
+    isRunning: false
+}
+let isRunning = false
+
 window['t'] = THREE
 
 function init() {
+    // STATS
+    stats = new Stats();
+    document.body.appendChild(stats.dom);
+
+    window.addEventListener('resize', onWindowResize, false);
+
+    var gui = new GUI();
+    gui.add(guiData, 'isRunning').onChange(() => isRunning = !isRunning);
+    gui.open();
+
     initGraphics()
     initPhysics()
     createBalls()
@@ -77,7 +94,7 @@ function initGraphics() {
     let groundGeometry = new THREE.PlaneGeometry(200, 200, 32)
     let groundMaterial = new THREE.MeshPhysicalMaterial({
         side: THREE.DoubleSide,
-        color: new THREE.Color('blue'),
+        color: new THREE.Color('black'),
         // emissive: 0x364a55,
         roughness: .3,
         metalness: 0,
@@ -85,7 +102,7 @@ function initGraphics() {
         // transparent: true,
         // transparency: .7,
         clearcoat: 1,
-        clearcoatRoughness: .1,
+        clearcoatRoughness: .3,
         // wireframe: true
     })
     let ground = new THREE.Mesh(groundGeometry, groundMaterial)
@@ -93,13 +110,6 @@ function initGraphics() {
     ground.position.y = -16
     ground.receiveShadow = true
     scene.add(ground)
-
-    // 球網格
-    // let sphereGeometry = new THREE.SphereGeometry(1, 32, 32)
-    // let sphereMaterial = new THREE.MeshStandardMaterial({ color: 0x33aaaa })
-    // sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
-    // sphere.castShadow = true
-    // scene.add(sphere)
 
     let glassGeo = new THREE.SphereGeometry(12, 32, 32);
     let glassMat = new THREE.MeshPhysicalMaterial({
@@ -194,7 +204,9 @@ function render() {
                 const p = ball.sphereBody.position
                 ball.sphereBody.velocity.copy(new CANNON.Vec3(-p.x, -p.y, -p.z))
             } else {
-                if (ball.sphereBody.position.y < -9) ball.sphereBody.velocity.copy(new CANNON.Vec3((Math.random() - 0.5), Math.random() * 80, (Math.random() - 0.5)))
+                const speed = isRunning ? 80 : 20
+                if (ball.sphereBody.position.y < -9)
+                    ball.sphereBody.velocity.copy(new CANNON.Vec3((Math.random() - 0.5), Math.random() * speed, (Math.random() - 0.5)))
             }
 
             ball.sphere.position.copy(ball.sphereBody.position)
@@ -204,6 +216,16 @@ function render() {
 
     requestAnimationFrame(render)
     renderer.render(scene, camera)
+    stats.update();
+}
+
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
 }
 
 init()

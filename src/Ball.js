@@ -1,5 +1,9 @@
 import * as THREE from "three";
 import * as CANNON from 'cannon'
+
+const radius = 0.6
+const sharedGeo = new THREE.SphereGeometry(radius, 32, 32)
+
 export class Ball {
     static sphereCM
     sphere;
@@ -12,12 +16,12 @@ export class Ball {
     constructor() {
         // this.scene = scene;
         // this.world = world;
-        this.radius = 0.6
+        this.radius = radius
         this.initGraphics();
         this.initPhysics();
     }
     initGraphics() {
-        let sphereGeometry = new THREE.SphereGeometry(this.radius, 32, 32);
+        let sphereGeometry = sharedGeo;
         let sphereMaterial = new THREE.MeshPhysicalMaterial({
             color: new THREE.Color('orange'),
             // emissive: 0x364a55,
