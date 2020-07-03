@@ -4,6 +4,28 @@ import * as CANNON from 'cannon'
 const radius = 0.6
 const sharedGeo = new THREE.SphereGeometry(radius, 32, 32)
 
+var imageCanvas = document.createElement("canvas"),
+    context = imageCanvas.getContext("2d");
+function makeTexture(num) {
+    const size = 128
+    imageCanvas.width = imageCanvas.height = size;
+
+    context.fillStyle = "rgb(255,255,255)";
+    context.fillRect(0, 0, size, size);
+    context.fillStyle = "rgb(0,0,0)";
+    context.font = '50px fantasy'
+
+    context.fillText(num+'', size/2, size/2)
+
+    var textureCanvas = new THREE.CanvasTexture(imageCanvas);
+    // textureCanvas.mapping = THREE.CubeUVReflectionMapping
+    textureCanvas.repeat.set(2, 2);
+    textureCanvas.wrapS = THREE.RepeatWrapping;
+    textureCanvas.wrapT = THREE.RepeatWrapping;
+
+    return textureCanvas
+}
+
 export class Ball {
     static sphereCM
     sphere;
@@ -12,11 +34,13 @@ export class Ball {
     // scene;
     // world;
     radius;
+    number
     /** @param scene {THREE.Scene} */
-    constructor() {
+    constructor(num) {
         // this.scene = scene;
         // this.world = world;
         this.radius = radius
+        this.number = num
         this.initGraphics();
         this.initPhysics();
     }
@@ -24,9 +48,10 @@ export class Ball {
         let sphereGeometry = sharedGeo;
         let sphereMaterial = new THREE.MeshPhysicalMaterial({
             color: new THREE.Color('orange'),
+            map: makeTexture(this.number),
             // emissive: 0x364a55,
             roughness: .1,
-            metalness: .7,
+            metalness: .07,
             reflectivity: .5,
             // transparent: true,
             // opacity: .9,

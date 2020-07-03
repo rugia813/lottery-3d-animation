@@ -13,12 +13,13 @@ import { GUI } from 'dat.gui';
 
 let world, scene, camera, renderer, pmremGenerator
 let stats;
-const timeStep = 1.0 / 60.0
+let timeStep = 1.0 / 60.0
 
 const balls = []
 
 const guiData = {
-    isRunning: false
+    isRunning: false,
+    timeStep,
 }
 let isRunning = false
 
@@ -33,6 +34,7 @@ function init() {
 
     var gui = new GUI();
     gui.add(guiData, 'isRunning').onChange(() => isRunning = !isRunning);
+    gui.add(guiData, 'timeStep').min(0).max(0.030).step(0.001).onChange((val) => timeStep = val);
     gui.open();
 
     initGraphics()
@@ -41,9 +43,9 @@ function init() {
 }
 
 function createBalls() {
-    for (let i = 0; i <= 49; i++) {
+    for (let i = 0; i < 49; i++) {
         setTimeout(() => {
-            const b = new Ball()
+            const b = new Ball(i+1)
             balls.push(b)
             scene.add(b.sphere)
             world.add(b.sphereBody)
@@ -61,7 +63,7 @@ function initGraphics() {
       1000
     )
     camera.position.set(20, 20, 20)
-    camera.lookAt(scene.position)
+    camera.lookAt({x: 0, y: 0, z: 0})
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     // renderer.setClearColor(0xeeeeee, 1.0)
@@ -113,6 +115,7 @@ function initGraphics() {
 
     let glassGeo = new THREE.SphereGeometry(12, 32, 32);
     let glassMat = new THREE.MeshPhysicalMaterial({
+        side: THREE.DoubleSide,
         color: new THREE.Color('gray'),
         // emissive: 0x364a55,
         roughness: 0,
