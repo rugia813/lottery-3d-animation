@@ -2,11 +2,9 @@ import * as THREE from "three";
 import * as CANNON from "cannon";
 import { Ball } from "./Ball";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-// import { GLTFLoader } from "./GLTFLoader";
 import { HDRCubeTextureLoader } from "./HDRCubeTextureLoader";
 import { RoughnessMipmapper } from './RoughnessMipmapper.js';
 import { RGBELoader } from './RGBELoader.js';
-// import hollowBall from "./halfsphere.gltf";
 import hdr from './royal_esplanade_1k.hdr'
 import Stats from './stats.module.js';
 import { GUI } from 'dat.gui';
