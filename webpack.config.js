@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   module: {
     rules: [
@@ -48,5 +49,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.html'),
       filename: "./index.html"
     })
-  ]
+  ],
+  optimization: {
+    minimizer: [new UglifyJsPlugin({
+      include: /\/includes/,
+    })],
+  },
 };
