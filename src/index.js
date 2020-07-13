@@ -11,7 +11,7 @@ import { GUI } from 'dat.gui';
 
 let world, scene, camera, renderer, pmremGenerator
 let stats;
-let timeStep = 1.0 / 60.0
+let timeStep = 1.0 / 72.0
 
 const balls = []
 
@@ -86,11 +86,12 @@ function initGraphics() {
     // let spotLight = new THREE.SpotLight(0x999999)
     // spotLight.position.set(-10, 30, 20)
     // scene.add(spotLight)
-    let pointLight = new THREE.PointLight(0xccffcc, 4, 30)
+    let pointLight = new THREE.PointLight(0xccffcc, 3, 30)
     pointLight.castShadow = true
     pointLight.position.set(0, 10, 0)
     scene.add(pointLight)
 
+    // Ground
     let groundGeometry = new THREE.PlaneGeometry(200, 200, 32)
     let groundMaterial = new THREE.MeshPhysicalMaterial({
         side: THREE.DoubleSide,
@@ -107,10 +108,11 @@ function initGraphics() {
     })
     let ground = new THREE.Mesh(groundGeometry, groundMaterial)
     ground.rotation.x = -Math.PI / 2
-    ground.position.y = -16
+    ground.position.y = -46
     ground.receiveShadow = true
     scene.add(ground)
 
+    // Glass
     let glassGeo = new THREE.SphereGeometry(12, 32, 32);
     let glassMat = new THREE.MeshPhysicalMaterial({
         side: THREE.DoubleSide,
@@ -126,11 +128,70 @@ function initGraphics() {
         // wireframe: true
     });
     const glassMesh = new THREE.Mesh(glassGeo, glassMat);
-    glassMesh.castShadow = true;
+    // glassMesh.castShadow = true;
     scene.add(glassMesh);
 
+    // Axes Helper
     var axesHelper = new THREE.AxesHelper( 5 );
     scene.add( axesHelper );
+
+    // Base Cylinder
+    var cylinderGeo = new THREE.CylinderGeometry(8, 11, 38, 32, 3, true);
+    var material = new THREE.MeshPhysicalMaterial({
+        side: THREE.DoubleSide,
+        color: new THREE.Color('rgb(60,60,60)'),
+        // emissive: new THREE.Color('rgb(78,0,0)'),
+        // emissiveIntensity: .1,
+        roughness: .1,
+        metalness: .6,
+        reflectivity: 1,
+        clearcoat: 1,
+        clearcoatRoughness: .3,
+    })
+    var base = new THREE.Mesh(cylinderGeo, material);
+    base.position.y -= 31.5
+    scene.add(base);
+
+    // Base Circle
+    const circleGeo = new THREE.CircleGeometry(8, 18);
+    const circle = new THREE.Mesh(circleGeo, material)
+    circle.receiveShadow = true
+    circle.rotation.x = 1.6
+    circle.position.y = -12
+    scene.add(circle)
+
+    // Hollow Circle
+    var arcShape = new THREE.Shape()
+        .moveTo(0, 0)
+        .absarc(0, 0, 60, 0, Math.PI * 2, false);
+
+    var holePath = new THREE.Path()
+        .moveTo(-0, 0)
+        .absarc(0, 0, 50, 0, Math.PI * 2, true);
+
+    arcShape.holes.push(holePath);
+    var hcGeometry = new THREE.ExtrudeBufferGeometry(arcShape, { depth: 18, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 1 });
+
+    var hcMesh = new THREE.Mesh(hcGeometry, material);
+    hcMesh.position.set(0, -10, 0);
+    hcMesh.rotation.set(1.6, 0, 0);
+    hcMesh.scale.set(.1, .1, .1);
+    hcMesh.receiveShadow = true
+    scene.add(hcMesh)
+
+    // Solid Circle
+    arcShape = new THREE.Shape()
+        .moveTo(0, 0)
+        .absarc(0, 0, 120, 0, Math.PI * 2, false);
+
+    var scGeo = new THREE.ExtrudeBufferGeometry(arcShape, { depth: 4, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 1 });
+
+    var scMesh = new THREE.Mesh(scGeo, material);
+    scMesh.position.set(0, -12, 0);
+    scMesh.rotation.set(1.6, 0, 0);
+    scMesh.scale.set(.1, .1, .1);
+    scMesh.receiveShadow = true
+    scene.add(scMesh)
 }
 
 function initPhysics() {
@@ -181,17 +242,11 @@ function loadENV(pmremGenerator) {
             var envMap = pmremGenerator.fromEquirectangular(texture).texture;
 
             scene.background = envMap;
+            // scene.background = new THREE.Color('rgb(45,45,90)');
             scene.environment = envMap;
 
             texture.dispose();
             pmremGenerator.dispose();
-
-            render();
-
-            // model
-
-            // use of RoughnessMipmapper is optional
-            var roughnessMipmapper = new RoughnessMipmapper(renderer);
         });
 }
 
