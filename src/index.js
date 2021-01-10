@@ -11,21 +11,24 @@ import { GUI } from 'dat.gui';
 
 let world, scene, camera, renderer, pmremGenerator
 let stats;
-let timeStep = 1.0 / 72.0
+let envMap;
 
 const balls = []
 
 const guiData = {
     isRunning: false,
-    timeStep,
+    timeStep: 1.0 / 72.0,
+    hdr: true,
 }
-let isRunning = false
+let isRunning = guiData.isRunning
+let hdrBg = guiData.hdr
+let timeStep = guiData.timeStep
 
 window['t'] = THREE
 
 function init() {
     // STATS
-    stats = new Stats();
+    stats = Stats();
     document.body.appendChild(stats.dom);
 
     window.addEventListener('resize', onWindowResize, false);
@@ -33,6 +36,16 @@ function init() {
     var gui = new GUI();
     gui.add(guiData, 'isRunning').onChange(() => isRunning = !isRunning);
     gui.add(guiData, 'timeStep').min(0).max(0.030).step(0.001).onChange((val) => timeStep = val);
+    gui.add(guiData, 'hdr').onChange(() => {
+        hdrBg = !hdrBg
+        if (hdrBg && envMap) {
+            scene.background = envMap;
+            scene.environment = envMap;
+        } else {
+            scene.background = new THREE.Color('gray')
+            scene.environment = null;
+        }
+    })
     gui.open();
 
     initGraphics()
@@ -239,11 +252,13 @@ function loadENV(pmremGenerator) {
     new RGBELoader()
         .setDataType(THREE.UnsignedByteType)
         .load(hdr, function (texture) {
-            var envMap = pmremGenerator.fromEquirectangular(texture).texture;
+            envMap = pmremGenerator.fromEquirectangular(texture).texture;
 
-            scene.background = envMap;
-            // scene.background = new THREE.Color('rgb(45,45,90)');
-            scene.environment = envMap;
+            if (hdrBg) {
+                scene.background = envMap;
+                // scene.background = new THREE.Color('rgb(45,45,90)');
+                scene.environment = envMap;
+            }
 
             texture.dispose();
             pmremGenerator.dispose();
