@@ -13,7 +13,7 @@
   "dependencies": {
     "cannon": "^0.6.2",
     "smoothie": "^1.35.0",
-    "three": "^0.118.1",
+    "three": "^0.125.0",
     "three-bas": "^2.8.1"
   },
   "devDependencies": {
