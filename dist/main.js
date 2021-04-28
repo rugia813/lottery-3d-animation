@@ -1,94 +1,10 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-var require;var require;/*
+/***/ 125:
+/***/ ((module) => {
+
+/*
  * Copyright (c) 2015 cannon.js Authors
  *
  * Permission is hereby granted, free of charge, to any person
@@ -111,7 +27,7 @@ var require;var require;/*
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-!function(e){if(true)module.exports=e();else { var f; }}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+!function(e){if(true)module.exports=e();else { var f; }}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=undefined;if(!u&&a)return require(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=undefined;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 module.exports={
   "name": "cannon",
   "version": "0.6.2",
@@ -13773,483 +13689,572 @@ World.prototype.clearForces = function(){
 (2)
 });
 
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ })
 
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+(() => {
 "use strict";
-__webpack_require__.r(__webpack_exports__);
+
+// NAMESPACE OBJECT: ./node_modules/three/build/three.module.js
 var three_module_namespaceObject = {};
 __webpack_require__.r(three_module_namespaceObject);
-__webpack_require__.d(three_module_namespaceObject, "ACESFilmicToneMapping", function() { return ACESFilmicToneMapping; });
-__webpack_require__.d(three_module_namespaceObject, "AddEquation", function() { return AddEquation; });
-__webpack_require__.d(three_module_namespaceObject, "AddOperation", function() { return AddOperation; });
-__webpack_require__.d(three_module_namespaceObject, "AdditiveAnimationBlendMode", function() { return AdditiveAnimationBlendMode; });
-__webpack_require__.d(three_module_namespaceObject, "AdditiveBlending", function() { return AdditiveBlending; });
-__webpack_require__.d(three_module_namespaceObject, "AlphaFormat", function() { return AlphaFormat; });
-__webpack_require__.d(three_module_namespaceObject, "AlwaysDepth", function() { return AlwaysDepth; });
-__webpack_require__.d(three_module_namespaceObject, "AlwaysStencilFunc", function() { return AlwaysStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "AmbientLight", function() { return AmbientLight; });
-__webpack_require__.d(three_module_namespaceObject, "AmbientLightProbe", function() { return AmbientLightProbe; });
-__webpack_require__.d(three_module_namespaceObject, "AnimationClip", function() { return AnimationClip; });
-__webpack_require__.d(three_module_namespaceObject, "AnimationLoader", function() { return AnimationLoader; });
-__webpack_require__.d(three_module_namespaceObject, "AnimationMixer", function() { return AnimationMixer; });
-__webpack_require__.d(three_module_namespaceObject, "AnimationObjectGroup", function() { return AnimationObjectGroup; });
-__webpack_require__.d(three_module_namespaceObject, "AnimationUtils", function() { return AnimationUtils; });
-__webpack_require__.d(three_module_namespaceObject, "ArcCurve", function() { return ArcCurve; });
-__webpack_require__.d(three_module_namespaceObject, "ArrayCamera", function() { return ArrayCamera; });
-__webpack_require__.d(three_module_namespaceObject, "ArrowHelper", function() { return ArrowHelper; });
-__webpack_require__.d(three_module_namespaceObject, "Audio", function() { return Audio; });
-__webpack_require__.d(three_module_namespaceObject, "AudioAnalyser", function() { return AudioAnalyser; });
-__webpack_require__.d(three_module_namespaceObject, "AudioContext", function() { return AudioContext; });
-__webpack_require__.d(three_module_namespaceObject, "AudioListener", function() { return AudioListener; });
-__webpack_require__.d(three_module_namespaceObject, "AudioLoader", function() { return AudioLoader; });
-__webpack_require__.d(three_module_namespaceObject, "AxesHelper", function() { return AxesHelper; });
-__webpack_require__.d(three_module_namespaceObject, "AxisHelper", function() { return AxisHelper; });
-__webpack_require__.d(three_module_namespaceObject, "BackSide", function() { return BackSide; });
-__webpack_require__.d(three_module_namespaceObject, "BasicDepthPacking", function() { return BasicDepthPacking; });
-__webpack_require__.d(three_module_namespaceObject, "BasicShadowMap", function() { return BasicShadowMap; });
-__webpack_require__.d(three_module_namespaceObject, "BinaryTextureLoader", function() { return BinaryTextureLoader; });
-__webpack_require__.d(three_module_namespaceObject, "Bone", function() { return Bone; });
-__webpack_require__.d(three_module_namespaceObject, "BooleanKeyframeTrack", function() { return BooleanKeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "BoundingBoxHelper", function() { return BoundingBoxHelper; });
-__webpack_require__.d(three_module_namespaceObject, "Box2", function() { return Box2; });
-__webpack_require__.d(three_module_namespaceObject, "Box3", function() { return Box3; });
-__webpack_require__.d(three_module_namespaceObject, "Box3Helper", function() { return Box3Helper; });
-__webpack_require__.d(three_module_namespaceObject, "BoxBufferGeometry", function() { return BoxBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "BoxGeometry", function() { return BoxGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "BoxHelper", function() { return BoxHelper; });
-__webpack_require__.d(three_module_namespaceObject, "BufferAttribute", function() { return BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "BufferGeometry", function() { return BufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "BufferGeometryLoader", function() { return BufferGeometryLoader; });
-__webpack_require__.d(three_module_namespaceObject, "ByteType", function() { return ByteType; });
-__webpack_require__.d(three_module_namespaceObject, "Cache", function() { return Cache; });
-__webpack_require__.d(three_module_namespaceObject, "Camera", function() { return Camera; });
-__webpack_require__.d(three_module_namespaceObject, "CameraHelper", function() { return CameraHelper; });
-__webpack_require__.d(three_module_namespaceObject, "CanvasRenderer", function() { return CanvasRenderer; });
-__webpack_require__.d(three_module_namespaceObject, "CanvasTexture", function() { return CanvasTexture; });
-__webpack_require__.d(three_module_namespaceObject, "CatmullRomCurve3", function() { return CatmullRomCurve3; });
-__webpack_require__.d(three_module_namespaceObject, "CineonToneMapping", function() { return CineonToneMapping; });
-__webpack_require__.d(three_module_namespaceObject, "CircleBufferGeometry", function() { return CircleBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "CircleGeometry", function() { return CircleGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ClampToEdgeWrapping", function() { return ClampToEdgeWrapping; });
-__webpack_require__.d(three_module_namespaceObject, "Clock", function() { return Clock; });
-__webpack_require__.d(three_module_namespaceObject, "ClosedSplineCurve3", function() { return ClosedSplineCurve3; });
-__webpack_require__.d(three_module_namespaceObject, "Color", function() { return Color; });
-__webpack_require__.d(three_module_namespaceObject, "ColorKeyframeTrack", function() { return ColorKeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "CompressedTexture", function() { return CompressedTexture; });
-__webpack_require__.d(three_module_namespaceObject, "CompressedTextureLoader", function() { return CompressedTextureLoader; });
-__webpack_require__.d(three_module_namespaceObject, "ConeBufferGeometry", function() { return ConeBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ConeGeometry", function() { return ConeGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "CubeCamera", function() { return CubeCamera; });
-__webpack_require__.d(three_module_namespaceObject, "CubeGeometry", function() { return BoxGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "CubeReflectionMapping", function() { return CubeReflectionMapping; });
-__webpack_require__.d(three_module_namespaceObject, "CubeRefractionMapping", function() { return CubeRefractionMapping; });
-__webpack_require__.d(three_module_namespaceObject, "CubeTexture", function() { return CubeTexture; });
-__webpack_require__.d(three_module_namespaceObject, "CubeTextureLoader", function() { return CubeTextureLoader; });
-__webpack_require__.d(three_module_namespaceObject, "CubeUVReflectionMapping", function() { return CubeUVReflectionMapping; });
-__webpack_require__.d(three_module_namespaceObject, "CubeUVRefractionMapping", function() { return CubeUVRefractionMapping; });
-__webpack_require__.d(three_module_namespaceObject, "CubicBezierCurve", function() { return CubicBezierCurve; });
-__webpack_require__.d(three_module_namespaceObject, "CubicBezierCurve3", function() { return CubicBezierCurve3; });
-__webpack_require__.d(three_module_namespaceObject, "CubicInterpolant", function() { return CubicInterpolant; });
-__webpack_require__.d(three_module_namespaceObject, "CullFaceBack", function() { return CullFaceBack; });
-__webpack_require__.d(three_module_namespaceObject, "CullFaceFront", function() { return CullFaceFront; });
-__webpack_require__.d(three_module_namespaceObject, "CullFaceFrontBack", function() { return CullFaceFrontBack; });
-__webpack_require__.d(three_module_namespaceObject, "CullFaceNone", function() { return CullFaceNone; });
-__webpack_require__.d(three_module_namespaceObject, "Curve", function() { return Curve; });
-__webpack_require__.d(three_module_namespaceObject, "CurvePath", function() { return CurvePath; });
-__webpack_require__.d(three_module_namespaceObject, "CustomBlending", function() { return CustomBlending; });
-__webpack_require__.d(three_module_namespaceObject, "CustomToneMapping", function() { return CustomToneMapping; });
-__webpack_require__.d(three_module_namespaceObject, "CylinderBufferGeometry", function() { return CylinderBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "CylinderGeometry", function() { return CylinderGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Cylindrical", function() { return Cylindrical; });
-__webpack_require__.d(three_module_namespaceObject, "DataTexture", function() { return DataTexture; });
-__webpack_require__.d(three_module_namespaceObject, "DataTexture2DArray", function() { return DataTexture2DArray; });
-__webpack_require__.d(three_module_namespaceObject, "DataTexture3D", function() { return DataTexture3D; });
-__webpack_require__.d(three_module_namespaceObject, "DataTextureLoader", function() { return DataTextureLoader; });
-__webpack_require__.d(three_module_namespaceObject, "DecrementStencilOp", function() { return DecrementStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "DecrementWrapStencilOp", function() { return DecrementWrapStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "DefaultLoadingManager", function() { return DefaultLoadingManager; });
-__webpack_require__.d(three_module_namespaceObject, "DepthFormat", function() { return DepthFormat; });
-__webpack_require__.d(three_module_namespaceObject, "DepthStencilFormat", function() { return DepthStencilFormat; });
-__webpack_require__.d(three_module_namespaceObject, "DepthTexture", function() { return DepthTexture; });
-__webpack_require__.d(three_module_namespaceObject, "DirectionalLight", function() { return DirectionalLight; });
-__webpack_require__.d(three_module_namespaceObject, "DirectionalLightHelper", function() { return DirectionalLightHelper; });
-__webpack_require__.d(three_module_namespaceObject, "DirectionalLightShadow", function() { return DirectionalLightShadow; });
-__webpack_require__.d(three_module_namespaceObject, "DiscreteInterpolant", function() { return DiscreteInterpolant; });
-__webpack_require__.d(three_module_namespaceObject, "DodecahedronBufferGeometry", function() { return DodecahedronBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "DodecahedronGeometry", function() { return DodecahedronGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "DoubleSide", function() { return DoubleSide; });
-__webpack_require__.d(three_module_namespaceObject, "DstAlphaFactor", function() { return DstAlphaFactor; });
-__webpack_require__.d(three_module_namespaceObject, "DstColorFactor", function() { return DstColorFactor; });
-__webpack_require__.d(three_module_namespaceObject, "DynamicBufferAttribute", function() { return DynamicBufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "DynamicCopyUsage", function() { return DynamicCopyUsage; });
-__webpack_require__.d(three_module_namespaceObject, "DynamicDrawUsage", function() { return DynamicDrawUsage; });
-__webpack_require__.d(three_module_namespaceObject, "DynamicReadUsage", function() { return DynamicReadUsage; });
-__webpack_require__.d(three_module_namespaceObject, "EdgesGeometry", function() { return EdgesGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "EdgesHelper", function() { return EdgesHelper; });
-__webpack_require__.d(three_module_namespaceObject, "EllipseCurve", function() { return EllipseCurve; });
-__webpack_require__.d(three_module_namespaceObject, "EqualDepth", function() { return EqualDepth; });
-__webpack_require__.d(three_module_namespaceObject, "EqualStencilFunc", function() { return EqualStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "EquirectangularReflectionMapping", function() { return EquirectangularReflectionMapping; });
-__webpack_require__.d(three_module_namespaceObject, "EquirectangularRefractionMapping", function() { return EquirectangularRefractionMapping; });
-__webpack_require__.d(three_module_namespaceObject, "Euler", function() { return Euler; });
-__webpack_require__.d(three_module_namespaceObject, "EventDispatcher", function() { return EventDispatcher; });
-__webpack_require__.d(three_module_namespaceObject, "ExtrudeBufferGeometry", function() { return ExtrudeBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ExtrudeGeometry", function() { return ExtrudeGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Face3", function() { return Face3; });
-__webpack_require__.d(three_module_namespaceObject, "Face4", function() { return Face4; });
-__webpack_require__.d(three_module_namespaceObject, "FaceColors", function() { return FaceColors; });
-__webpack_require__.d(three_module_namespaceObject, "FileLoader", function() { return FileLoader; });
-__webpack_require__.d(three_module_namespaceObject, "FlatShading", function() { return FlatShading; });
-__webpack_require__.d(three_module_namespaceObject, "Float32Attribute", function() { return Float32Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Float32BufferAttribute", function() { return Float32BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Float64Attribute", function() { return Float64Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Float64BufferAttribute", function() { return Float64BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "FloatType", function() { return FloatType; });
-__webpack_require__.d(three_module_namespaceObject, "Fog", function() { return Fog; });
-__webpack_require__.d(three_module_namespaceObject, "FogExp2", function() { return FogExp2; });
-__webpack_require__.d(three_module_namespaceObject, "Font", function() { return Font; });
-__webpack_require__.d(three_module_namespaceObject, "FontLoader", function() { return FontLoader; });
-__webpack_require__.d(three_module_namespaceObject, "FrontFaceDirectionCCW", function() { return FrontFaceDirectionCCW; });
-__webpack_require__.d(three_module_namespaceObject, "FrontFaceDirectionCW", function() { return FrontFaceDirectionCW; });
-__webpack_require__.d(three_module_namespaceObject, "FrontSide", function() { return FrontSide; });
-__webpack_require__.d(three_module_namespaceObject, "Frustum", function() { return Frustum; });
-__webpack_require__.d(three_module_namespaceObject, "GammaEncoding", function() { return GammaEncoding; });
-__webpack_require__.d(three_module_namespaceObject, "Geometry", function() { return Geometry; });
-__webpack_require__.d(three_module_namespaceObject, "GeometryUtils", function() { return GeometryUtils; });
-__webpack_require__.d(three_module_namespaceObject, "GreaterDepth", function() { return GreaterDepth; });
-__webpack_require__.d(three_module_namespaceObject, "GreaterEqualDepth", function() { return GreaterEqualDepth; });
-__webpack_require__.d(three_module_namespaceObject, "GreaterEqualStencilFunc", function() { return GreaterEqualStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "GreaterStencilFunc", function() { return GreaterStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "GridHelper", function() { return GridHelper; });
-__webpack_require__.d(three_module_namespaceObject, "Group", function() { return Group; });
-__webpack_require__.d(three_module_namespaceObject, "HalfFloatType", function() { return HalfFloatType; });
-__webpack_require__.d(three_module_namespaceObject, "HemisphereLight", function() { return HemisphereLight; });
-__webpack_require__.d(three_module_namespaceObject, "HemisphereLightHelper", function() { return HemisphereLightHelper; });
-__webpack_require__.d(three_module_namespaceObject, "HemisphereLightProbe", function() { return HemisphereLightProbe; });
-__webpack_require__.d(three_module_namespaceObject, "IcosahedronBufferGeometry", function() { return IcosahedronBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "IcosahedronGeometry", function() { return IcosahedronGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ImageBitmapLoader", function() { return ImageBitmapLoader; });
-__webpack_require__.d(three_module_namespaceObject, "ImageLoader", function() { return ImageLoader; });
-__webpack_require__.d(three_module_namespaceObject, "ImageUtils", function() { return ImageUtils; });
-__webpack_require__.d(three_module_namespaceObject, "ImmediateRenderObject", function() { return ImmediateRenderObject; });
-__webpack_require__.d(three_module_namespaceObject, "IncrementStencilOp", function() { return IncrementStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "IncrementWrapStencilOp", function() { return IncrementWrapStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "InstancedBufferAttribute", function() { return InstancedBufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "InstancedBufferGeometry", function() { return InstancedBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "InstancedInterleavedBuffer", function() { return InstancedInterleavedBuffer; });
-__webpack_require__.d(three_module_namespaceObject, "InstancedMesh", function() { return InstancedMesh; });
-__webpack_require__.d(three_module_namespaceObject, "Int16Attribute", function() { return Int16Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Int16BufferAttribute", function() { return Int16BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Int32Attribute", function() { return Int32Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Int32BufferAttribute", function() { return Int32BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Int8Attribute", function() { return Int8Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Int8BufferAttribute", function() { return Int8BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "IntType", function() { return IntType; });
-__webpack_require__.d(three_module_namespaceObject, "InterleavedBuffer", function() { return InterleavedBuffer; });
-__webpack_require__.d(three_module_namespaceObject, "InterleavedBufferAttribute", function() { return InterleavedBufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Interpolant", function() { return Interpolant; });
-__webpack_require__.d(three_module_namespaceObject, "InterpolateDiscrete", function() { return InterpolateDiscrete; });
-__webpack_require__.d(three_module_namespaceObject, "InterpolateLinear", function() { return InterpolateLinear; });
-__webpack_require__.d(three_module_namespaceObject, "InterpolateSmooth", function() { return InterpolateSmooth; });
-__webpack_require__.d(three_module_namespaceObject, "InvertStencilOp", function() { return InvertStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "JSONLoader", function() { return JSONLoader; });
-__webpack_require__.d(three_module_namespaceObject, "KeepStencilOp", function() { return KeepStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "KeyframeTrack", function() { return KeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "LOD", function() { return LOD; });
-__webpack_require__.d(three_module_namespaceObject, "LatheBufferGeometry", function() { return LatheBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "LatheGeometry", function() { return LatheGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Layers", function() { return Layers; });
-__webpack_require__.d(three_module_namespaceObject, "LensFlare", function() { return LensFlare; });
-__webpack_require__.d(three_module_namespaceObject, "LessDepth", function() { return LessDepth; });
-__webpack_require__.d(three_module_namespaceObject, "LessEqualDepth", function() { return LessEqualDepth; });
-__webpack_require__.d(three_module_namespaceObject, "LessEqualStencilFunc", function() { return LessEqualStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "LessStencilFunc", function() { return LessStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "Light", function() { return Light; });
-__webpack_require__.d(three_module_namespaceObject, "LightProbe", function() { return LightProbe; });
-__webpack_require__.d(three_module_namespaceObject, "LightShadow", function() { return LightShadow; });
-__webpack_require__.d(three_module_namespaceObject, "Line", function() { return Line; });
-__webpack_require__.d(three_module_namespaceObject, "Line3", function() { return Line3; });
-__webpack_require__.d(three_module_namespaceObject, "LineBasicMaterial", function() { return LineBasicMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "LineCurve", function() { return LineCurve; });
-__webpack_require__.d(three_module_namespaceObject, "LineCurve3", function() { return LineCurve3; });
-__webpack_require__.d(three_module_namespaceObject, "LineDashedMaterial", function() { return LineDashedMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "LineLoop", function() { return LineLoop; });
-__webpack_require__.d(three_module_namespaceObject, "LinePieces", function() { return LinePieces; });
-__webpack_require__.d(three_module_namespaceObject, "LineSegments", function() { return LineSegments; });
-__webpack_require__.d(three_module_namespaceObject, "LineStrip", function() { return LineStrip; });
-__webpack_require__.d(three_module_namespaceObject, "LinearEncoding", function() { return LinearEncoding; });
-__webpack_require__.d(three_module_namespaceObject, "LinearFilter", function() { return LinearFilter; });
-__webpack_require__.d(three_module_namespaceObject, "LinearInterpolant", function() { return LinearInterpolant; });
-__webpack_require__.d(three_module_namespaceObject, "LinearMipMapLinearFilter", function() { return LinearMipMapLinearFilter; });
-__webpack_require__.d(three_module_namespaceObject, "LinearMipMapNearestFilter", function() { return LinearMipMapNearestFilter; });
-__webpack_require__.d(three_module_namespaceObject, "LinearMipmapLinearFilter", function() { return LinearMipmapLinearFilter; });
-__webpack_require__.d(three_module_namespaceObject, "LinearMipmapNearestFilter", function() { return LinearMipmapNearestFilter; });
-__webpack_require__.d(three_module_namespaceObject, "LinearToneMapping", function() { return LinearToneMapping; });
-__webpack_require__.d(three_module_namespaceObject, "Loader", function() { return Loader; });
-__webpack_require__.d(three_module_namespaceObject, "LoaderUtils", function() { return LoaderUtils; });
-__webpack_require__.d(three_module_namespaceObject, "LoadingManager", function() { return LoadingManager; });
-__webpack_require__.d(three_module_namespaceObject, "LogLuvEncoding", function() { return LogLuvEncoding; });
-__webpack_require__.d(three_module_namespaceObject, "LoopOnce", function() { return LoopOnce; });
-__webpack_require__.d(three_module_namespaceObject, "LoopPingPong", function() { return LoopPingPong; });
-__webpack_require__.d(three_module_namespaceObject, "LoopRepeat", function() { return LoopRepeat; });
-__webpack_require__.d(three_module_namespaceObject, "LuminanceAlphaFormat", function() { return LuminanceAlphaFormat; });
-__webpack_require__.d(three_module_namespaceObject, "LuminanceFormat", function() { return LuminanceFormat; });
-__webpack_require__.d(three_module_namespaceObject, "MOUSE", function() { return MOUSE; });
-__webpack_require__.d(three_module_namespaceObject, "Material", function() { return Material; });
-__webpack_require__.d(three_module_namespaceObject, "MaterialLoader", function() { return MaterialLoader; });
-__webpack_require__.d(three_module_namespaceObject, "Math", function() { return MathUtils; });
-__webpack_require__.d(three_module_namespaceObject, "MathUtils", function() { return MathUtils; });
-__webpack_require__.d(three_module_namespaceObject, "Matrix3", function() { return Matrix3; });
-__webpack_require__.d(three_module_namespaceObject, "Matrix4", function() { return Matrix4; });
-__webpack_require__.d(three_module_namespaceObject, "MaxEquation", function() { return MaxEquation; });
-__webpack_require__.d(three_module_namespaceObject, "Mesh", function() { return Mesh; });
-__webpack_require__.d(three_module_namespaceObject, "MeshBasicMaterial", function() { return MeshBasicMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshDepthMaterial", function() { return MeshDepthMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshDistanceMaterial", function() { return MeshDistanceMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshFaceMaterial", function() { return MeshFaceMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshLambertMaterial", function() { return MeshLambertMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshMatcapMaterial", function() { return MeshMatcapMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshNormalMaterial", function() { return MeshNormalMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshPhongMaterial", function() { return MeshPhongMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshPhysicalMaterial", function() { return MeshPhysicalMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshStandardMaterial", function() { return MeshStandardMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MeshToonMaterial", function() { return MeshToonMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MinEquation", function() { return MinEquation; });
-__webpack_require__.d(three_module_namespaceObject, "MirroredRepeatWrapping", function() { return MirroredRepeatWrapping; });
-__webpack_require__.d(three_module_namespaceObject, "MixOperation", function() { return MixOperation; });
-__webpack_require__.d(three_module_namespaceObject, "MultiMaterial", function() { return MultiMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "MultiplyBlending", function() { return MultiplyBlending; });
-__webpack_require__.d(three_module_namespaceObject, "MultiplyOperation", function() { return MultiplyOperation; });
-__webpack_require__.d(three_module_namespaceObject, "NearestFilter", function() { return NearestFilter; });
-__webpack_require__.d(three_module_namespaceObject, "NearestMipMapLinearFilter", function() { return NearestMipMapLinearFilter; });
-__webpack_require__.d(three_module_namespaceObject, "NearestMipMapNearestFilter", function() { return NearestMipMapNearestFilter; });
-__webpack_require__.d(three_module_namespaceObject, "NearestMipmapLinearFilter", function() { return NearestMipmapLinearFilter; });
-__webpack_require__.d(three_module_namespaceObject, "NearestMipmapNearestFilter", function() { return NearestMipmapNearestFilter; });
-__webpack_require__.d(three_module_namespaceObject, "NeverDepth", function() { return NeverDepth; });
-__webpack_require__.d(three_module_namespaceObject, "NeverStencilFunc", function() { return NeverStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "NoBlending", function() { return NoBlending; });
-__webpack_require__.d(three_module_namespaceObject, "NoColors", function() { return NoColors; });
-__webpack_require__.d(three_module_namespaceObject, "NoToneMapping", function() { return NoToneMapping; });
-__webpack_require__.d(three_module_namespaceObject, "NormalAnimationBlendMode", function() { return NormalAnimationBlendMode; });
-__webpack_require__.d(three_module_namespaceObject, "NormalBlending", function() { return NormalBlending; });
-__webpack_require__.d(three_module_namespaceObject, "NotEqualDepth", function() { return NotEqualDepth; });
-__webpack_require__.d(three_module_namespaceObject, "NotEqualStencilFunc", function() { return NotEqualStencilFunc; });
-__webpack_require__.d(three_module_namespaceObject, "NumberKeyframeTrack", function() { return NumberKeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "Object3D", function() { return Object3D; });
-__webpack_require__.d(three_module_namespaceObject, "ObjectLoader", function() { return ObjectLoader; });
-__webpack_require__.d(three_module_namespaceObject, "ObjectSpaceNormalMap", function() { return ObjectSpaceNormalMap; });
-__webpack_require__.d(three_module_namespaceObject, "OctahedronBufferGeometry", function() { return OctahedronBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "OctahedronGeometry", function() { return OctahedronGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "OneFactor", function() { return OneFactor; });
-__webpack_require__.d(three_module_namespaceObject, "OneMinusDstAlphaFactor", function() { return OneMinusDstAlphaFactor; });
-__webpack_require__.d(three_module_namespaceObject, "OneMinusDstColorFactor", function() { return OneMinusDstColorFactor; });
-__webpack_require__.d(three_module_namespaceObject, "OneMinusSrcAlphaFactor", function() { return OneMinusSrcAlphaFactor; });
-__webpack_require__.d(three_module_namespaceObject, "OneMinusSrcColorFactor", function() { return OneMinusSrcColorFactor; });
-__webpack_require__.d(three_module_namespaceObject, "OrthographicCamera", function() { return OrthographicCamera; });
-__webpack_require__.d(three_module_namespaceObject, "PCFShadowMap", function() { return PCFShadowMap; });
-__webpack_require__.d(three_module_namespaceObject, "PCFSoftShadowMap", function() { return PCFSoftShadowMap; });
-__webpack_require__.d(three_module_namespaceObject, "PMREMGenerator", function() { return PMREMGenerator; });
-__webpack_require__.d(three_module_namespaceObject, "ParametricBufferGeometry", function() { return ParametricBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ParametricGeometry", function() { return ParametricGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Particle", function() { return Particle; });
-__webpack_require__.d(three_module_namespaceObject, "ParticleBasicMaterial", function() { return ParticleBasicMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "ParticleSystem", function() { return ParticleSystem; });
-__webpack_require__.d(three_module_namespaceObject, "ParticleSystemMaterial", function() { return ParticleSystemMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "Path", function() { return Path; });
-__webpack_require__.d(three_module_namespaceObject, "PerspectiveCamera", function() { return PerspectiveCamera; });
-__webpack_require__.d(three_module_namespaceObject, "Plane", function() { return Plane; });
-__webpack_require__.d(three_module_namespaceObject, "PlaneBufferGeometry", function() { return PlaneBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "PlaneGeometry", function() { return PlaneGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "PlaneHelper", function() { return PlaneHelper; });
-__webpack_require__.d(three_module_namespaceObject, "PointCloud", function() { return PointCloud; });
-__webpack_require__.d(three_module_namespaceObject, "PointCloudMaterial", function() { return PointCloudMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "PointLight", function() { return PointLight; });
-__webpack_require__.d(three_module_namespaceObject, "PointLightHelper", function() { return PointLightHelper; });
-__webpack_require__.d(three_module_namespaceObject, "Points", function() { return Points; });
-__webpack_require__.d(three_module_namespaceObject, "PointsMaterial", function() { return PointsMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "PolarGridHelper", function() { return PolarGridHelper; });
-__webpack_require__.d(three_module_namespaceObject, "PolyhedronBufferGeometry", function() { return PolyhedronBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "PolyhedronGeometry", function() { return PolyhedronGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "PositionalAudio", function() { return PositionalAudio; });
-__webpack_require__.d(three_module_namespaceObject, "PropertyBinding", function() { return PropertyBinding; });
-__webpack_require__.d(three_module_namespaceObject, "PropertyMixer", function() { return PropertyMixer; });
-__webpack_require__.d(three_module_namespaceObject, "QuadraticBezierCurve", function() { return QuadraticBezierCurve; });
-__webpack_require__.d(three_module_namespaceObject, "QuadraticBezierCurve3", function() { return QuadraticBezierCurve3; });
-__webpack_require__.d(three_module_namespaceObject, "Quaternion", function() { return Quaternion; });
-__webpack_require__.d(three_module_namespaceObject, "QuaternionKeyframeTrack", function() { return QuaternionKeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "QuaternionLinearInterpolant", function() { return QuaternionLinearInterpolant; });
-__webpack_require__.d(three_module_namespaceObject, "REVISION", function() { return REVISION; });
-__webpack_require__.d(three_module_namespaceObject, "RGBADepthPacking", function() { return RGBADepthPacking; });
-__webpack_require__.d(three_module_namespaceObject, "RGBAFormat", function() { return RGBAFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RGBAIntegerFormat", function() { return RGBAIntegerFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_10x10_Format", function() { return RGBA_ASTC_10x10_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_10x5_Format", function() { return RGBA_ASTC_10x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_10x6_Format", function() { return RGBA_ASTC_10x6_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_10x8_Format", function() { return RGBA_ASTC_10x8_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_12x10_Format", function() { return RGBA_ASTC_12x10_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_12x12_Format", function() { return RGBA_ASTC_12x12_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_4x4_Format", function() { return RGBA_ASTC_4x4_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_5x4_Format", function() { return RGBA_ASTC_5x4_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_5x5_Format", function() { return RGBA_ASTC_5x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_6x5_Format", function() { return RGBA_ASTC_6x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_6x6_Format", function() { return RGBA_ASTC_6x6_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_8x5_Format", function() { return RGBA_ASTC_8x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_8x6_Format", function() { return RGBA_ASTC_8x6_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ASTC_8x8_Format", function() { return RGBA_ASTC_8x8_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_BPTC_Format", function() { return RGBA_BPTC_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_ETC2_EAC_Format", function() { return RGBA_ETC2_EAC_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_PVRTC_2BPPV1_Format", function() { return RGBA_PVRTC_2BPPV1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_PVRTC_4BPPV1_Format", function() { return RGBA_PVRTC_4BPPV1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_S3TC_DXT1_Format", function() { return RGBA_S3TC_DXT1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_S3TC_DXT3_Format", function() { return RGBA_S3TC_DXT3_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBA_S3TC_DXT5_Format", function() { return RGBA_S3TC_DXT5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGBDEncoding", function() { return RGBDEncoding; });
-__webpack_require__.d(three_module_namespaceObject, "RGBEEncoding", function() { return RGBEEncoding; });
-__webpack_require__.d(three_module_namespaceObject, "RGBEFormat", function() { return RGBEFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RGBFormat", function() { return RGBFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RGBIntegerFormat", function() { return RGBIntegerFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RGBM16Encoding", function() { return RGBM16Encoding; });
-__webpack_require__.d(three_module_namespaceObject, "RGBM7Encoding", function() { return RGBM7Encoding; });
-__webpack_require__.d(three_module_namespaceObject, "RGB_ETC1_Format", function() { return RGB_ETC1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGB_ETC2_Format", function() { return RGB_ETC2_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGB_PVRTC_2BPPV1_Format", function() { return RGB_PVRTC_2BPPV1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGB_PVRTC_4BPPV1_Format", function() { return RGB_PVRTC_4BPPV1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGB_S3TC_DXT1_Format", function() { return RGB_S3TC_DXT1_Format; });
-__webpack_require__.d(three_module_namespaceObject, "RGFormat", function() { return RGFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RGIntegerFormat", function() { return RGIntegerFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RawShaderMaterial", function() { return RawShaderMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "Ray", function() { return Ray; });
-__webpack_require__.d(three_module_namespaceObject, "Raycaster", function() { return Raycaster; });
-__webpack_require__.d(three_module_namespaceObject, "RectAreaLight", function() { return RectAreaLight; });
-__webpack_require__.d(three_module_namespaceObject, "RedFormat", function() { return RedFormat; });
-__webpack_require__.d(three_module_namespaceObject, "RedIntegerFormat", function() { return RedIntegerFormat; });
-__webpack_require__.d(three_module_namespaceObject, "ReinhardToneMapping", function() { return ReinhardToneMapping; });
-__webpack_require__.d(three_module_namespaceObject, "RepeatWrapping", function() { return RepeatWrapping; });
-__webpack_require__.d(three_module_namespaceObject, "ReplaceStencilOp", function() { return ReplaceStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "ReverseSubtractEquation", function() { return ReverseSubtractEquation; });
-__webpack_require__.d(three_module_namespaceObject, "RingBufferGeometry", function() { return RingBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "RingGeometry", function() { return RingGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_10x10_Format", function() { return SRGB8_ALPHA8_ASTC_10x10_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_10x5_Format", function() { return SRGB8_ALPHA8_ASTC_10x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_10x6_Format", function() { return SRGB8_ALPHA8_ASTC_10x6_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_10x8_Format", function() { return SRGB8_ALPHA8_ASTC_10x8_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_12x10_Format", function() { return SRGB8_ALPHA8_ASTC_12x10_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_12x12_Format", function() { return SRGB8_ALPHA8_ASTC_12x12_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_4x4_Format", function() { return SRGB8_ALPHA8_ASTC_4x4_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_5x4_Format", function() { return SRGB8_ALPHA8_ASTC_5x4_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_5x5_Format", function() { return SRGB8_ALPHA8_ASTC_5x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_6x5_Format", function() { return SRGB8_ALPHA8_ASTC_6x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_6x6_Format", function() { return SRGB8_ALPHA8_ASTC_6x6_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_8x5_Format", function() { return SRGB8_ALPHA8_ASTC_8x5_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_8x6_Format", function() { return SRGB8_ALPHA8_ASTC_8x6_Format; });
-__webpack_require__.d(three_module_namespaceObject, "SRGB8_ALPHA8_ASTC_8x8_Format", function() { return SRGB8_ALPHA8_ASTC_8x8_Format; });
-__webpack_require__.d(three_module_namespaceObject, "Scene", function() { return Scene; });
-__webpack_require__.d(three_module_namespaceObject, "SceneUtils", function() { return SceneUtils; });
-__webpack_require__.d(three_module_namespaceObject, "ShaderChunk", function() { return ShaderChunk; });
-__webpack_require__.d(three_module_namespaceObject, "ShaderLib", function() { return ShaderLib; });
-__webpack_require__.d(three_module_namespaceObject, "ShaderMaterial", function() { return ShaderMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "ShadowMaterial", function() { return ShadowMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "Shape", function() { return Shape; });
-__webpack_require__.d(three_module_namespaceObject, "ShapeBufferGeometry", function() { return ShapeBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ShapeGeometry", function() { return ShapeGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "ShapePath", function() { return ShapePath; });
-__webpack_require__.d(three_module_namespaceObject, "ShapeUtils", function() { return ShapeUtils; });
-__webpack_require__.d(three_module_namespaceObject, "ShortType", function() { return ShortType; });
-__webpack_require__.d(three_module_namespaceObject, "Skeleton", function() { return Skeleton; });
-__webpack_require__.d(three_module_namespaceObject, "SkeletonHelper", function() { return SkeletonHelper; });
-__webpack_require__.d(three_module_namespaceObject, "SkinnedMesh", function() { return SkinnedMesh; });
-__webpack_require__.d(three_module_namespaceObject, "SmoothShading", function() { return SmoothShading; });
-__webpack_require__.d(three_module_namespaceObject, "Sphere", function() { return Sphere; });
-__webpack_require__.d(three_module_namespaceObject, "SphereBufferGeometry", function() { return SphereBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "SphereGeometry", function() { return SphereGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Spherical", function() { return Spherical; });
-__webpack_require__.d(three_module_namespaceObject, "SphericalHarmonics3", function() { return SphericalHarmonics3; });
-__webpack_require__.d(three_module_namespaceObject, "Spline", function() { return Spline; });
-__webpack_require__.d(three_module_namespaceObject, "SplineCurve", function() { return SplineCurve; });
-__webpack_require__.d(three_module_namespaceObject, "SplineCurve3", function() { return SplineCurve3; });
-__webpack_require__.d(three_module_namespaceObject, "SpotLight", function() { return SpotLight; });
-__webpack_require__.d(three_module_namespaceObject, "SpotLightHelper", function() { return SpotLightHelper; });
-__webpack_require__.d(three_module_namespaceObject, "SpotLightShadow", function() { return SpotLightShadow; });
-__webpack_require__.d(three_module_namespaceObject, "Sprite", function() { return Sprite; });
-__webpack_require__.d(three_module_namespaceObject, "SpriteMaterial", function() { return SpriteMaterial; });
-__webpack_require__.d(three_module_namespaceObject, "SrcAlphaFactor", function() { return SrcAlphaFactor; });
-__webpack_require__.d(three_module_namespaceObject, "SrcAlphaSaturateFactor", function() { return SrcAlphaSaturateFactor; });
-__webpack_require__.d(three_module_namespaceObject, "SrcColorFactor", function() { return SrcColorFactor; });
-__webpack_require__.d(three_module_namespaceObject, "StaticCopyUsage", function() { return StaticCopyUsage; });
-__webpack_require__.d(three_module_namespaceObject, "StaticDrawUsage", function() { return StaticDrawUsage; });
-__webpack_require__.d(three_module_namespaceObject, "StaticReadUsage", function() { return StaticReadUsage; });
-__webpack_require__.d(three_module_namespaceObject, "StereoCamera", function() { return StereoCamera; });
-__webpack_require__.d(three_module_namespaceObject, "StreamCopyUsage", function() { return StreamCopyUsage; });
-__webpack_require__.d(three_module_namespaceObject, "StreamDrawUsage", function() { return StreamDrawUsage; });
-__webpack_require__.d(three_module_namespaceObject, "StreamReadUsage", function() { return StreamReadUsage; });
-__webpack_require__.d(three_module_namespaceObject, "StringKeyframeTrack", function() { return StringKeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "SubtractEquation", function() { return SubtractEquation; });
-__webpack_require__.d(three_module_namespaceObject, "SubtractiveBlending", function() { return SubtractiveBlending; });
-__webpack_require__.d(three_module_namespaceObject, "TOUCH", function() { return TOUCH; });
-__webpack_require__.d(three_module_namespaceObject, "TangentSpaceNormalMap", function() { return TangentSpaceNormalMap; });
-__webpack_require__.d(three_module_namespaceObject, "TetrahedronBufferGeometry", function() { return TetrahedronBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TetrahedronGeometry", function() { return TetrahedronGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TextBufferGeometry", function() { return TextBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TextGeometry", function() { return TextGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Texture", function() { return Texture; });
-__webpack_require__.d(three_module_namespaceObject, "TextureLoader", function() { return TextureLoader; });
-__webpack_require__.d(three_module_namespaceObject, "TorusBufferGeometry", function() { return TorusBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TorusGeometry", function() { return TorusGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TorusKnotBufferGeometry", function() { return TorusKnotBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TorusKnotGeometry", function() { return TorusKnotGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "Triangle", function() { return Triangle; });
-__webpack_require__.d(three_module_namespaceObject, "TriangleFanDrawMode", function() { return TriangleFanDrawMode; });
-__webpack_require__.d(three_module_namespaceObject, "TriangleStripDrawMode", function() { return TriangleStripDrawMode; });
-__webpack_require__.d(three_module_namespaceObject, "TrianglesDrawMode", function() { return TrianglesDrawMode; });
-__webpack_require__.d(three_module_namespaceObject, "TubeBufferGeometry", function() { return TubeBufferGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "TubeGeometry", function() { return TubeGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "UVMapping", function() { return UVMapping; });
-__webpack_require__.d(three_module_namespaceObject, "Uint16Attribute", function() { return Uint16Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint16BufferAttribute", function() { return Uint16BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint32Attribute", function() { return Uint32Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint32BufferAttribute", function() { return Uint32BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint8Attribute", function() { return Uint8Attribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint8BufferAttribute", function() { return Uint8BufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint8ClampedAttribute", function() { return Uint8ClampedAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uint8ClampedBufferAttribute", function() { return Uint8ClampedBufferAttribute; });
-__webpack_require__.d(three_module_namespaceObject, "Uniform", function() { return Uniform; });
-__webpack_require__.d(three_module_namespaceObject, "UniformsLib", function() { return UniformsLib; });
-__webpack_require__.d(three_module_namespaceObject, "UniformsUtils", function() { return UniformsUtils; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedByteType", function() { return UnsignedByteType; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedInt248Type", function() { return UnsignedInt248Type; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedIntType", function() { return UnsignedIntType; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedShort4444Type", function() { return UnsignedShort4444Type; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedShort5551Type", function() { return UnsignedShort5551Type; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedShort565Type", function() { return UnsignedShort565Type; });
-__webpack_require__.d(three_module_namespaceObject, "UnsignedShortType", function() { return UnsignedShortType; });
-__webpack_require__.d(three_module_namespaceObject, "VSMShadowMap", function() { return VSMShadowMap; });
-__webpack_require__.d(three_module_namespaceObject, "Vector2", function() { return Vector2; });
-__webpack_require__.d(three_module_namespaceObject, "Vector3", function() { return Vector3; });
-__webpack_require__.d(three_module_namespaceObject, "Vector4", function() { return Vector4; });
-__webpack_require__.d(three_module_namespaceObject, "VectorKeyframeTrack", function() { return VectorKeyframeTrack; });
-__webpack_require__.d(three_module_namespaceObject, "Vertex", function() { return Vertex; });
-__webpack_require__.d(three_module_namespaceObject, "VertexColors", function() { return VertexColors; });
-__webpack_require__.d(three_module_namespaceObject, "VideoTexture", function() { return VideoTexture; });
-__webpack_require__.d(three_module_namespaceObject, "WebGL1Renderer", function() { return WebGL1Renderer; });
-__webpack_require__.d(three_module_namespaceObject, "WebGLCubeRenderTarget", function() { return WebGLCubeRenderTarget; });
-__webpack_require__.d(three_module_namespaceObject, "WebGLMultisampleRenderTarget", function() { return WebGLMultisampleRenderTarget; });
-__webpack_require__.d(three_module_namespaceObject, "WebGLRenderTarget", function() { return WebGLRenderTarget; });
-__webpack_require__.d(three_module_namespaceObject, "WebGLRenderTargetCube", function() { return WebGLRenderTargetCube; });
-__webpack_require__.d(three_module_namespaceObject, "WebGLRenderer", function() { return WebGLRenderer; });
-__webpack_require__.d(three_module_namespaceObject, "WebGLUtils", function() { return WebGLUtils; });
-__webpack_require__.d(three_module_namespaceObject, "WireframeGeometry", function() { return WireframeGeometry; });
-__webpack_require__.d(three_module_namespaceObject, "WireframeHelper", function() { return WireframeHelper; });
-__webpack_require__.d(three_module_namespaceObject, "WrapAroundEnding", function() { return WrapAroundEnding; });
-__webpack_require__.d(three_module_namespaceObject, "XHRLoader", function() { return XHRLoader; });
-__webpack_require__.d(three_module_namespaceObject, "ZeroCurvatureEnding", function() { return ZeroCurvatureEnding; });
-__webpack_require__.d(three_module_namespaceObject, "ZeroFactor", function() { return ZeroFactor; });
-__webpack_require__.d(three_module_namespaceObject, "ZeroSlopeEnding", function() { return ZeroSlopeEnding; });
-__webpack_require__.d(three_module_namespaceObject, "ZeroStencilOp", function() { return ZeroStencilOp; });
-__webpack_require__.d(three_module_namespaceObject, "sRGBEncoding", function() { return sRGBEncoding; });
+__webpack_require__.d(three_module_namespaceObject, {
+  "ACESFilmicToneMapping": () => ACESFilmicToneMapping,
+  "AddEquation": () => AddEquation,
+  "AddOperation": () => AddOperation,
+  "AdditiveAnimationBlendMode": () => AdditiveAnimationBlendMode,
+  "AdditiveBlending": () => AdditiveBlending,
+  "AlphaFormat": () => AlphaFormat,
+  "AlwaysDepth": () => AlwaysDepth,
+  "AlwaysStencilFunc": () => AlwaysStencilFunc,
+  "AmbientLight": () => AmbientLight,
+  "AmbientLightProbe": () => AmbientLightProbe,
+  "AnimationClip": () => AnimationClip,
+  "AnimationLoader": () => AnimationLoader,
+  "AnimationMixer": () => AnimationMixer,
+  "AnimationObjectGroup": () => AnimationObjectGroup,
+  "AnimationUtils": () => AnimationUtils,
+  "ArcCurve": () => ArcCurve,
+  "ArrayCamera": () => ArrayCamera,
+  "ArrowHelper": () => ArrowHelper,
+  "Audio": () => Audio,
+  "AudioAnalyser": () => AudioAnalyser,
+  "AudioContext": () => AudioContext,
+  "AudioListener": () => AudioListener,
+  "AudioLoader": () => AudioLoader,
+  "AxesHelper": () => AxesHelper,
+  "AxisHelper": () => AxisHelper,
+  "BackSide": () => BackSide,
+  "BasicDepthPacking": () => BasicDepthPacking,
+  "BasicShadowMap": () => BasicShadowMap,
+  "BinaryTextureLoader": () => BinaryTextureLoader,
+  "Bone": () => Bone,
+  "BooleanKeyframeTrack": () => BooleanKeyframeTrack,
+  "BoundingBoxHelper": () => BoundingBoxHelper,
+  "Box2": () => Box2,
+  "Box3": () => Box3,
+  "Box3Helper": () => Box3Helper,
+  "BoxBufferGeometry": () => BoxBufferGeometry,
+  "BoxGeometry": () => BoxGeometry,
+  "BoxHelper": () => BoxHelper,
+  "BufferAttribute": () => BufferAttribute,
+  "BufferGeometry": () => BufferGeometry,
+  "BufferGeometryLoader": () => BufferGeometryLoader,
+  "ByteType": () => ByteType,
+  "Cache": () => Cache,
+  "Camera": () => Camera,
+  "CameraHelper": () => CameraHelper,
+  "CanvasRenderer": () => CanvasRenderer,
+  "CanvasTexture": () => CanvasTexture,
+  "CatmullRomCurve3": () => CatmullRomCurve3,
+  "CineonToneMapping": () => CineonToneMapping,
+  "CircleBufferGeometry": () => CircleBufferGeometry,
+  "CircleGeometry": () => CircleGeometry,
+  "ClampToEdgeWrapping": () => ClampToEdgeWrapping,
+  "Clock": () => Clock,
+  "ClosedSplineCurve3": () => ClosedSplineCurve3,
+  "Color": () => Color,
+  "ColorKeyframeTrack": () => ColorKeyframeTrack,
+  "CompressedTexture": () => CompressedTexture,
+  "CompressedTextureLoader": () => CompressedTextureLoader,
+  "ConeBufferGeometry": () => ConeBufferGeometry,
+  "ConeGeometry": () => ConeGeometry,
+  "CubeCamera": () => CubeCamera,
+  "CubeGeometry": () => BoxGeometry,
+  "CubeReflectionMapping": () => CubeReflectionMapping,
+  "CubeRefractionMapping": () => CubeRefractionMapping,
+  "CubeTexture": () => CubeTexture,
+  "CubeTextureLoader": () => CubeTextureLoader,
+  "CubeUVReflectionMapping": () => CubeUVReflectionMapping,
+  "CubeUVRefractionMapping": () => CubeUVRefractionMapping,
+  "CubicBezierCurve": () => CubicBezierCurve,
+  "CubicBezierCurve3": () => CubicBezierCurve3,
+  "CubicInterpolant": () => CubicInterpolant,
+  "CullFaceBack": () => CullFaceBack,
+  "CullFaceFront": () => CullFaceFront,
+  "CullFaceFrontBack": () => CullFaceFrontBack,
+  "CullFaceNone": () => CullFaceNone,
+  "Curve": () => Curve,
+  "CurvePath": () => CurvePath,
+  "CustomBlending": () => CustomBlending,
+  "CustomToneMapping": () => CustomToneMapping,
+  "CylinderBufferGeometry": () => CylinderBufferGeometry,
+  "CylinderGeometry": () => CylinderGeometry,
+  "Cylindrical": () => Cylindrical,
+  "DataTexture": () => DataTexture,
+  "DataTexture2DArray": () => DataTexture2DArray,
+  "DataTexture3D": () => DataTexture3D,
+  "DataTextureLoader": () => DataTextureLoader,
+  "DecrementStencilOp": () => DecrementStencilOp,
+  "DecrementWrapStencilOp": () => DecrementWrapStencilOp,
+  "DefaultLoadingManager": () => DefaultLoadingManager,
+  "DepthFormat": () => DepthFormat,
+  "DepthStencilFormat": () => DepthStencilFormat,
+  "DepthTexture": () => DepthTexture,
+  "DirectionalLight": () => DirectionalLight,
+  "DirectionalLightHelper": () => DirectionalLightHelper,
+  "DirectionalLightShadow": () => DirectionalLightShadow,
+  "DiscreteInterpolant": () => DiscreteInterpolant,
+  "DodecahedronBufferGeometry": () => DodecahedronBufferGeometry,
+  "DodecahedronGeometry": () => DodecahedronGeometry,
+  "DoubleSide": () => DoubleSide,
+  "DstAlphaFactor": () => DstAlphaFactor,
+  "DstColorFactor": () => DstColorFactor,
+  "DynamicBufferAttribute": () => DynamicBufferAttribute,
+  "DynamicCopyUsage": () => DynamicCopyUsage,
+  "DynamicDrawUsage": () => DynamicDrawUsage,
+  "DynamicReadUsage": () => DynamicReadUsage,
+  "EdgesGeometry": () => EdgesGeometry,
+  "EdgesHelper": () => EdgesHelper,
+  "EllipseCurve": () => EllipseCurve,
+  "EqualDepth": () => EqualDepth,
+  "EqualStencilFunc": () => EqualStencilFunc,
+  "EquirectangularReflectionMapping": () => EquirectangularReflectionMapping,
+  "EquirectangularRefractionMapping": () => EquirectangularRefractionMapping,
+  "Euler": () => Euler,
+  "EventDispatcher": () => EventDispatcher,
+  "ExtrudeBufferGeometry": () => ExtrudeBufferGeometry,
+  "ExtrudeGeometry": () => ExtrudeGeometry,
+  "Face3": () => Face3,
+  "Face4": () => Face4,
+  "FaceColors": () => FaceColors,
+  "FileLoader": () => FileLoader,
+  "FlatShading": () => FlatShading,
+  "Float32Attribute": () => Float32Attribute,
+  "Float32BufferAttribute": () => Float32BufferAttribute,
+  "Float64Attribute": () => Float64Attribute,
+  "Float64BufferAttribute": () => Float64BufferAttribute,
+  "FloatType": () => FloatType,
+  "Fog": () => Fog,
+  "FogExp2": () => FogExp2,
+  "Font": () => Font,
+  "FontLoader": () => FontLoader,
+  "FrontFaceDirectionCCW": () => FrontFaceDirectionCCW,
+  "FrontFaceDirectionCW": () => FrontFaceDirectionCW,
+  "FrontSide": () => FrontSide,
+  "Frustum": () => Frustum,
+  "GammaEncoding": () => GammaEncoding,
+  "Geometry": () => Geometry,
+  "GeometryUtils": () => GeometryUtils,
+  "GreaterDepth": () => GreaterDepth,
+  "GreaterEqualDepth": () => GreaterEqualDepth,
+  "GreaterEqualStencilFunc": () => GreaterEqualStencilFunc,
+  "GreaterStencilFunc": () => GreaterStencilFunc,
+  "GridHelper": () => GridHelper,
+  "Group": () => Group,
+  "HalfFloatType": () => HalfFloatType,
+  "HemisphereLight": () => HemisphereLight,
+  "HemisphereLightHelper": () => HemisphereLightHelper,
+  "HemisphereLightProbe": () => HemisphereLightProbe,
+  "IcosahedronBufferGeometry": () => IcosahedronBufferGeometry,
+  "IcosahedronGeometry": () => IcosahedronGeometry,
+  "ImageBitmapLoader": () => ImageBitmapLoader,
+  "ImageLoader": () => ImageLoader,
+  "ImageUtils": () => ImageUtils,
+  "ImmediateRenderObject": () => ImmediateRenderObject,
+  "IncrementStencilOp": () => IncrementStencilOp,
+  "IncrementWrapStencilOp": () => IncrementWrapStencilOp,
+  "InstancedBufferAttribute": () => InstancedBufferAttribute,
+  "InstancedBufferGeometry": () => InstancedBufferGeometry,
+  "InstancedInterleavedBuffer": () => InstancedInterleavedBuffer,
+  "InstancedMesh": () => InstancedMesh,
+  "Int16Attribute": () => Int16Attribute,
+  "Int16BufferAttribute": () => Int16BufferAttribute,
+  "Int32Attribute": () => Int32Attribute,
+  "Int32BufferAttribute": () => Int32BufferAttribute,
+  "Int8Attribute": () => Int8Attribute,
+  "Int8BufferAttribute": () => Int8BufferAttribute,
+  "IntType": () => IntType,
+  "InterleavedBuffer": () => InterleavedBuffer,
+  "InterleavedBufferAttribute": () => InterleavedBufferAttribute,
+  "Interpolant": () => Interpolant,
+  "InterpolateDiscrete": () => InterpolateDiscrete,
+  "InterpolateLinear": () => InterpolateLinear,
+  "InterpolateSmooth": () => InterpolateSmooth,
+  "InvertStencilOp": () => InvertStencilOp,
+  "JSONLoader": () => JSONLoader,
+  "KeepStencilOp": () => KeepStencilOp,
+  "KeyframeTrack": () => KeyframeTrack,
+  "LOD": () => LOD,
+  "LatheBufferGeometry": () => LatheBufferGeometry,
+  "LatheGeometry": () => LatheGeometry,
+  "Layers": () => Layers,
+  "LensFlare": () => LensFlare,
+  "LessDepth": () => LessDepth,
+  "LessEqualDepth": () => LessEqualDepth,
+  "LessEqualStencilFunc": () => LessEqualStencilFunc,
+  "LessStencilFunc": () => LessStencilFunc,
+  "Light": () => Light,
+  "LightProbe": () => LightProbe,
+  "LightShadow": () => LightShadow,
+  "Line": () => Line,
+  "Line3": () => Line3,
+  "LineBasicMaterial": () => LineBasicMaterial,
+  "LineCurve": () => LineCurve,
+  "LineCurve3": () => LineCurve3,
+  "LineDashedMaterial": () => LineDashedMaterial,
+  "LineLoop": () => LineLoop,
+  "LinePieces": () => LinePieces,
+  "LineSegments": () => LineSegments,
+  "LineStrip": () => LineStrip,
+  "LinearEncoding": () => LinearEncoding,
+  "LinearFilter": () => LinearFilter,
+  "LinearInterpolant": () => LinearInterpolant,
+  "LinearMipMapLinearFilter": () => LinearMipMapLinearFilter,
+  "LinearMipMapNearestFilter": () => LinearMipMapNearestFilter,
+  "LinearMipmapLinearFilter": () => LinearMipmapLinearFilter,
+  "LinearMipmapNearestFilter": () => LinearMipmapNearestFilter,
+  "LinearToneMapping": () => LinearToneMapping,
+  "Loader": () => Loader,
+  "LoaderUtils": () => LoaderUtils,
+  "LoadingManager": () => LoadingManager,
+  "LogLuvEncoding": () => LogLuvEncoding,
+  "LoopOnce": () => LoopOnce,
+  "LoopPingPong": () => LoopPingPong,
+  "LoopRepeat": () => LoopRepeat,
+  "LuminanceAlphaFormat": () => LuminanceAlphaFormat,
+  "LuminanceFormat": () => LuminanceFormat,
+  "MOUSE": () => MOUSE,
+  "Material": () => Material,
+  "MaterialLoader": () => MaterialLoader,
+  "Math": () => MathUtils,
+  "MathUtils": () => MathUtils,
+  "Matrix3": () => Matrix3,
+  "Matrix4": () => Matrix4,
+  "MaxEquation": () => MaxEquation,
+  "Mesh": () => Mesh,
+  "MeshBasicMaterial": () => MeshBasicMaterial,
+  "MeshDepthMaterial": () => MeshDepthMaterial,
+  "MeshDistanceMaterial": () => MeshDistanceMaterial,
+  "MeshFaceMaterial": () => MeshFaceMaterial,
+  "MeshLambertMaterial": () => MeshLambertMaterial,
+  "MeshMatcapMaterial": () => MeshMatcapMaterial,
+  "MeshNormalMaterial": () => MeshNormalMaterial,
+  "MeshPhongMaterial": () => MeshPhongMaterial,
+  "MeshPhysicalMaterial": () => MeshPhysicalMaterial,
+  "MeshStandardMaterial": () => MeshStandardMaterial,
+  "MeshToonMaterial": () => MeshToonMaterial,
+  "MinEquation": () => MinEquation,
+  "MirroredRepeatWrapping": () => MirroredRepeatWrapping,
+  "MixOperation": () => MixOperation,
+  "MultiMaterial": () => MultiMaterial,
+  "MultiplyBlending": () => MultiplyBlending,
+  "MultiplyOperation": () => MultiplyOperation,
+  "NearestFilter": () => NearestFilter,
+  "NearestMipMapLinearFilter": () => NearestMipMapLinearFilter,
+  "NearestMipMapNearestFilter": () => NearestMipMapNearestFilter,
+  "NearestMipmapLinearFilter": () => NearestMipmapLinearFilter,
+  "NearestMipmapNearestFilter": () => NearestMipmapNearestFilter,
+  "NeverDepth": () => NeverDepth,
+  "NeverStencilFunc": () => NeverStencilFunc,
+  "NoBlending": () => NoBlending,
+  "NoColors": () => NoColors,
+  "NoToneMapping": () => NoToneMapping,
+  "NormalAnimationBlendMode": () => NormalAnimationBlendMode,
+  "NormalBlending": () => NormalBlending,
+  "NotEqualDepth": () => NotEqualDepth,
+  "NotEqualStencilFunc": () => NotEqualStencilFunc,
+  "NumberKeyframeTrack": () => NumberKeyframeTrack,
+  "Object3D": () => Object3D,
+  "ObjectLoader": () => ObjectLoader,
+  "ObjectSpaceNormalMap": () => ObjectSpaceNormalMap,
+  "OctahedronBufferGeometry": () => OctahedronBufferGeometry,
+  "OctahedronGeometry": () => OctahedronGeometry,
+  "OneFactor": () => OneFactor,
+  "OneMinusDstAlphaFactor": () => OneMinusDstAlphaFactor,
+  "OneMinusDstColorFactor": () => OneMinusDstColorFactor,
+  "OneMinusSrcAlphaFactor": () => OneMinusSrcAlphaFactor,
+  "OneMinusSrcColorFactor": () => OneMinusSrcColorFactor,
+  "OrthographicCamera": () => OrthographicCamera,
+  "PCFShadowMap": () => PCFShadowMap,
+  "PCFSoftShadowMap": () => PCFSoftShadowMap,
+  "PMREMGenerator": () => PMREMGenerator,
+  "ParametricBufferGeometry": () => ParametricBufferGeometry,
+  "ParametricGeometry": () => ParametricGeometry,
+  "Particle": () => Particle,
+  "ParticleBasicMaterial": () => ParticleBasicMaterial,
+  "ParticleSystem": () => ParticleSystem,
+  "ParticleSystemMaterial": () => ParticleSystemMaterial,
+  "Path": () => Path,
+  "PerspectiveCamera": () => PerspectiveCamera,
+  "Plane": () => Plane,
+  "PlaneBufferGeometry": () => PlaneBufferGeometry,
+  "PlaneGeometry": () => PlaneGeometry,
+  "PlaneHelper": () => PlaneHelper,
+  "PointCloud": () => PointCloud,
+  "PointCloudMaterial": () => PointCloudMaterial,
+  "PointLight": () => PointLight,
+  "PointLightHelper": () => PointLightHelper,
+  "Points": () => Points,
+  "PointsMaterial": () => PointsMaterial,
+  "PolarGridHelper": () => PolarGridHelper,
+  "PolyhedronBufferGeometry": () => PolyhedronBufferGeometry,
+  "PolyhedronGeometry": () => PolyhedronGeometry,
+  "PositionalAudio": () => PositionalAudio,
+  "PropertyBinding": () => PropertyBinding,
+  "PropertyMixer": () => PropertyMixer,
+  "QuadraticBezierCurve": () => QuadraticBezierCurve,
+  "QuadraticBezierCurve3": () => QuadraticBezierCurve3,
+  "Quaternion": () => Quaternion,
+  "QuaternionKeyframeTrack": () => QuaternionKeyframeTrack,
+  "QuaternionLinearInterpolant": () => QuaternionLinearInterpolant,
+  "REVISION": () => REVISION,
+  "RGBADepthPacking": () => RGBADepthPacking,
+  "RGBAFormat": () => RGBAFormat,
+  "RGBAIntegerFormat": () => RGBAIntegerFormat,
+  "RGBA_ASTC_10x10_Format": () => RGBA_ASTC_10x10_Format,
+  "RGBA_ASTC_10x5_Format": () => RGBA_ASTC_10x5_Format,
+  "RGBA_ASTC_10x6_Format": () => RGBA_ASTC_10x6_Format,
+  "RGBA_ASTC_10x8_Format": () => RGBA_ASTC_10x8_Format,
+  "RGBA_ASTC_12x10_Format": () => RGBA_ASTC_12x10_Format,
+  "RGBA_ASTC_12x12_Format": () => RGBA_ASTC_12x12_Format,
+  "RGBA_ASTC_4x4_Format": () => RGBA_ASTC_4x4_Format,
+  "RGBA_ASTC_5x4_Format": () => RGBA_ASTC_5x4_Format,
+  "RGBA_ASTC_5x5_Format": () => RGBA_ASTC_5x5_Format,
+  "RGBA_ASTC_6x5_Format": () => RGBA_ASTC_6x5_Format,
+  "RGBA_ASTC_6x6_Format": () => RGBA_ASTC_6x6_Format,
+  "RGBA_ASTC_8x5_Format": () => RGBA_ASTC_8x5_Format,
+  "RGBA_ASTC_8x6_Format": () => RGBA_ASTC_8x6_Format,
+  "RGBA_ASTC_8x8_Format": () => RGBA_ASTC_8x8_Format,
+  "RGBA_BPTC_Format": () => RGBA_BPTC_Format,
+  "RGBA_ETC2_EAC_Format": () => RGBA_ETC2_EAC_Format,
+  "RGBA_PVRTC_2BPPV1_Format": () => RGBA_PVRTC_2BPPV1_Format,
+  "RGBA_PVRTC_4BPPV1_Format": () => RGBA_PVRTC_4BPPV1_Format,
+  "RGBA_S3TC_DXT1_Format": () => RGBA_S3TC_DXT1_Format,
+  "RGBA_S3TC_DXT3_Format": () => RGBA_S3TC_DXT3_Format,
+  "RGBA_S3TC_DXT5_Format": () => RGBA_S3TC_DXT5_Format,
+  "RGBDEncoding": () => RGBDEncoding,
+  "RGBEEncoding": () => RGBEEncoding,
+  "RGBEFormat": () => RGBEFormat,
+  "RGBFormat": () => RGBFormat,
+  "RGBIntegerFormat": () => RGBIntegerFormat,
+  "RGBM16Encoding": () => RGBM16Encoding,
+  "RGBM7Encoding": () => RGBM7Encoding,
+  "RGB_ETC1_Format": () => RGB_ETC1_Format,
+  "RGB_ETC2_Format": () => RGB_ETC2_Format,
+  "RGB_PVRTC_2BPPV1_Format": () => RGB_PVRTC_2BPPV1_Format,
+  "RGB_PVRTC_4BPPV1_Format": () => RGB_PVRTC_4BPPV1_Format,
+  "RGB_S3TC_DXT1_Format": () => RGB_S3TC_DXT1_Format,
+  "RGFormat": () => RGFormat,
+  "RGIntegerFormat": () => RGIntegerFormat,
+  "RawShaderMaterial": () => RawShaderMaterial,
+  "Ray": () => Ray,
+  "Raycaster": () => Raycaster,
+  "RectAreaLight": () => RectAreaLight,
+  "RedFormat": () => RedFormat,
+  "RedIntegerFormat": () => RedIntegerFormat,
+  "ReinhardToneMapping": () => ReinhardToneMapping,
+  "RepeatWrapping": () => RepeatWrapping,
+  "ReplaceStencilOp": () => ReplaceStencilOp,
+  "ReverseSubtractEquation": () => ReverseSubtractEquation,
+  "RingBufferGeometry": () => RingBufferGeometry,
+  "RingGeometry": () => RingGeometry,
+  "SRGB8_ALPHA8_ASTC_10x10_Format": () => SRGB8_ALPHA8_ASTC_10x10_Format,
+  "SRGB8_ALPHA8_ASTC_10x5_Format": () => SRGB8_ALPHA8_ASTC_10x5_Format,
+  "SRGB8_ALPHA8_ASTC_10x6_Format": () => SRGB8_ALPHA8_ASTC_10x6_Format,
+  "SRGB8_ALPHA8_ASTC_10x8_Format": () => SRGB8_ALPHA8_ASTC_10x8_Format,
+  "SRGB8_ALPHA8_ASTC_12x10_Format": () => SRGB8_ALPHA8_ASTC_12x10_Format,
+  "SRGB8_ALPHA8_ASTC_12x12_Format": () => SRGB8_ALPHA8_ASTC_12x12_Format,
+  "SRGB8_ALPHA8_ASTC_4x4_Format": () => SRGB8_ALPHA8_ASTC_4x4_Format,
+  "SRGB8_ALPHA8_ASTC_5x4_Format": () => SRGB8_ALPHA8_ASTC_5x4_Format,
+  "SRGB8_ALPHA8_ASTC_5x5_Format": () => SRGB8_ALPHA8_ASTC_5x5_Format,
+  "SRGB8_ALPHA8_ASTC_6x5_Format": () => SRGB8_ALPHA8_ASTC_6x5_Format,
+  "SRGB8_ALPHA8_ASTC_6x6_Format": () => SRGB8_ALPHA8_ASTC_6x6_Format,
+  "SRGB8_ALPHA8_ASTC_8x5_Format": () => SRGB8_ALPHA8_ASTC_8x5_Format,
+  "SRGB8_ALPHA8_ASTC_8x6_Format": () => SRGB8_ALPHA8_ASTC_8x6_Format,
+  "SRGB8_ALPHA8_ASTC_8x8_Format": () => SRGB8_ALPHA8_ASTC_8x8_Format,
+  "Scene": () => Scene,
+  "SceneUtils": () => SceneUtils,
+  "ShaderChunk": () => ShaderChunk,
+  "ShaderLib": () => ShaderLib,
+  "ShaderMaterial": () => ShaderMaterial,
+  "ShadowMaterial": () => ShadowMaterial,
+  "Shape": () => Shape,
+  "ShapeBufferGeometry": () => ShapeBufferGeometry,
+  "ShapeGeometry": () => ShapeGeometry,
+  "ShapePath": () => ShapePath,
+  "ShapeUtils": () => ShapeUtils,
+  "ShortType": () => ShortType,
+  "Skeleton": () => Skeleton,
+  "SkeletonHelper": () => SkeletonHelper,
+  "SkinnedMesh": () => SkinnedMesh,
+  "SmoothShading": () => SmoothShading,
+  "Sphere": () => Sphere,
+  "SphereBufferGeometry": () => SphereBufferGeometry,
+  "SphereGeometry": () => SphereGeometry,
+  "Spherical": () => Spherical,
+  "SphericalHarmonics3": () => SphericalHarmonics3,
+  "Spline": () => Spline,
+  "SplineCurve": () => SplineCurve,
+  "SplineCurve3": () => SplineCurve3,
+  "SpotLight": () => SpotLight,
+  "SpotLightHelper": () => SpotLightHelper,
+  "SpotLightShadow": () => SpotLightShadow,
+  "Sprite": () => Sprite,
+  "SpriteMaterial": () => SpriteMaterial,
+  "SrcAlphaFactor": () => SrcAlphaFactor,
+  "SrcAlphaSaturateFactor": () => SrcAlphaSaturateFactor,
+  "SrcColorFactor": () => SrcColorFactor,
+  "StaticCopyUsage": () => StaticCopyUsage,
+  "StaticDrawUsage": () => StaticDrawUsage,
+  "StaticReadUsage": () => StaticReadUsage,
+  "StereoCamera": () => StereoCamera,
+  "StreamCopyUsage": () => StreamCopyUsage,
+  "StreamDrawUsage": () => StreamDrawUsage,
+  "StreamReadUsage": () => StreamReadUsage,
+  "StringKeyframeTrack": () => StringKeyframeTrack,
+  "SubtractEquation": () => SubtractEquation,
+  "SubtractiveBlending": () => SubtractiveBlending,
+  "TOUCH": () => TOUCH,
+  "TangentSpaceNormalMap": () => TangentSpaceNormalMap,
+  "TetrahedronBufferGeometry": () => TetrahedronBufferGeometry,
+  "TetrahedronGeometry": () => TetrahedronGeometry,
+  "TextBufferGeometry": () => TextBufferGeometry,
+  "TextGeometry": () => TextGeometry,
+  "Texture": () => Texture,
+  "TextureLoader": () => TextureLoader,
+  "TorusBufferGeometry": () => TorusBufferGeometry,
+  "TorusGeometry": () => TorusGeometry,
+  "TorusKnotBufferGeometry": () => TorusKnotBufferGeometry,
+  "TorusKnotGeometry": () => TorusKnotGeometry,
+  "Triangle": () => Triangle,
+  "TriangleFanDrawMode": () => TriangleFanDrawMode,
+  "TriangleStripDrawMode": () => TriangleStripDrawMode,
+  "TrianglesDrawMode": () => TrianglesDrawMode,
+  "TubeBufferGeometry": () => TubeBufferGeometry,
+  "TubeGeometry": () => TubeGeometry,
+  "UVMapping": () => UVMapping,
+  "Uint16Attribute": () => Uint16Attribute,
+  "Uint16BufferAttribute": () => Uint16BufferAttribute,
+  "Uint32Attribute": () => Uint32Attribute,
+  "Uint32BufferAttribute": () => Uint32BufferAttribute,
+  "Uint8Attribute": () => Uint8Attribute,
+  "Uint8BufferAttribute": () => Uint8BufferAttribute,
+  "Uint8ClampedAttribute": () => Uint8ClampedAttribute,
+  "Uint8ClampedBufferAttribute": () => Uint8ClampedBufferAttribute,
+  "Uniform": () => Uniform,
+  "UniformsLib": () => UniformsLib,
+  "UniformsUtils": () => UniformsUtils,
+  "UnsignedByteType": () => UnsignedByteType,
+  "UnsignedInt248Type": () => UnsignedInt248Type,
+  "UnsignedIntType": () => UnsignedIntType,
+  "UnsignedShort4444Type": () => UnsignedShort4444Type,
+  "UnsignedShort5551Type": () => UnsignedShort5551Type,
+  "UnsignedShort565Type": () => UnsignedShort565Type,
+  "UnsignedShortType": () => UnsignedShortType,
+  "VSMShadowMap": () => VSMShadowMap,
+  "Vector2": () => Vector2,
+  "Vector3": () => Vector3,
+  "Vector4": () => Vector4,
+  "VectorKeyframeTrack": () => VectorKeyframeTrack,
+  "Vertex": () => Vertex,
+  "VertexColors": () => VertexColors,
+  "VideoTexture": () => VideoTexture,
+  "WebGL1Renderer": () => WebGL1Renderer,
+  "WebGLCubeRenderTarget": () => WebGLCubeRenderTarget,
+  "WebGLMultisampleRenderTarget": () => WebGLMultisampleRenderTarget,
+  "WebGLRenderTarget": () => WebGLRenderTarget,
+  "WebGLRenderTargetCube": () => WebGLRenderTargetCube,
+  "WebGLRenderer": () => WebGLRenderer,
+  "WebGLUtils": () => WebGLUtils,
+  "WireframeGeometry": () => WireframeGeometry,
+  "WireframeHelper": () => WireframeHelper,
+  "WrapAroundEnding": () => WrapAroundEnding,
+  "XHRLoader": () => XHRLoader,
+  "ZeroCurvatureEnding": () => ZeroCurvatureEnding,
+  "ZeroFactor": () => ZeroFactor,
+  "ZeroSlopeEnding": () => ZeroSlopeEnding,
+  "ZeroStencilOp": () => ZeroStencilOp,
+  "sRGBEncoding": () => sRGBEncoding
+});
 
-// CONCATENATED MODULE: ./node_modules/three/build/three.module.js
+;// CONCATENATED MODULE: ./node_modules/three/build/three.module.js
 // Polyfills
 
 if ( Number.EPSILON === undefined ) {
@@ -65788,9 +65793,8 @@ if ( typeof __THREE_DEVTOOLS__ !== 'undefined' ) {
 
 
 // EXTERNAL MODULE: ./node_modules/cannon/build/cannon.js
-var cannon = __webpack_require__(0);
-
-// CONCATENATED MODULE: ./src/Ball.js
+var cannon = __webpack_require__(125);
+;// CONCATENATED MODULE: ./src/Ball.js
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -65822,9 +65826,7 @@ function makeTexture(num) {
   return textureCanvas;
 }
 
-var Ball_Ball =
-/*#__PURE__*/
-function () {
+var Ball = /*#__PURE__*/function () {
   /** @type {THREE.Scene} */
   // scene;
   // world;
@@ -65872,15 +65874,15 @@ function () {
   }, {
     key: "initPhysics",
     value: function initPhysics() {
-      var sphereShape = new cannon["Sphere"](this.radius); // let sphereCM = new CANNON.Material()
+      var sphereShape = new cannon.Sphere(this.radius); // let sphereCM = new CANNON.Material()
 
       var speed = -12;
-      this.sphereBody = new cannon["Body"]({
+      this.sphereBody = new cannon.Body({
         mass: 2,
         shape: sphereShape,
-        position: new cannon["Vec3"](0, -8, 0),
+        position: new cannon.Vec3(0, -8, 0),
         material: Ball.sphereCM,
-        velocity: new cannon["Vec3"](Math.random() - 0.5, Math.random() * speed, Math.random() - 0.5)
+        velocity: new cannon.Vec3(Math.random() - 0.5, Math.random() * speed, Math.random() - 0.5)
       }); // this.world.add(this.sphereBody);
     }
   }]);
@@ -65888,8 +65890,8 @@ function () {
   return Ball;
 }();
 
-_defineProperty(Ball_Ball, "sphereCM", void 0);
-// CONCATENATED MODULE: ./node_modules/three/examples/jsm/controls/OrbitControls.js
+_defineProperty(Ball, "sphereCM", void 0);
+;// CONCATENATED MODULE: ./node_modules/three/examples/jsm/controls/OrbitControls.js
 /**
  * @author qiao / https://github.com/qiao
  * @author mrdoob / http://mrdoob.com
@@ -67071,8 +67073,8 @@ MapControls.prototype.constructor = MapControls;
 
 
 
-// CONCATENATED MODULE: ./src/three.module.js
-var _ENCODINGS;function three_module_defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function _typeof(obj){if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function three_module_classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(call&&(_typeof(call)==="object"||typeof call==="function")){return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self){if(self===void 0){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _getPrototypeOf(o){_getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function _getPrototypeOf(o){return o.__proto__||Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function");}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,writable:true,configurable:true}});if(superClass)_setPrototypeOf(subClass,superClass);}function _setPrototypeOf(o,p){_setPrototypeOf=Object.setPrototypeOf||function _setPrototypeOf(o,p){o.__proto__=p;return o;};return _setPrototypeOf(o,p);}// Polyfills
+;// CONCATENATED MODULE: ./src/three.module.js
+var _ENCODINGS;function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function three_module_defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function three_module_classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function");}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,writable:true,configurable:true}});if(superClass)_setPrototypeOf(subClass,superClass);}function _setPrototypeOf(o,p){_setPrototypeOf=Object.setPrototypeOf||function _setPrototypeOf(o,p){o.__proto__=p;return o;};return _setPrototypeOf(o,p);}function _createSuper(Derived){var hasNativeReflectConstruct=_isNativeReflectConstruct();return function _createSuperInternal(){var Super=_getPrototypeOf(Derived),result;if(hasNativeReflectConstruct){var NewTarget=_getPrototypeOf(this).constructor;result=Reflect.construct(Super,arguments,NewTarget);}else{result=Super.apply(this,arguments);}return _possibleConstructorReturn(this,result);};}function _possibleConstructorReturn(self,call){if(call&&(_typeof(call)==="object"||typeof call==="function")){return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self){if(self===void 0){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct(){if(typeof Reflect==="undefined"||!Reflect.construct)return false;if(Reflect.construct.sham)return false;if(typeof Proxy==="function")return true;try{Date.prototype.toString.call(Reflect.construct(Date,[],function(){}));return true;}catch(e){return false;}}function _getPrototypeOf(o){_getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function _getPrototypeOf(o){return o.__proto__||Object.getPrototypeOf(o);};return _getPrototypeOf(o);}// Polyfills
 if(Number.EPSILON===undefined){Number.EPSILON=Math.pow(2,-52);}if(Number.isInteger===undefined){// Missing in IE
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger
 Number.isInteger=function(value){return typeof value==='number'&&isFinite(value)&&Math.floor(value)===value;};}//
@@ -67089,7 +67091,7 @@ var array=listenerArray.slice(0);for(var i=0,l=array.length;i<l;i++){array[i].ca
  * @author mrdoob / http://mrdoob.com/
  * @author WestLangley / http://github.com/WestLangley
  * @author thezwap
- */var three_module_lut=[];for(var three_module_i=0;three_module_i<256;three_module_i++){three_module_lut[three_module_i]=(three_module_i<16?'0':'')+three_module_i.toString(16);}var three_module_MathUtils={DEG2RAD:Math.PI/180,RAD2DEG:180/Math.PI,generateUUID:function generateUUID(){// http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript/21963136#21963136
+ */var three_module_lut=[];for(var i=0;i<256;i++){three_module_lut[i]=(i<16?'0':'')+i.toString(16);}var three_module_MathUtils={DEG2RAD:Math.PI/180,RAD2DEG:180/Math.PI,generateUUID:function generateUUID(){// http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript/21963136#21963136
 var d0=Math.random()*0xffffffff|0;var d1=Math.random()*0xffffffff|0;var d2=Math.random()*0xffffffff|0;var d3=Math.random()*0xffffffff|0;var uuid=three_module_lut[d0&0xff]+three_module_lut[d0>>8&0xff]+three_module_lut[d0>>16&0xff]+three_module_lut[d0>>24&0xff]+'-'+three_module_lut[d1&0xff]+three_module_lut[d1>>8&0xff]+'-'+three_module_lut[d1>>16&0x0f|0x40]+three_module_lut[d1>>24&0xff]+'-'+three_module_lut[d2&0x3f|0x80]+three_module_lut[d2>>8&0xff]+'-'+three_module_lut[d2>>16&0xff]+three_module_lut[d2>>24&0xff]+three_module_lut[d3&0xff]+three_module_lut[d3>>8&0xff]+three_module_lut[d3>>16&0xff]+three_module_lut[d3>>24&0xff];// .toUpperCase() here flattens concatenated strings to save heap memory space.
 return uuid.toUpperCase();},clamp:function clamp(value,min,max){return Math.max(min,Math.min(max,value));},// compute euclidian modulo of m % n
 // https://en.wikipedia.org/wiki/Modulo_operation
@@ -67643,8 +67645,8 @@ this.elementsNeedUpdate=source.elementsNeedUpdate;this.verticesNeedUpdate=source
  * @author mrdoob / http://mrdoob.com/
  * @author Mugen87 / https://github.com/Mugen87
  */ // BoxGeometry
-var three_module_BoxGeometry=/*#__PURE__*/function(_Geometry){_inherits(BoxGeometry,_Geometry);function BoxGeometry(width,height,depth,widthSegments,heightSegments,depthSegments){var _this2;three_module_classCallCheck(this,BoxGeometry);_this2=_possibleConstructorReturn(this,_getPrototypeOf(BoxGeometry).call(this));_this2.type='BoxGeometry';_this2.parameters={width:width,height:height,depth:depth,widthSegments:widthSegments,heightSegments:heightSegments,depthSegments:depthSegments};_this2.fromBufferGeometry(new three_module_BoxBufferGeometry(width,height,depth,widthSegments,heightSegments,depthSegments));_this2.mergeVertices();return _this2;}return BoxGeometry;}(three_module_Geometry);// BoxBufferGeometry
-var three_module_BoxBufferGeometry=/*#__PURE__*/function(_BufferGeometry){_inherits(BoxBufferGeometry,_BufferGeometry);function BoxBufferGeometry(width,height,depth,widthSegments,heightSegments,depthSegments){var _this3;three_module_classCallCheck(this,BoxBufferGeometry);_this3=_possibleConstructorReturn(this,_getPrototypeOf(BoxBufferGeometry).call(this));_this3.type='BoxBufferGeometry';_this3.parameters={width:width,height:height,depth:depth,widthSegments:widthSegments,heightSegments:heightSegments,depthSegments:depthSegments};var scope=_assertThisInitialized(_this3);width=width||1;height=height||1;depth=depth||1;// segments
+var three_module_BoxGeometry=/*#__PURE__*/function(_Geometry){_inherits(BoxGeometry,_Geometry);var _super=_createSuper(BoxGeometry);function BoxGeometry(width,height,depth,widthSegments,heightSegments,depthSegments){var _this2;three_module_classCallCheck(this,BoxGeometry);_this2=_super.call(this);_this2.type='BoxGeometry';_this2.parameters={width:width,height:height,depth:depth,widthSegments:widthSegments,heightSegments:heightSegments,depthSegments:depthSegments};_this2.fromBufferGeometry(new three_module_BoxBufferGeometry(width,height,depth,widthSegments,heightSegments,depthSegments));_this2.mergeVertices();return _this2;}return BoxGeometry;}(three_module_Geometry);// BoxBufferGeometry
+var three_module_BoxBufferGeometry=/*#__PURE__*/function(_BufferGeometry){_inherits(BoxBufferGeometry,_BufferGeometry);var _super2=_createSuper(BoxBufferGeometry);function BoxBufferGeometry(width,height,depth,widthSegments,heightSegments,depthSegments){var _this3;three_module_classCallCheck(this,BoxBufferGeometry);_this3=_super2.call(this);_this3.type='BoxBufferGeometry';_this3.parameters={width:width,height:height,depth:depth,widthSegments:widthSegments,heightSegments:heightSegments,depthSegments:depthSegments};var scope=_assertThisInitialized(_this3);width=width||1;height=height||1;depth=depth||1;// segments
 widthSegments=Math.floor(widthSegments)||1;heightSegments=Math.floor(heightSegments)||1;depthSegments=Math.floor(depthSegments)||1;// buffers
 var indices=[];var vertices=[];var normals=[];var uvs=[];// helper variables
 var numberOfVertices=0;var groupStart=0;// build each side of the box geometry
@@ -67788,7 +67790,7 @@ rectAreaLights:{value:[],properties:{color:{},position:{},width:{},height:{}}}},
  */function three_module_WebGLAttributes(gl,capabilities){var isWebGL2=capabilities.isWebGL2;var buffers=new WeakMap();function createBuffer(attribute,bufferType){var array=attribute.array;var usage=attribute.usage;var buffer=gl.createBuffer();gl.bindBuffer(bufferType,buffer);gl.bufferData(bufferType,array,usage);attribute.onUploadCallback();var type=5126;if(array instanceof Float32Array){type=5126;}else if(array instanceof Float64Array){console.warn('THREE.WebGLAttributes: Unsupported data buffer format: Float64Array.');}else if(array instanceof Uint16Array){type=5123;}else if(array instanceof Int16Array){type=5122;}else if(array instanceof Uint32Array){type=5125;}else if(array instanceof Int32Array){type=5124;}else if(array instanceof Int8Array){type=5120;}else if(array instanceof Uint8Array){type=5121;}return{buffer:buffer,type:type,bytesPerElement:array.BYTES_PER_ELEMENT,version:attribute.version};}function updateBuffer(buffer,attribute,bufferType){var array=attribute.array;var updateRange=attribute.updateRange;gl.bindBuffer(bufferType,buffer);if(updateRange.count===-1){// Not using update ranges
 gl.bufferSubData(bufferType,0,array);}else{if(isWebGL2){gl.bufferSubData(bufferType,updateRange.offset*array.BYTES_PER_ELEMENT,array,updateRange.offset,updateRange.count);}else{gl.bufferSubData(bufferType,updateRange.offset*array.BYTES_PER_ELEMENT,array.subarray(updateRange.offset,updateRange.offset+updateRange.count));}updateRange.count=-1;// reset range
 }}//
-function get(attribute){if(attribute.isInterleavedBufferAttribute)attribute=attribute.data;return buffers.get(attribute);}function remove(attribute){if(attribute.isInterleavedBufferAttribute)attribute=attribute.data;var data=buffers.get(attribute);if(data){gl.deleteBuffer(data.buffer);buffers.delete(attribute);}}function update(attribute,bufferType){if(attribute.isInterleavedBufferAttribute)attribute=attribute.data;var data=buffers.get(attribute);if(data===undefined){buffers.set(attribute,createBuffer(attribute,bufferType));}else if(data.version<attribute.version){updateBuffer(data.buffer,attribute,bufferType);data.version=attribute.version;}}return{get:get,remove:remove,update:update};}/**
+function get(attribute){if(attribute.isInterleavedBufferAttribute)attribute=attribute.data;return buffers.get(attribute);}function remove(attribute){if(attribute.isInterleavedBufferAttribute)attribute=attribute.data;var data=buffers.get(attribute);if(data){gl.deleteBuffer(data.buffer);buffers["delete"](attribute);}}function update(attribute,bufferType){if(attribute.isInterleavedBufferAttribute)attribute=attribute.data;var data=buffers.get(attribute);if(data===undefined){buffers.set(attribute,createBuffer(attribute,bufferType));}else if(data.version<attribute.version){updateBuffer(data.buffer,attribute,bufferType);data.version=attribute.version;}}return{get:get,remove:remove,update:update};}/**
  * @author mrdoob / http://mrdoob.com/
  * @author Mugen87 / https://github.com/Mugen87
  */ // PlaneGeometry
@@ -67802,8 +67804,8 @@ this.setIndex(indices);this.setAttribute('position',new three_module_Float32Buff
  * @author alteredq / http://alteredqualia.com/
  * @author mrdoob / http://mrdoob.com/
  * @author mikael emtinger / http://gomo.se/
- */var three_module_ShaderLib={basic:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.fog]),vertexShader:three_module_ShaderChunk.meshbasic_vert,fragmentShader:three_module_ShaderChunk.meshbasic_frag},lambert:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)}}]),vertexShader:three_module_ShaderChunk.meshlambert_vert,fragmentShader:three_module_ShaderChunk.meshlambert_frag},phong:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)},specular:{value:new three_module_Color(0x111111)},shininess:{value:30}}]),vertexShader:three_module_ShaderChunk.meshphong_vert,fragmentShader:three_module_ShaderChunk.meshphong_frag},standard:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.roughnessmap,three_module_UniformsLib.metalnessmap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)},roughness:{value:1.0},metalness:{value:0.0},envMapIntensity:{value:1// temporary
-}}]),vertexShader:three_module_ShaderChunk.meshphysical_vert,fragmentShader:three_module_ShaderChunk.meshphysical_frag},toon:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.gradientmap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)},specular:{value:new three_module_Color(0x111111)},shininess:{value:30}}]),vertexShader:three_module_ShaderChunk.meshtoon_vert,fragmentShader:three_module_ShaderChunk.meshtoon_frag},matcap:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.fog,{matcap:{value:null}}]),vertexShader:three_module_ShaderChunk.meshmatcap_vert,fragmentShader:three_module_ShaderChunk.meshmatcap_frag},points:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.points,three_module_UniformsLib.fog]),vertexShader:three_module_ShaderChunk.points_vert,fragmentShader:three_module_ShaderChunk.points_frag},dashed:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.fog,{scale:{value:1},dashSize:{value:1},totalSize:{value:2}}]),vertexShader:three_module_ShaderChunk.linedashed_vert,fragmentShader:three_module_ShaderChunk.linedashed_frag},depth:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.displacementmap]),vertexShader:three_module_ShaderChunk.depth_vert,fragmentShader:three_module_ShaderChunk.depth_frag},normal:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,{opacity:{value:1.0}}]),vertexShader:three_module_ShaderChunk.normal_vert,fragmentShader:three_module_ShaderChunk.normal_frag},sprite:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.sprite,three_module_UniformsLib.fog]),vertexShader:three_module_ShaderChunk.sprite_vert,fragmentShader:three_module_ShaderChunk.sprite_frag},background:{uniforms:{uvTransform:{value:new three_module_Matrix3()},t2D:{value:null}},vertexShader:three_module_ShaderChunk.background_vert,fragmentShader:three_module_ShaderChunk.background_frag},/* -------------------------------------------------------------------------
+ */var three_module_ShaderLib={basic:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.fog]),vertexShader:three_module_ShaderChunk.meshbasic_vert,fragmentShader:three_module_ShaderChunk.meshbasic_frag},lambert:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)}}]),vertexShader:three_module_ShaderChunk.meshlambert_vert,fragmentShader:three_module_ShaderChunk.meshlambert_frag},phong:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)},specular:{value:new three_module_Color(0x111111)},shininess:{value:30}}]),vertexShader:three_module_ShaderChunk.meshphong_vert,fragmentShader:three_module_ShaderChunk.meshphong_frag},standard:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.envmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.roughnessmap,three_module_UniformsLib.metalnessmap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)},roughness:{value:1.0},metalness:{value:0.0},envMapIntensity:{value:1}// temporary
+}]),vertexShader:three_module_ShaderChunk.meshphysical_vert,fragmentShader:three_module_ShaderChunk.meshphysical_frag},toon:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.specularmap,three_module_UniformsLib.aomap,three_module_UniformsLib.lightmap,three_module_UniformsLib.emissivemap,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.gradientmap,three_module_UniformsLib.fog,three_module_UniformsLib.lights,{emissive:{value:new three_module_Color(0x000000)},specular:{value:new three_module_Color(0x111111)},shininess:{value:30}}]),vertexShader:three_module_ShaderChunk.meshtoon_vert,fragmentShader:three_module_ShaderChunk.meshtoon_frag},matcap:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,three_module_UniformsLib.fog,{matcap:{value:null}}]),vertexShader:three_module_ShaderChunk.meshmatcap_vert,fragmentShader:three_module_ShaderChunk.meshmatcap_frag},points:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.points,three_module_UniformsLib.fog]),vertexShader:three_module_ShaderChunk.points_vert,fragmentShader:three_module_ShaderChunk.points_frag},dashed:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.fog,{scale:{value:1},dashSize:{value:1},totalSize:{value:2}}]),vertexShader:three_module_ShaderChunk.linedashed_vert,fragmentShader:three_module_ShaderChunk.linedashed_frag},depth:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.displacementmap]),vertexShader:three_module_ShaderChunk.depth_vert,fragmentShader:three_module_ShaderChunk.depth_frag},normal:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.bumpmap,three_module_UniformsLib.normalmap,three_module_UniformsLib.displacementmap,{opacity:{value:1.0}}]),vertexShader:three_module_ShaderChunk.normal_vert,fragmentShader:three_module_ShaderChunk.normal_frag},sprite:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.sprite,three_module_UniformsLib.fog]),vertexShader:three_module_ShaderChunk.sprite_vert,fragmentShader:three_module_ShaderChunk.sprite_frag},background:{uniforms:{uvTransform:{value:new three_module_Matrix3()},t2D:{value:null}},vertexShader:three_module_ShaderChunk.background_vert,fragmentShader:three_module_ShaderChunk.background_frag},/* -------------------------------------------------------------------------
 	//	Cube map shader
 	 ------------------------------------------------------------------------- */cube:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.envmap,{opacity:{value:1.0}}]),vertexShader:three_module_ShaderChunk.cube_vert,fragmentShader:three_module_ShaderChunk.cube_frag},equirect:{uniforms:{tEquirect:{value:null}},vertexShader:three_module_ShaderChunk.equirect_vert,fragmentShader:three_module_ShaderChunk.equirect_frag},distanceRGBA:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.common,three_module_UniformsLib.displacementmap,{referencePosition:{value:new three_module_Vector3()},nearDistance:{value:1},farDistance:{value:1000}}]),vertexShader:three_module_ShaderChunk.distanceRGBA_vert,fragmentShader:three_module_ShaderChunk.distanceRGBA_frag},shadow:{uniforms:three_module_mergeUniforms([three_module_UniformsLib.lights,three_module_UniformsLib.fog,{color:{value:new three_module_Color(0x00000)},opacity:{value:1.0}}]),vertexShader:three_module_ShaderChunk.shadow_vert,fragmentShader:three_module_ShaderChunk.shadow_frag}};three_module_ShaderLib.physical={uniforms:three_module_mergeUniforms([three_module_ShaderLib.standard.uniforms,{clearcoat:{value:0},clearcoatMap:{value:null},clearcoatRoughness:{value:0},clearcoatRoughnessMap:{value:null},clearcoatNormalScale:{value:new three_module_Vector2(1,1)},clearcoatNormalMap:{value:null},sheen:{value:new three_module_Color(0x000000)},transparency:{value:0}}]),vertexShader:three_module_ShaderChunk.meshphysical_vert,fragmentShader:three_module_ShaderChunk.meshphysical_frag};/**
  * @author mrdoob / http://mrdoob.com/
@@ -67838,7 +67840,7 @@ dstArray=projectPlanes(planes,camera,lGlobal,fromCache);for(var _i99=0;_i99!==lG
  * @author mrdoob / http://mrdoob.com/
  */function three_module_WebGLExtensions(gl){var extensions={};return{get:function get(name){if(extensions[name]!==undefined){return extensions[name];}var extension;switch(name){case'WEBGL_depth_texture':extension=gl.getExtension('WEBGL_depth_texture')||gl.getExtension('MOZ_WEBGL_depth_texture')||gl.getExtension('WEBKIT_WEBGL_depth_texture');break;case'EXT_texture_filter_anisotropic':extension=gl.getExtension('EXT_texture_filter_anisotropic')||gl.getExtension('MOZ_EXT_texture_filter_anisotropic')||gl.getExtension('WEBKIT_EXT_texture_filter_anisotropic');break;case'WEBGL_compressed_texture_s3tc':extension=gl.getExtension('WEBGL_compressed_texture_s3tc')||gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc')||gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc');break;case'WEBGL_compressed_texture_pvrtc':extension=gl.getExtension('WEBGL_compressed_texture_pvrtc')||gl.getExtension('WEBKIT_WEBGL_compressed_texture_pvrtc');break;default:extension=gl.getExtension(name);}if(extension===null){console.warn('THREE.WebGLRenderer: '+name+' extension not supported.');}extensions[name]=extension;return extension;}};}/**
  * @author mrdoob / http://mrdoob.com/
- */function three_module_WebGLGeometries(gl,attributes,info,bindingStates){var geometries=new WeakMap();var wireframeAttributes=new WeakMap();function onGeometryDispose(event){var geometry=event.target;var buffergeometry=geometries.get(geometry);if(buffergeometry.index!==null){attributes.remove(buffergeometry.index);}for(var name in buffergeometry.attributes){attributes.remove(buffergeometry.attributes[name]);}geometry.removeEventListener('dispose',onGeometryDispose);geometries.delete(geometry);var attribute=wireframeAttributes.get(buffergeometry);if(attribute){attributes.remove(attribute);wireframeAttributes.delete(buffergeometry);}bindingStates.releaseStatesOfGeometry(geometry);//
+ */function three_module_WebGLGeometries(gl,attributes,info,bindingStates){var geometries=new WeakMap();var wireframeAttributes=new WeakMap();function onGeometryDispose(event){var geometry=event.target;var buffergeometry=geometries.get(geometry);if(buffergeometry.index!==null){attributes.remove(buffergeometry.index);}for(var name in buffergeometry.attributes){attributes.remove(buffergeometry.attributes[name]);}geometry.removeEventListener('dispose',onGeometryDispose);geometries["delete"](geometry);var attribute=wireframeAttributes.get(buffergeometry);if(attribute){attributes.remove(attribute);wireframeAttributes["delete"](buffergeometry);}bindingStates.releaseStatesOfGeometry(geometry);//
 info.memory.geometries--;}function get(object,geometry){var buffergeometry=geometries.get(geometry);if(buffergeometry)return buffergeometry;geometry.addEventListener('dispose',onGeometryDispose);if(geometry.isBufferGeometry){buffergeometry=geometry;}else if(geometry.isGeometry){if(geometry._bufferGeometry===undefined){geometry._bufferGeometry=new three_module_BufferGeometry().setFromObject(object);}buffergeometry=geometry._bufferGeometry;}geometries.set(geometry,buffergeometry);info.memory.geometries++;return buffergeometry;}function update(geometry){var geometryAttributes=geometry.attributes;// Updating index buffer in VAO now. See WebGLBindingStates.
 for(var name in geometryAttributes){attributes.update(geometryAttributes[name],34962);}// morph targets
 var morphAttributes=geometry.morphAttributes;for(var _name3 in morphAttributes){var array=morphAttributes[_name3];for(var _i101=0,l=array.length;_i101<l;_i101++){attributes.update(array[_i101],34962);}}}function updateWireframeAttribute(geometry){var indices=[];var geometryIndex=geometry.index;var geometryPosition=geometry.attributes.position;var version=0;if(geometryIndex!==null){var array=geometryIndex.array;version=geometryIndex.version;for(var _i102=0,l=array.length;_i102<l;_i102+=3){var a=array[_i102+0];var b=array[_i102+1];var c=array[_i102+2];indices.push(a,b,b,c,c,a);}}else{var _array=geometryPosition.array;version=geometryPosition.version;for(var _i103=0,_l4=_array.length/3-1;_i103<_l4;_i103+=3){var _a4=_i103+0;var _b4=_i103+1;var _c4=_i103+2;indices.push(_a4,_b4,_b4,_c4,_c4,_a4);}}var attribute=new(three_module_arrayMax(indices)>65535?three_module_Uint32BufferAttribute:three_module_Uint16BufferAttribute)(indices,1);attribute.version=version;// Updating index buffer in VAO now. See WebGLBindingStates
@@ -68054,10 +68056,10 @@ var _i123=programs.indexOf(program);programs[_i123]=programs[programs.length-1];
 program.destroy();}}return{getParameters:getParameters,getProgramCacheKey:getProgramCacheKey,acquireProgram:acquireProgram,releaseProgram:releaseProgram,// Exposed for resource monitoring & error feedback via renderer.info:
 programs:programs};}/**
  * @author fordacious / fordacious.github.io
- */function three_module_WebGLProperties(){var properties=new WeakMap();function get(object){var map=properties.get(object);if(map===undefined){map={};properties.set(object,map);}return map;}function remove(object){properties.delete(object);}function update(object,key,value){properties.get(object)[key]=value;}function dispose(){properties=new WeakMap();}return{get:get,remove:remove,update:update,dispose:dispose};}/**
+ */function three_module_WebGLProperties(){var properties=new WeakMap();function get(object){var map=properties.get(object);if(map===undefined){map={};properties.set(object,map);}return map;}function remove(object){properties["delete"](object);}function update(object,key,value){properties.get(object)[key]=value;}function dispose(){properties=new WeakMap();}return{get:get,remove:remove,update:update,dispose:dispose};}/**
  * @author mrdoob / http://mrdoob.com/
  */function three_module_painterSortStable(a,b){if(a.groupOrder!==b.groupOrder){return a.groupOrder-b.groupOrder;}else if(a.renderOrder!==b.renderOrder){return a.renderOrder-b.renderOrder;}else if(a.program!==b.program){return a.program.id-b.program.id;}else if(a.material.id!==b.material.id){return a.material.id-b.material.id;}else if(a.z!==b.z){return a.z-b.z;}else{return a.id-b.id;}}function three_module_reversePainterSortStable(a,b){if(a.groupOrder!==b.groupOrder){return a.groupOrder-b.groupOrder;}else if(a.renderOrder!==b.renderOrder){return a.renderOrder-b.renderOrder;}else if(a.z!==b.z){return b.z-a.z;}else{return a.id-b.id;}}function three_module_WebGLRenderList(){var renderItems=[];var renderItemsIndex=0;var opaque=[];var transparent=[];var defaultProgram={id:-1};function init(){renderItemsIndex=0;opaque.length=0;transparent.length=0;}function getNextRenderItem(object,geometry,material,groupOrder,z,group){var renderItem=renderItems[renderItemsIndex];if(renderItem===undefined){renderItem={id:object.id,object:object,geometry:geometry,material:material,program:material.program||defaultProgram,groupOrder:groupOrder,renderOrder:object.renderOrder,z:z,group:group};renderItems[renderItemsIndex]=renderItem;}else{renderItem.id=object.id;renderItem.object=object;renderItem.geometry=geometry;renderItem.material=material;renderItem.program=material.program||defaultProgram;renderItem.groupOrder=groupOrder;renderItem.renderOrder=object.renderOrder;renderItem.z=z;renderItem.group=group;}renderItemsIndex++;return renderItem;}function push(object,geometry,material,groupOrder,z,group){var renderItem=getNextRenderItem(object,geometry,material,groupOrder,z,group);(material.transparent===true?transparent:opaque).push(renderItem);}function unshift(object,geometry,material,groupOrder,z,group){var renderItem=getNextRenderItem(object,geometry,material,groupOrder,z,group);(material.transparent===true?transparent:opaque).unshift(renderItem);}function sort(customOpaqueSort,customTransparentSort){if(opaque.length>1)opaque.sort(customOpaqueSort||three_module_painterSortStable);if(transparent.length>1)transparent.sort(customTransparentSort||three_module_reversePainterSortStable);}function finish(){// Clear references from inactive renderItems in the list
-for(var _i124=renderItemsIndex,il=renderItems.length;_i124<il;_i124++){var renderItem=renderItems[_i124];if(renderItem.id===null)break;renderItem.id=null;renderItem.object=null;renderItem.geometry=null;renderItem.material=null;renderItem.program=null;renderItem.group=null;}}return{opaque:opaque,transparent:transparent,init:init,push:push,unshift:unshift,finish:finish,sort:sort};}function three_module_WebGLRenderLists(){var lists=new WeakMap();function onSceneDispose(event){var scene=event.target;scene.removeEventListener('dispose',onSceneDispose);lists.delete(scene);}function get(scene,camera){var cameras=lists.get(scene);var list;if(cameras===undefined){list=new three_module_WebGLRenderList();lists.set(scene,new WeakMap());lists.get(scene).set(camera,list);scene.addEventListener('dispose',onSceneDispose);}else{list=cameras.get(camera);if(list===undefined){list=new three_module_WebGLRenderList();cameras.set(camera,list);}}return list;}function dispose(){lists=new WeakMap();}return{get:get,dispose:dispose};}/**
+for(var _i124=renderItemsIndex,il=renderItems.length;_i124<il;_i124++){var renderItem=renderItems[_i124];if(renderItem.id===null)break;renderItem.id=null;renderItem.object=null;renderItem.geometry=null;renderItem.material=null;renderItem.program=null;renderItem.group=null;}}return{opaque:opaque,transparent:transparent,init:init,push:push,unshift:unshift,finish:finish,sort:sort};}function three_module_WebGLRenderLists(){var lists=new WeakMap();function onSceneDispose(event){var scene=event.target;scene.removeEventListener('dispose',onSceneDispose);lists["delete"](scene);}function get(scene,camera){var cameras=lists.get(scene);var list;if(cameras===undefined){list=new three_module_WebGLRenderList();lists.set(scene,new WeakMap());lists.get(scene).set(camera,list);scene.addEventListener('dispose',onSceneDispose);}else{list=cameras.get(camera);if(list===undefined){list=new three_module_WebGLRenderList();cameras.set(camera,list);}}return list;}function dispose(){lists=new WeakMap();}return{get:get,dispose:dispose};}/**
  * @author mrdoob / http://mrdoob.com/
  */function three_module_UniformsCache(){var lights={};return{get:function get(light){if(lights[light.id]!==undefined){return lights[light.id];}var uniforms;switch(light.type){case'DirectionalLight':uniforms={direction:new three_module_Vector3(),color:new three_module_Color()};break;case'SpotLight':uniforms={position:new three_module_Vector3(),direction:new three_module_Vector3(),color:new three_module_Color(),distance:0,coneCos:0,penumbraCos:0,decay:0};break;case'PointLight':uniforms={position:new three_module_Vector3(),color:new three_module_Color(),distance:0,decay:0};break;case'HemisphereLight':uniforms={direction:new three_module_Vector3(),skyColor:new three_module_Color(),groundColor:new three_module_Color()};break;case'RectAreaLight':uniforms={color:new three_module_Color(),position:new three_module_Vector3(),halfWidth:new three_module_Vector3(),halfHeight:new three_module_Vector3()};break;}lights[light.id]=uniforms;return uniforms;}};}function three_module_ShadowUniformsCache(){var lights={};return{get:function get(light){if(lights[light.id]!==undefined){return lights[light.id];}var uniforms;switch(light.type){case'DirectionalLight':uniforms={shadowBias:0,shadowNormalOffset:0,shadowRadius:1,shadowMapSize:new three_module_Vector2()};break;case'SpotLight':uniforms={shadowBias:0,shadowNormalOffset:0,shadowRadius:1,shadowMapSize:new three_module_Vector2()};break;case'PointLight':uniforms={shadowBias:0,shadowNormalOffset:0,shadowRadius:1,shadowMapSize:new three_module_Vector2(),shadowCameraNear:1,shadowCameraFar:1000};break;// TODO (abelnation): set RectAreaLight shadow uniforms
 }lights[light.id]=uniforms;return uniforms;}};}var three_module_nextVersion=0;function three_module_shadowCastingLightsFirst(lightA,lightB){return(lightB.castShadow?1:0)-(lightA.castShadow?1:0);}function three_module_WebGLLights(){var cache=new three_module_UniformsCache();var shadowCache=three_module_ShadowUniformsCache();var state={version:0,hash:{directionalLength:-1,pointLength:-1,spotLength:-1,rectAreaLength:-1,hemiLength:-1,numDirectionalShadows:-1,numPointShadows:-1,numSpotShadows:-1},ambient:[0,0,0],probe:[],directional:[],directionalShadow:[],directionalShadowMap:[],directionalShadowMatrix:[],spot:[],spotShadow:[],spotShadowMap:[],spotShadowMatrix:[],rectArea:[],point:[],pointShadow:[],pointShadowMap:[],pointShadowMatrix:[],hemi:[]};for(var _i125=0;_i125<9;_i125++){state.probe.push(new three_module_Vector3());}var vector3=new three_module_Vector3();var matrix4=new three_module_Matrix4();var matrix42=new three_module_Matrix4();function setup(lights,shadows,camera){var r=0,g=0,b=0;for(var _i126=0;_i126<9;_i126++){state.probe[_i126].set(0,0,0);}var directionalLength=0;var pointLength=0;var spotLength=0;var rectAreaLength=0;var hemiLength=0;var numDirectionalShadows=0;var numPointShadows=0;var numSpotShadows=0;var viewMatrix=camera.matrixWorldInverse;lights.sort(three_module_shadowCastingLightsFirst);for(var _i127=0,l=lights.length;_i127<l;_i127++){var light=lights[_i127];var color=light.color;var intensity=light.intensity;var distance=light.distance;var shadowMap=light.shadow&&light.shadow.map?light.shadow.map.texture:null;if(light.isAmbientLight){r+=color.r*intensity;g+=color.g*intensity;b+=color.b*intensity;}else if(light.isLightProbe){for(var j=0;j<9;j++){state.probe[j].addScaledVector(light.sh.coefficients[j],intensity);}}else if(light.isDirectionalLight){var uniforms=cache.get(light);uniforms.color.copy(light.color).multiplyScalar(light.intensity);uniforms.direction.setFromMatrixPosition(light.matrixWorld);vector3.setFromMatrixPosition(light.target.matrixWorld);uniforms.direction.sub(vector3);uniforms.direction.transformDirection(viewMatrix);if(light.castShadow){var shadow=light.shadow;var shadowUniforms=shadowCache.get(light);shadowUniforms.shadowBias=shadow.bias;shadowUniforms.shadowNormalOffset=shadow.normalOffset;shadowUniforms.shadowRadius=shadow.radius;shadowUniforms.shadowMapSize=shadow.mapSize;state.directionalShadow[directionalLength]=shadowUniforms;state.directionalShadowMap[directionalLength]=shadowMap;state.directionalShadowMatrix[directionalLength]=light.shadow.matrix;numDirectionalShadows++;}state.directional[directionalLength]=uniforms;directionalLength++;}else if(light.isSpotLight){var _uniforms=cache.get(light);_uniforms.position.setFromMatrixPosition(light.matrixWorld);_uniforms.position.applyMatrix4(viewMatrix);_uniforms.color.copy(color).multiplyScalar(intensity);_uniforms.distance=distance;_uniforms.direction.setFromMatrixPosition(light.matrixWorld);vector3.setFromMatrixPosition(light.target.matrixWorld);_uniforms.direction.sub(vector3);_uniforms.direction.transformDirection(viewMatrix);_uniforms.coneCos=Math.cos(light.angle);_uniforms.penumbraCos=Math.cos(light.angle*(1-light.penumbra));_uniforms.decay=light.decay;if(light.castShadow){var _shadow=light.shadow;var _shadowUniforms=shadowCache.get(light);_shadowUniforms.shadowBias=_shadow.bias;_shadowUniforms.shadowNormalOffset=_shadow.normalOffset;_shadowUniforms.shadowRadius=_shadow.radius;_shadowUniforms.shadowMapSize=_shadow.mapSize;state.spotShadow[spotLength]=_shadowUniforms;state.spotShadowMap[spotLength]=shadowMap;state.spotShadowMatrix[spotLength]=light.shadow.matrix;numSpotShadows++;}state.spot[spotLength]=_uniforms;spotLength++;}else if(light.isRectAreaLight){var _uniforms2=cache.get(light);// (a) intensity is the total visible light emitted
@@ -68068,7 +68070,7 @@ matrix42.identity();matrix4.copy(light.matrixWorld);matrix4.premultiply(viewMatr
 // uniforms.distance = distance;
 state.rectArea[rectAreaLength]=_uniforms2;rectAreaLength++;}else if(light.isPointLight){var _uniforms3=cache.get(light);_uniforms3.position.setFromMatrixPosition(light.matrixWorld);_uniforms3.position.applyMatrix4(viewMatrix);_uniforms3.color.copy(light.color).multiplyScalar(light.intensity);_uniforms3.distance=light.distance;_uniforms3.decay=light.decay;if(light.castShadow){var _shadow2=light.shadow;var _shadowUniforms2=shadowCache.get(light);_shadowUniforms2.shadowBias=_shadow2.bias;_shadowUniforms2.shadowNormalOffset=_shadow2.normalOffset;_shadowUniforms2.shadowRadius=_shadow2.radius;_shadowUniforms2.shadowMapSize=_shadow2.mapSize;_shadowUniforms2.shadowCameraNear=_shadow2.camera.near;_shadowUniforms2.shadowCameraFar=_shadow2.camera.far;state.pointShadow[pointLength]=_shadowUniforms2;state.pointShadowMap[pointLength]=shadowMap;state.pointShadowMatrix[pointLength]=light.shadow.matrix;numPointShadows++;}state.point[pointLength]=_uniforms3;pointLength++;}else if(light.isHemisphereLight){var _uniforms4=cache.get(light);_uniforms4.direction.setFromMatrixPosition(light.matrixWorld);_uniforms4.direction.transformDirection(viewMatrix);_uniforms4.direction.normalize();_uniforms4.skyColor.copy(light.color).multiplyScalar(intensity);_uniforms4.groundColor.copy(light.groundColor).multiplyScalar(intensity);state.hemi[hemiLength]=_uniforms4;hemiLength++;}}state.ambient[0]=r;state.ambient[1]=g;state.ambient[2]=b;var hash=state.hash;if(hash.directionalLength!==directionalLength||hash.pointLength!==pointLength||hash.spotLength!==spotLength||hash.rectAreaLength!==rectAreaLength||hash.hemiLength!==hemiLength||hash.numDirectionalShadows!==numDirectionalShadows||hash.numPointShadows!==numPointShadows||hash.numSpotShadows!==numSpotShadows){state.directional.length=directionalLength;state.spot.length=spotLength;state.rectArea.length=rectAreaLength;state.point.length=pointLength;state.hemi.length=hemiLength;state.directionalShadow.length=numDirectionalShadows;state.directionalShadowMap.length=numDirectionalShadows;state.pointShadow.length=numPointShadows;state.pointShadowMap.length=numPointShadows;state.spotShadow.length=numSpotShadows;state.spotShadowMap.length=numSpotShadows;state.directionalShadowMatrix.length=numDirectionalShadows;state.pointShadowMatrix.length=numPointShadows;state.spotShadowMatrix.length=numSpotShadows;hash.directionalLength=directionalLength;hash.pointLength=pointLength;hash.spotLength=spotLength;hash.rectAreaLength=rectAreaLength;hash.hemiLength=hemiLength;hash.numDirectionalShadows=numDirectionalShadows;hash.numPointShadows=numPointShadows;hash.numSpotShadows=numSpotShadows;state.version=three_module_nextVersion++;}}return{setup:setup,state:state};}/**
  * @author Mugen87 / https://github.com/Mugen87
- */function three_module_WebGLRenderState(){var lights=new three_module_WebGLLights();var lightsArray=[];var shadowsArray=[];function init(){lightsArray.length=0;shadowsArray.length=0;}function pushLight(light){lightsArray.push(light);}function pushShadow(shadowLight){shadowsArray.push(shadowLight);}function setupLights(camera){lights.setup(lightsArray,shadowsArray,camera);}var state={lightsArray:lightsArray,shadowsArray:shadowsArray,lights:lights};return{init:init,state:state,setupLights:setupLights,pushLight:pushLight,pushShadow:pushShadow};}function three_module_WebGLRenderStates(){var renderStates=new WeakMap();function onSceneDispose(event){var scene=event.target;scene.removeEventListener('dispose',onSceneDispose);renderStates.delete(scene);}function get(scene,camera){var renderState;if(renderStates.has(scene)===false){renderState=new three_module_WebGLRenderState();renderStates.set(scene,new WeakMap());renderStates.get(scene).set(camera,renderState);scene.addEventListener('dispose',onSceneDispose);}else{if(renderStates.get(scene).has(camera)===false){renderState=new three_module_WebGLRenderState();renderStates.get(scene).set(camera,renderState);}else{renderState=renderStates.get(scene).get(camera);}}return renderState;}function dispose(){renderStates=new WeakMap();}return{get:get,dispose:dispose};}/**
+ */function three_module_WebGLRenderState(){var lights=new three_module_WebGLLights();var lightsArray=[];var shadowsArray=[];function init(){lightsArray.length=0;shadowsArray.length=0;}function pushLight(light){lightsArray.push(light);}function pushShadow(shadowLight){shadowsArray.push(shadowLight);}function setupLights(camera){lights.setup(lightsArray,shadowsArray,camera);}var state={lightsArray:lightsArray,shadowsArray:shadowsArray,lights:lights};return{init:init,state:state,setupLights:setupLights,pushLight:pushLight,pushShadow:pushShadow};}function three_module_WebGLRenderStates(){var renderStates=new WeakMap();function onSceneDispose(event){var scene=event.target;scene.removeEventListener('dispose',onSceneDispose);renderStates["delete"](scene);}function get(scene,camera){var renderState;if(renderStates.has(scene)===false){renderState=new three_module_WebGLRenderState();renderStates.set(scene,new WeakMap());renderStates.get(scene).set(camera,renderState);scene.addEventListener('dispose',onSceneDispose);}else{if(renderStates.get(scene).has(camera)===false){renderState=new three_module_WebGLRenderState();renderStates.get(scene).set(camera,renderState);}else{renderState=renderStates.get(scene).get(camera);}}return renderState;}function dispose(){renderStates=new WeakMap();}return{get:get,dispose:dispose};}/**
  * @author mrdoob / http://mrdoob.com/
  * @author alteredq / http://alteredqualia.com/
  * @author bhouston / https://clara.io
@@ -68146,7 +68148,7 @@ if(typeof HTMLImageElement!=='undefined'&&image instanceof HTMLImageElement||typ
 var canvas=needsNewCanvas?createCanvas(width,height):_canvas;canvas.width=width;canvas.height=height;var context=canvas.getContext('2d');context.drawImage(image,0,0,width,height);console.warn('THREE.WebGLRenderer: Texture has been resized from ('+image.width+'x'+image.height+') to ('+width+'x'+height+').');return canvas;}else{if('data'in image){console.warn('THREE.WebGLRenderer: Image in DataTexture is too big ('+image.width+'x'+image.height+').');}return image;}}return image;}function isPowerOfTwo(image){return three_module_MathUtils.isPowerOfTwo(image.width)&&three_module_MathUtils.isPowerOfTwo(image.height);}function textureNeedsPowerOfTwo(texture){if(isWebGL2)return false;return texture.wrapS!==three_module_ClampToEdgeWrapping||texture.wrapT!==three_module_ClampToEdgeWrapping||texture.minFilter!==three_module_NearestFilter&&texture.minFilter!==three_module_LinearFilter;}function textureNeedsGenerateMipmaps(texture,supportsMips){return texture.generateMipmaps&&supportsMips&&texture.minFilter!==three_module_NearestFilter&&texture.minFilter!==three_module_LinearFilter;}function generateMipmap(target,texture,width,height){_gl.generateMipmap(target);var textureProperties=properties.get(texture);// Note: Math.log( x ) * Math.LOG2E used instead of Math.log2( x ) which is not supported by IE11
 textureProperties.__maxMipLevel=Math.log(Math.max(width,height))*Math.LOG2E;}function getInternalFormat(internalFormatName,glFormat,glType){if(isWebGL2===false)return glFormat;if(internalFormatName!==null){if(_gl[internalFormatName]!==undefined)return _gl[internalFormatName];console.warn('THREE.WebGLRenderer: Attempt to use non-existing WebGL internal format \''+internalFormatName+'\'');}var internalFormat=glFormat;if(glFormat===6403){if(glType===5126)internalFormat=33326;if(glType===5131)internalFormat=33325;if(glType===5121)internalFormat=33321;}if(glFormat===6407){if(glType===5126)internalFormat=34837;if(glType===5131)internalFormat=34843;if(glType===5121)internalFormat=32849;}if(glFormat===6408){if(glType===5126)internalFormat=34836;if(glType===5131)internalFormat=34842;if(glType===5121)internalFormat=32856;}if(internalFormat===33325||internalFormat===33326||internalFormat===34842||internalFormat===34836){extensions.get('EXT_color_buffer_float');}return internalFormat;}// Fallback filters for non-power-of-2 textures
 function filterFallback(f){if(f===three_module_NearestFilter||f===three_module_NearestMipmapNearestFilter||f===three_module_NearestMipmapLinearFilter){return 9728;}return 9729;}//
-function onTextureDispose(event){var texture=event.target;texture.removeEventListener('dispose',onTextureDispose);deallocateTexture(texture);if(texture.isVideoTexture){_videoTextures.delete(texture);}info.memory.textures--;}function onRenderTargetDispose(event){var renderTarget=event.target;renderTarget.removeEventListener('dispose',onRenderTargetDispose);deallocateRenderTarget(renderTarget);info.memory.textures--;}//
+function onTextureDispose(event){var texture=event.target;texture.removeEventListener('dispose',onTextureDispose);deallocateTexture(texture);if(texture.isVideoTexture){_videoTextures["delete"](texture);}info.memory.textures--;}function onRenderTargetDispose(event){var renderTarget=event.target;renderTarget.removeEventListener('dispose',onRenderTargetDispose);deallocateRenderTarget(renderTarget);info.memory.textures--;}//
 function deallocateTexture(texture){var textureProperties=properties.get(texture);if(textureProperties.__webglInit===undefined)return;_gl.deleteTexture(textureProperties.__webglTexture);properties.remove(texture);}function deallocateRenderTarget(renderTarget){var renderTargetProperties=properties.get(renderTarget);var textureProperties=properties.get(renderTarget.texture);if(!renderTarget)return;if(textureProperties.__webglTexture!==undefined){_gl.deleteTexture(textureProperties.__webglTexture);}if(renderTarget.depthTexture){renderTarget.depthTexture.dispose();}if(renderTarget.isWebGLCubeRenderTarget){for(var _i131=0;_i131<6;_i131++){_gl.deleteFramebuffer(renderTargetProperties.__webglFramebuffer[_i131]);if(renderTargetProperties.__webglDepthbuffer)_gl.deleteRenderbuffer(renderTargetProperties.__webglDepthbuffer[_i131]);}}else{_gl.deleteFramebuffer(renderTargetProperties.__webglFramebuffer);if(renderTargetProperties.__webglDepthbuffer)_gl.deleteRenderbuffer(renderTargetProperties.__webglDepthbuffer);if(renderTargetProperties.__webglMultisampledFramebuffer)_gl.deleteFramebuffer(renderTargetProperties.__webglMultisampledFramebuffer);if(renderTargetProperties.__webglColorRenderbuffer)_gl.deleteRenderbuffer(renderTargetProperties.__webglColorRenderbuffer);if(renderTargetProperties.__webglDepthRenderbuffer)_gl.deleteRenderbuffer(renderTargetProperties.__webglDepthRenderbuffer);}properties.remove(renderTarget.texture);properties.remove(renderTarget);}//
 var textureUnits=0;function resetTextureUnits(){textureUnits=0;}function allocateTextureUnit(){var textureUnit=textureUnits;if(textureUnit>=maxTextures){console.warn('THREE.WebGLTextures: Trying to use '+textureUnit+' texture units while this GPU supports only '+maxTextures);}textureUnits+=1;return textureUnit;}//
 function setTexture2D(texture,slot){var textureProperties=properties.get(texture);if(texture.isVideoTexture)updateVideoTexture(texture);if(texture.version>0&&textureProperties.__version!==texture.version){var image=texture.image;if(image===undefined){console.warn('THREE.WebGLRenderer: Texture marked for update but image is undefined');}else if(image.complete===false){console.warn('THREE.WebGLRenderer: Texture marked for update but image is incomplete');}else{uploadTexture(textureProperties,texture,slot);return;}}state.activeTexture(33984+slot);state.bindTexture(3553,textureProperties.__webglTexture);}function setTexture2DArray(texture,slot){var textureProperties=properties.get(texture);if(texture.version>0&&textureProperties.__version!==texture.version){uploadTexture(textureProperties,texture,slot);return;}state.activeTexture(33984+slot);state.bindTexture(35866,textureProperties.__webglTexture);}function setTexture3D(texture,slot){var textureProperties=properties.get(texture);if(texture.version>0&&textureProperties.__version!==texture.version){uploadTexture(textureProperties,texture,slot);return;}state.activeTexture(33984+slot);state.bindTexture(32879,textureProperties.__webglTexture);}function setTextureCube(texture,slot){if(texture.image.length!==6)return;var textureProperties=properties.get(texture);if(texture.version>0&&textureProperties.__version!==texture.version){initTexture(textureProperties,texture);state.activeTexture(33984+slot);state.bindTexture(34067,textureProperties.__webglTexture);_gl.pixelStorei(37440,texture.flipY);var isCompressed=texture&&(texture.isCompressedTexture||texture.image[0].isCompressedTexture);var isDataTexture=texture.image[0]&&texture.image[0].isDataTexture;var cubeImage=[];for(var _i132=0;_i132<6;_i132++){if(!isCompressed&&!isDataTexture){cubeImage[_i132]=resizeImage(texture.image[_i132],false,true,maxCubemapSize);}else{cubeImage[_i132]=isDataTexture?texture.image[_i132].image:texture.image[_i132];}}var image=cubeImage[0],supportsMips=isPowerOfTwo(image)||isWebGL2,glFormat=utils.convert(texture.format),glType=utils.convert(texture.type),glInternalFormat=getInternalFormat(texture.internalFormat,glFormat,glType);setTextureParameters(34067,texture,supportsMips);var mipmaps;if(isCompressed){for(var _i133=0;_i133<6;_i133++){mipmaps=cubeImage[_i133].mipmaps;for(var j=0;j<mipmaps.length;j++){var mipmap=mipmaps[j];if(texture.format!==three_module_RGBAFormat&&texture.format!==three_module_RGBFormat){if(glFormat!==null){state.compressedTexImage2D(34069+_i133,j,glInternalFormat,mipmap.width,mipmap.height,0,mipmap.data);}else{console.warn('THREE.WebGLRenderer: Attempt to load unsupported compressed texture format in .setTextureCube()');}}else{state.texImage2D(34069+_i133,j,glInternalFormat,mipmap.width,mipmap.height,0,glFormat,glType,mipmap.data);}}}textureProperties.__maxMipLevel=mipmaps.length-1;}else{mipmaps=texture.mipmaps;for(var _i134=0;_i134<6;_i134++){if(isDataTexture){state.texImage2D(34069+_i134,0,glInternalFormat,cubeImage[_i134].width,cubeImage[_i134].height,0,glFormat,glType,cubeImage[_i134].data);for(var _j9=0;_j9<mipmaps.length;_j9++){var _mipmap=mipmaps[_j9];var mipmapImage=_mipmap.image[_i134].image;state.texImage2D(34069+_i134,_j9+1,glInternalFormat,mipmapImage.width,mipmapImage.height,0,glFormat,glType,mipmapImage.data);}}else{state.texImage2D(34069+_i134,0,glInternalFormat,glFormat,glType,cubeImage[_i134]);for(var _j10=0;_j10<mipmaps.length;_j10++){var _mipmap2=mipmaps[_j10];state.texImage2D(34069+_i134,_j10+1,glInternalFormat,glFormat,glType,_mipmap2.image[_i134]);}}}textureProperties.__maxMipLevel=mipmaps.length;}if(textureNeedsGenerateMipmaps(texture,supportsMips)){// We assume images for cube map have the same size.
@@ -68211,7 +68213,7 @@ animation.stop();scope.isPresenting=false;scope.dispatchEvent({type:'sessionend'
 var baseLayer=new XRWebGLLayer(session,gl,layerInit);session.updateRenderState({baseLayer:baseLayer});session.requestReferenceSpace(referenceSpaceType).then(onRequestReferenceSpace);//
 session.addEventListener('inputsourceschange',updateInputSources);}};function updateInputSources(event){var inputSources=session.inputSources;// Assign inputSources to available controllers
 for(var _i141=0;_i141<controllers.length;_i141++){inputSourcesMap.set(inputSources[_i141],controllers[_i141]);}// Notify disconnected
-for(var _i142=0;_i142<event.removed.length;_i142++){var inputSource=event.removed[_i142];var controller=inputSourcesMap.get(inputSource);if(controller){controller.dispatchEvent({type:'disconnected',data:inputSource});inputSourcesMap.delete(inputSource);}}// Notify connected
+for(var _i142=0;_i142<event.removed.length;_i142++){var inputSource=event.removed[_i142];var controller=inputSourcesMap.get(inputSource);if(controller){controller.dispatchEvent({type:'disconnected',data:inputSource});inputSourcesMap["delete"](inputSource);}}// Notify connected
 for(var _i143=0;_i143<event.added.length;_i143++){var _inputSource=event.added[_i143];var _controller=inputSourcesMap.get(_inputSource);if(_controller){_controller.dispatchEvent({type:'connected',data:_inputSource});}}}//
 var cameraLPos=new three_module_Vector3();var cameraRPos=new three_module_Vector3();/**
 	 * @author jsantell / https://www.jsantell.com/
@@ -68292,7 +68294,7 @@ _canvas.addEventListener('webglcontextlost',onContextLost,false);_canvas.addEven
 if(_gl.getShaderPrecisionFormat===undefined){_gl.getShaderPrecisionFormat=function(){return{'rangeMin':1,'rangeMax':1,'precision':1};};}}catch(error){console.error('THREE.WebGLRenderer: '+error.message);throw error;}var extensions,capabilities,state,info;var properties,textures,attributes,geometries,objects;var programCache,materials,renderLists,renderStates;var background,morphtargets,bufferRenderer,indexedBufferRenderer;var utils,bindingStates;function initGLContext(){extensions=new three_module_WebGLExtensions(_gl);capabilities=new three_module_WebGLCapabilities(_gl,extensions,parameters);if(capabilities.isWebGL2===false){extensions.get('WEBGL_depth_texture');extensions.get('OES_texture_float');extensions.get('OES_texture_half_float');extensions.get('OES_texture_half_float_linear');extensions.get('OES_standard_derivatives');extensions.get('OES_element_index_uint');extensions.get('OES_vertex_array_object');extensions.get('ANGLE_instanced_arrays');}extensions.get('OES_texture_float_linear');utils=new three_module_WebGLUtils(_gl,extensions,capabilities);state=new three_module_WebGLState(_gl,extensions,capabilities);state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio).floor());state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio).floor());info=new three_module_WebGLInfo(_gl);properties=new three_module_WebGLProperties();textures=new three_module_WebGLTextures(_gl,extensions,state,properties,capabilities,utils,info);attributes=new three_module_WebGLAttributes(_gl,capabilities);bindingStates=new three_module_WebGLBindingStates(_gl,extensions,attributes,capabilities);geometries=new three_module_WebGLGeometries(_gl,attributes,info,bindingStates);objects=new three_module_WebGLObjects(_gl,geometries,attributes,info);morphtargets=new three_module_WebGLMorphtargets(_gl);programCache=new three_module_WebGLPrograms(_this,extensions,capabilities,bindingStates);materials=new three_module_WebGLMaterials(properties);renderLists=new three_module_WebGLRenderLists();renderStates=new three_module_WebGLRenderStates();background=new three_module_WebGLBackground(_this,state,objects,_premultipliedAlpha);bufferRenderer=new three_module_WebGLBufferRenderer(_gl,extensions,info,capabilities);indexedBufferRenderer=new three_module_WebGLIndexedBufferRenderer(_gl,extensions,info,capabilities);info.programs=programCache.programs;_this.capabilities=capabilities;_this.extensions=extensions;_this.properties=properties;_this.renderLists=renderLists;_this.state=state;_this.info=info;}initGLContext();// xr
 var xr=new three_module_WebXRManager(_this,_gl);this.xr=xr;// shadow map
 var shadowMap=new three_module_WebGLShadowMap(_this,objects,capabilities.maxTextureSize);this.shadowMap=shadowMap;// API
-this.getContext=function(){return _gl;};this.getContextAttributes=function(){return _gl.getContextAttributes();};this.forceContextLoss=function(){var extension=extensions.get('WEBGL_lose_context');if(extension)extension.loseContext();};this.forceContextRestore=function(){var extension=extensions.get('WEBGL_lose_context');if(extension)extension.restoreContext();};this.getPixelRatio=function(){return _pixelRatio;};this.setPixelRatio=function(value){if(value===undefined)return;_pixelRatio=value;this.setSize(_width,_height,false);};this.getSize=function(target){if(target===undefined){console.warn('WebGLRenderer: .getsize() now requires a Vector2 as an argument');target=new three_module_Vector2();}return target.set(_width,_height);};this.setSize=function(width,height,updateStyle){if(xr.isPresenting){console.warn('THREE.WebGLRenderer: Can\'t change size while VR device is presenting.');return;}_width=width;_height=height;_canvas.width=Math.floor(width*_pixelRatio);_canvas.height=Math.floor(height*_pixelRatio);if(updateStyle!==false){_canvas.style.width=width+'px';_canvas.style.height=height+'px';}this.setViewport(0,0,width,height);};this.getDrawingBufferSize=function(target){if(target===undefined){console.warn('WebGLRenderer: .getdrawingBufferSize() now requires a Vector2 as an argument');target=new three_module_Vector2();}return target.set(_width*_pixelRatio,_height*_pixelRatio).floor();};this.setDrawingBufferSize=function(width,height,pixelRatio){_width=width;_height=height;_pixelRatio=pixelRatio;_canvas.width=Math.floor(width*pixelRatio);_canvas.height=Math.floor(height*pixelRatio);this.setViewport(0,0,width,height);};this.getCurrentViewport=function(target){if(target===undefined){console.warn('WebGLRenderer: .getCurrentViewport() now requires a Vector4 as an argument');target=new three_module_Vector4();}return target.copy(_currentViewport);};this.getViewport=function(target){return target.copy(_viewport);};this.setViewport=function(x,y,width,height){if(x.isVector4){_viewport.set(x.x,x.y,x.z,x.w);}else{_viewport.set(x,y,width,height);}state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio).floor());};this.getScissor=function(target){return target.copy(_scissor);};this.setScissor=function(x,y,width,height){if(x.isVector4){_scissor.set(x.x,x.y,x.z,x.w);}else{_scissor.set(x,y,width,height);}state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio).floor());};this.getScissorTest=function(){return _scissorTest;};this.setScissorTest=function(boolean){state.setScissorTest(_scissorTest=boolean);};this.setOpaqueSort=function(method){_opaqueSort=method;};this.setTransparentSort=function(method){_transparentSort=method;};// Clearing
+this.getContext=function(){return _gl;};this.getContextAttributes=function(){return _gl.getContextAttributes();};this.forceContextLoss=function(){var extension=extensions.get('WEBGL_lose_context');if(extension)extension.loseContext();};this.forceContextRestore=function(){var extension=extensions.get('WEBGL_lose_context');if(extension)extension.restoreContext();};this.getPixelRatio=function(){return _pixelRatio;};this.setPixelRatio=function(value){if(value===undefined)return;_pixelRatio=value;this.setSize(_width,_height,false);};this.getSize=function(target){if(target===undefined){console.warn('WebGLRenderer: .getsize() now requires a Vector2 as an argument');target=new three_module_Vector2();}return target.set(_width,_height);};this.setSize=function(width,height,updateStyle){if(xr.isPresenting){console.warn('THREE.WebGLRenderer: Can\'t change size while VR device is presenting.');return;}_width=width;_height=height;_canvas.width=Math.floor(width*_pixelRatio);_canvas.height=Math.floor(height*_pixelRatio);if(updateStyle!==false){_canvas.style.width=width+'px';_canvas.style.height=height+'px';}this.setViewport(0,0,width,height);};this.getDrawingBufferSize=function(target){if(target===undefined){console.warn('WebGLRenderer: .getdrawingBufferSize() now requires a Vector2 as an argument');target=new three_module_Vector2();}return target.set(_width*_pixelRatio,_height*_pixelRatio).floor();};this.setDrawingBufferSize=function(width,height,pixelRatio){_width=width;_height=height;_pixelRatio=pixelRatio;_canvas.width=Math.floor(width*pixelRatio);_canvas.height=Math.floor(height*pixelRatio);this.setViewport(0,0,width,height);};this.getCurrentViewport=function(target){if(target===undefined){console.warn('WebGLRenderer: .getCurrentViewport() now requires a Vector4 as an argument');target=new three_module_Vector4();}return target.copy(_currentViewport);};this.getViewport=function(target){return target.copy(_viewport);};this.setViewport=function(x,y,width,height){if(x.isVector4){_viewport.set(x.x,x.y,x.z,x.w);}else{_viewport.set(x,y,width,height);}state.viewport(_currentViewport.copy(_viewport).multiplyScalar(_pixelRatio).floor());};this.getScissor=function(target){return target.copy(_scissor);};this.setScissor=function(x,y,width,height){if(x.isVector4){_scissor.set(x.x,x.y,x.z,x.w);}else{_scissor.set(x,y,width,height);}state.scissor(_currentScissor.copy(_scissor).multiplyScalar(_pixelRatio).floor());};this.getScissorTest=function(){return _scissorTest;};this.setScissorTest=function(_boolean){state.setScissorTest(_scissorTest=_boolean);};this.setOpaqueSort=function(method){_opaqueSort=method;};this.setTransparentSort=function(method){_transparentSort=method;};// Clearing
 this.getClearColor=function(){return background.getClearColor();};this.setClearColor=function(){background.setClearColor.apply(background,arguments);};this.getClearAlpha=function(){return background.getClearAlpha();};this.setClearAlpha=function(){background.setClearAlpha.apply(background,arguments);};this.clear=function(color,depth,stencil){var bits=0;if(color===undefined||color)bits|=16384;if(depth===undefined||depth)bits|=256;if(stencil===undefined||stencil)bits|=1024;_gl.clear(bits);};this.clearColor=function(){this.clear(true,false,false);};this.clearDepth=function(){this.clear(false,true,false);};this.clearStencil=function(){this.clear(false,false,true);};//
 this.dispose=function(){_canvas.removeEventListener('webglcontextlost',onContextLost,false);_canvas.removeEventListener('webglcontextrestored',onContextRestore,false);renderLists.dispose();renderStates.dispose();properties.dispose();objects.dispose();bindingStates.dispose();xr.dispose();animation.stop();};// Events
 function onContextLost(event){event.preventDefault();console.log('THREE.WebGLRenderer: Context Lost.');_isContextLost=true;}function onContextRestore()/* event */{console.log('THREE.WebGLRenderer: Context Restored.');_isContextLost=false;initGLContext();}function onMaterialDispose(event){var material=event.target;material.removeEventListener('dispose',onMaterialDispose);deallocateMaterial(material);}// Buffer deallocation
@@ -69818,7 +69820,7 @@ images[image.uuid]=[];for(var j=0,jl=url.length;j<jl;j++){var currentUrl=url[j];
 var _path=/^(\/\/)|([a-z]+:(\/\/)?)/i.test(image.url)?image.url:scope.resourcePath+image.url;images[image.uuid]=loadImage(_path);}}}return images;},parseTextures:function parseTextures(json,images){function parseConstant(value,type){if(typeof value==='number')return value;console.warn('THREE.ObjectLoader.parseTexture: Constant should be in numeric form.',value);return type[value];}var textures={};if(json!==undefined){for(var _i308=0,l=json.length;_i308<l;_i308++){var data=json[_i308];if(data.image===undefined){console.warn('THREE.ObjectLoader: No "image" specified for',data.uuid);}if(images[data.image]===undefined){console.warn('THREE.ObjectLoader: Undefined image',data.image);}var texture=void 0;if(Array.isArray(images[data.image])){texture=new three_module_CubeTexture(images[data.image]);}else{texture=new three_module_Texture(images[data.image]);}texture.needsUpdate=true;texture.uuid=data.uuid;if(data.name!==undefined)texture.name=data.name;if(data.mapping!==undefined)texture.mapping=parseConstant(data.mapping,three_module_TEXTURE_MAPPING);if(data.offset!==undefined)texture.offset.fromArray(data.offset);if(data.repeat!==undefined)texture.repeat.fromArray(data.repeat);if(data.center!==undefined)texture.center.fromArray(data.center);if(data.rotation!==undefined)texture.rotation=data.rotation;if(data.wrap!==undefined){texture.wrapS=parseConstant(data.wrap[0],three_module_TEXTURE_WRAPPING);texture.wrapT=parseConstant(data.wrap[1],three_module_TEXTURE_WRAPPING);}if(data.format!==undefined)texture.format=data.format;if(data.type!==undefined)texture.type=data.type;if(data.encoding!==undefined)texture.encoding=data.encoding;if(data.minFilter!==undefined)texture.minFilter=parseConstant(data.minFilter,three_module_TEXTURE_FILTER);if(data.magFilter!==undefined)texture.magFilter=parseConstant(data.magFilter,three_module_TEXTURE_FILTER);if(data.anisotropy!==undefined)texture.anisotropy=data.anisotropy;if(data.flipY!==undefined)texture.flipY=data.flipY;if(data.premultiplyAlpha!==undefined)texture.premultiplyAlpha=data.premultiplyAlpha;if(data.unpackAlignment!==undefined)texture.unpackAlignment=data.unpackAlignment;textures[data.uuid]=texture;}}return textures;},parseObject:function parseObject(data,geometries,materials){var object;function getGeometry(name){if(geometries[name]===undefined){console.warn('THREE.ObjectLoader: Undefined geometry',name);}return geometries[name];}function getMaterial(name){if(name===undefined)return undefined;if(Array.isArray(name)){var array=[];for(var _i309=0,l=name.length;_i309<l;_i309++){var uuid=name[_i309];if(materials[uuid]===undefined){console.warn('THREE.ObjectLoader: Undefined material',uuid);}array.push(materials[uuid]);}return array;}if(materials[name]===undefined){console.warn('THREE.ObjectLoader: Undefined material',name);}return materials[name];}var geometry,material;switch(data.type){case'Scene':object=new three_module_Scene();if(data.background!==undefined){if(Number.isInteger(data.background)){object.background=new three_module_Color(data.background);}}if(data.fog!==undefined){if(data.fog.type==='Fog'){object.fog=new three_module_Fog(data.fog.color,data.fog.near,data.fog.far);}else if(data.fog.type==='FogExp2'){object.fog=new three_module_FogExp2(data.fog.color,data.fog.density);}}break;case'PerspectiveCamera':object=new three_module_PerspectiveCamera(data.fov,data.aspect,data.near,data.far);if(data.focus!==undefined)object.focus=data.focus;if(data.zoom!==undefined)object.zoom=data.zoom;if(data.filmGauge!==undefined)object.filmGauge=data.filmGauge;if(data.filmOffset!==undefined)object.filmOffset=data.filmOffset;if(data.view!==undefined)object.view=Object.assign({},data.view);break;case'OrthographicCamera':object=new three_module_OrthographicCamera(data.left,data.right,data.top,data.bottom,data.near,data.far);if(data.zoom!==undefined)object.zoom=data.zoom;if(data.view!==undefined)object.view=Object.assign({},data.view);break;case'AmbientLight':object=new three_module_AmbientLight(data.color,data.intensity);break;case'DirectionalLight':object=new three_module_DirectionalLight(data.color,data.intensity);break;case'PointLight':object=new three_module_PointLight(data.color,data.intensity,data.distance,data.decay);break;case'RectAreaLight':object=new three_module_RectAreaLight(data.color,data.intensity,data.width,data.height);break;case'SpotLight':object=new three_module_SpotLight(data.color,data.intensity,data.distance,data.angle,data.penumbra,data.decay);break;case'HemisphereLight':object=new three_module_HemisphereLight(data.color,data.groundColor,data.intensity);break;case'LightProbe':object=new three_module_LightProbe().fromJSON(data);break;case'SkinnedMesh':console.warn('THREE.ObjectLoader.parseObject() does not support SkinnedMesh yet.');case'Mesh':geometry=getGeometry(data.geometry);material=getMaterial(data.material);object=new three_module_Mesh(geometry,material);break;case'InstancedMesh':geometry=getGeometry(data.geometry);material=getMaterial(data.material);var count=data.count;var instanceMatrix=data.instanceMatrix;object=new three_module_InstancedMesh(geometry,material,count);object.instanceMatrix=new three_module_BufferAttribute(new Float32Array(instanceMatrix.array),16);break;case'LOD':object=new three_module_LOD();break;case'Line':object=new three_module_Line(getGeometry(data.geometry),getMaterial(data.material),data.mode);break;case'LineLoop':object=new three_module_LineLoop(getGeometry(data.geometry),getMaterial(data.material));break;case'LineSegments':object=new three_module_LineSegments(getGeometry(data.geometry),getMaterial(data.material));break;case'PointCloud':case'Points':object=new three_module_Points(getGeometry(data.geometry),getMaterial(data.material));break;case'Sprite':object=new three_module_Sprite(getMaterial(data.material));break;case'Group':object=new three_module_Group();break;default:object=new three_module_Object3D();}object.uuid=data.uuid;if(data.name!==undefined)object.name=data.name;if(data.matrix!==undefined){object.matrix.fromArray(data.matrix);if(data.matrixAutoUpdate!==undefined)object.matrixAutoUpdate=data.matrixAutoUpdate;if(object.matrixAutoUpdate)object.matrix.decompose(object.position,object.quaternion,object.scale);}else{if(data.position!==undefined)object.position.fromArray(data.position);if(data.rotation!==undefined)object.rotation.fromArray(data.rotation);if(data.quaternion!==undefined)object.quaternion.fromArray(data.quaternion);if(data.scale!==undefined)object.scale.fromArray(data.scale);}if(data.castShadow!==undefined)object.castShadow=data.castShadow;if(data.receiveShadow!==undefined)object.receiveShadow=data.receiveShadow;if(data.shadow){if(data.shadow.bias!==undefined)object.shadow.bias=data.shadow.bias;if(data.shadow.normalOffset!==undefined)object.shadow.normalOffset=data.shadow.normalOffset;if(data.shadow.radius!==undefined)object.shadow.radius=data.shadow.radius;if(data.shadow.mapSize!==undefined)object.shadow.mapSize.fromArray(data.shadow.mapSize);if(data.shadow.camera!==undefined)object.shadow.camera=this.parseObject(data.shadow.camera);}if(data.visible!==undefined)object.visible=data.visible;if(data.frustumCulled!==undefined)object.frustumCulled=data.frustumCulled;if(data.renderOrder!==undefined)object.renderOrder=data.renderOrder;if(data.userData!==undefined)object.userData=data.userData;if(data.layers!==undefined)object.layers.mask=data.layers;if(data.children!==undefined){var children=data.children;for(var _i310=0;_i310<children.length;_i310++){object.add(this.parseObject(children[_i310],geometries,materials));}}if(data.type==='LOD'){if(data.autoUpdate!==undefined)object.autoUpdate=data.autoUpdate;var levels=data.levels;for(var l=0;l<levels.length;l++){var level=levels[l];var child=object.getObjectByProperty('uuid',level.object);if(child!==undefined){object.addLevel(child,level.distance);}}}return object;}});var three_module_TEXTURE_MAPPING={UVMapping:three_module_UVMapping,CubeReflectionMapping:three_module_CubeReflectionMapping,CubeRefractionMapping:three_module_CubeRefractionMapping,EquirectangularReflectionMapping:three_module_EquirectangularReflectionMapping,EquirectangularRefractionMapping:three_module_EquirectangularRefractionMapping,CubeUVReflectionMapping:three_module_CubeUVReflectionMapping,CubeUVRefractionMapping:three_module_CubeUVRefractionMapping};var three_module_TEXTURE_WRAPPING={RepeatWrapping:three_module_RepeatWrapping,ClampToEdgeWrapping:three_module_ClampToEdgeWrapping,MirroredRepeatWrapping:three_module_MirroredRepeatWrapping};var three_module_TEXTURE_FILTER={NearestFilter:three_module_NearestFilter,NearestMipmapNearestFilter:three_module_NearestMipmapNearestFilter,NearestMipmapLinearFilter:three_module_NearestMipmapLinearFilter,LinearFilter:three_module_LinearFilter,LinearMipmapNearestFilter:three_module_LinearMipmapNearestFilter,LinearMipmapLinearFilter:three_module_LinearMipmapLinearFilter};/**
  * @author thespite / http://clicktorelease.com/
  */function three_module_ImageBitmapLoader(manager){if(typeof createImageBitmap==='undefined'){console.warn('THREE.ImageBitmapLoader: createImageBitmap() not supported.');}if(typeof fetch==='undefined'){console.warn('THREE.ImageBitmapLoader: fetch() not supported.');}three_module_Loader.call(this,manager);this.options=undefined;}three_module_ImageBitmapLoader.prototype=Object.assign(Object.create(three_module_Loader.prototype),{constructor:three_module_ImageBitmapLoader,setOptions:function setOptions(options){this.options=options;return this;},load:function load(url,onLoad,onProgress,onError){if(url===undefined)url='';if(this.path!==undefined)url=this.path+url;url=this.manager.resolveURL(url);var scope=this;var cached=three_module_Cache.get(url);if(cached!==undefined){scope.manager.itemStart(url);setTimeout(function(){if(onLoad)onLoad(cached);scope.manager.itemEnd(url);},0);return cached;}fetch(url).then(function(res){return res.blob();}).then(function(blob){if(scope.options===undefined){// Workaround for FireFox. It causes an error if you pass options.
-return createImageBitmap(blob);}else{return createImageBitmap(blob,scope.options);}}).then(function(imageBitmap){three_module_Cache.add(url,imageBitmap);if(onLoad)onLoad(imageBitmap);scope.manager.itemEnd(url);}).catch(function(e){if(onError)onError(e);scope.manager.itemError(url);scope.manager.itemEnd(url);});scope.manager.itemStart(url);}});/**
+return createImageBitmap(blob);}else{return createImageBitmap(blob,scope.options);}}).then(function(imageBitmap){three_module_Cache.add(url,imageBitmap);if(onLoad)onLoad(imageBitmap);scope.manager.itemEnd(url);})["catch"](function(e){if(onError)onError(e);scope.manager.itemError(url);scope.manager.itemEnd(url);});scope.manager.itemStart(url);}});/**
  * @author zz85 / http://www.lab4games.net/zz85/blog
  * minimal class for proxing functions to Path. Replaces old "extractSubpaths()"
  **/function three_module_ShapePath(){this.type='ShapePath';this.color=new three_module_Color();this.subPaths=[];this.currentPath=null;}Object.assign(three_module_ShapePath.prototype,{moveTo:function moveTo(x,y){this.currentPath=new three_module_Path();this.subPaths.push(this.currentPath);this.currentPath.moveTo(x,y);return this;},lineTo:function lineTo(x,y){this.currentPath.lineTo(x,y);return this;},quadraticCurveTo:function quadraticCurveTo(aCPx,aCPy,aX,aY){this.currentPath.quadraticCurveTo(aCPx,aCPy,aX,aY);return this;},bezierCurveTo:function bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY){this.currentPath.bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY);return this;},splineThru:function splineThru(pts){this.currentPath.splineThru(pts);return this;},toShapes:function toShapes(isCCW,noHoles){function toShapesNoHoles(inSubpaths){var shapes=[];for(var _i311=0,l=inSubpaths.length;_i311<l;_i311++){var _tmpPath=inSubpaths[_i311];var _tmpShape=new three_module_Shape();_tmpShape.curves=_tmpPath.curves;shapes.push(_tmpShape);}return shapes;}function isPointInsidePolygon(inPt,inPolygon){var polyLen=inPolygon.length;// inPt on polygon contour => immediate success    or
@@ -69846,7 +69848,7 @@ return shapes;}});/**
  * @author zz85 / http://www.lab4games.net/zz85/blog
  * @author mrdoob / http://mrdoob.com/
  */function three_module_Font(data){this.type='Font';this.data=data;}Object.assign(three_module_Font.prototype,{isFont:true,generateShapes:function generateShapes(text,size){if(size===undefined)size=100;var shapes=[];var paths=three_module_createPaths(text,size,this.data);for(var p=0,pl=paths.length;p<pl;p++){Array.prototype.push.apply(shapes,paths[p].toShapes());}return shapes;}});function three_module_createPaths(text,size,data){var chars=Array.from?Array.from(text):String(text).split('');// workaround for IE11, see #13988
-var scale=size/data.resolution;var line_height=(data.boundingBox.yMax-data.boundingBox.yMin+data.underlineThickness)*scale;var paths=[];var offsetX=0,offsetY=0;for(var _i314=0;_i314<chars.length;_i314++){var char=chars[_i314];if(char==='\n'){offsetX=0;offsetY-=line_height;}else{var ret=three_module_createPath(char,scale,offsetX,offsetY,data);offsetX+=ret.offsetX;paths.push(ret.path);}}return paths;}function three_module_createPath(char,scale,offsetX,offsetY,data){var glyph=data.glyphs[char]||data.glyphs['?'];if(!glyph){console.error('THREE.Font: character "'+char+'" does not exists in font family '+data.familyName+'.');return;}var path=new three_module_ShapePath();var x,y,cpx,cpy,cpx1,cpy1,cpx2,cpy2;if(glyph.o){var outline=glyph._cachedOutline||(glyph._cachedOutline=glyph.o.split(' '));for(var _i315=0,l=outline.length;_i315<l;){var action=outline[_i315++];switch(action){case'm':// moveTo
+var scale=size/data.resolution;var line_height=(data.boundingBox.yMax-data.boundingBox.yMin+data.underlineThickness)*scale;var paths=[];var offsetX=0,offsetY=0;for(var _i314=0;_i314<chars.length;_i314++){var _char=chars[_i314];if(_char==='\n'){offsetX=0;offsetY-=line_height;}else{var ret=three_module_createPath(_char,scale,offsetX,offsetY,data);offsetX+=ret.offsetX;paths.push(ret.path);}}return paths;}function three_module_createPath(_char2,scale,offsetX,offsetY,data){var glyph=data.glyphs[_char2]||data.glyphs['?'];if(!glyph){console.error('THREE.Font: character "'+_char2+'" does not exists in font family '+data.familyName+'.');return;}var path=new three_module_ShapePath();var x,y,cpx,cpy,cpx1,cpy1,cpx2,cpy2;if(glyph.o){var outline=glyph._cachedOutline||(glyph._cachedOutline=glyph.o.split(' '));for(var _i315=0,l=outline.length;_i315<l;){var action=outline[_i315++];switch(action){case'm':// moveTo
 x=outline[_i315++]*scale+offsetX;y=outline[_i315++]*scale+offsetY;path.moveTo(x,y);break;case'l':// lineTo
 x=outline[_i315++]*scale+offsetX;y=outline[_i315++]*scale+offsetY;path.lineTo(x,y);break;case'q':// quadraticCurveTo
 cpx=outline[_i315++]*scale+offsetX;cpy=outline[_i315++]*scale+offsetY;cpx1=outline[_i315++]*scale+offsetX;cpy1=outline[_i315++]*scale+offsetY;path.quadraticCurveTo(cpx1,cpy1,cpx,cpy);break;case'b':// bezierCurveTo
@@ -70444,7 +70446,7 @@ Object.defineProperties(three_module_BufferAttribute.prototype,{length:{get:func
 Object.assign(three_module_ExtrudeBufferGeometry.prototype,{getArrays:function getArrays(){console.error('THREE.ExtrudeBufferGeometry: .getArrays() has been removed.');},addShapeList:function addShapeList(){console.error('THREE.ExtrudeBufferGeometry: .addShapeList() has been removed.');},addShape:function addShape(){console.error('THREE.ExtrudeBufferGeometry: .addShape() has been removed.');}});//
 Object.defineProperties(three_module_Uniform.prototype,{dynamic:{set:function set(){console.warn('THREE.Uniform: .dynamic has been removed. Use object.onBeforeRender() instead.');}},onUpdate:{value:function value(){console.warn('THREE.Uniform: .onUpdate() has been removed. Use object.onBeforeRender() instead.');return this;}}});//
 Object.defineProperties(three_module_Material.prototype,{wrapAround:{get:function get(){console.warn('THREE.Material: .wrapAround has been removed.');},set:function set(){console.warn('THREE.Material: .wrapAround has been removed.');}},overdraw:{get:function get(){console.warn('THREE.Material: .overdraw has been removed.');},set:function set(){console.warn('THREE.Material: .overdraw has been removed.');}},wrapRGB:{get:function get(){console.warn('THREE.Material: .wrapRGB has been removed.');return new three_module_Color();}},shading:{get:function get(){console.error('THREE.'+this.type+': .shading has been removed. Use the boolean .flatShading instead.');},set:function set(value){console.warn('THREE.'+this.type+': .shading has been removed. Use the boolean .flatShading instead.');this.flatShading=value===three_module_FlatShading;}},stencilMask:{get:function get(){console.warn('THREE.'+this.type+': .stencilMask has been removed. Use .stencilFuncMask instead.');return this.stencilFuncMask;},set:function set(value){console.warn('THREE.'+this.type+': .stencilMask has been removed. Use .stencilFuncMask instead.');this.stencilFuncMask=value;}}});Object.defineProperties(three_module_MeshPhongMaterial.prototype,{metal:{get:function get(){console.warn('THREE.MeshPhongMaterial: .metal has been removed. Use THREE.MeshStandardMaterial instead.');return false;},set:function set(){console.warn('THREE.MeshPhongMaterial: .metal has been removed. Use THREE.MeshStandardMaterial instead');}}});Object.defineProperties(three_module_ShaderMaterial.prototype,{derivatives:{get:function get(){console.warn('THREE.ShaderMaterial: .derivatives has been moved to .extensions.derivatives.');return this.extensions.derivatives;},set:function set(value){console.warn('THREE. ShaderMaterial: .derivatives has been moved to .extensions.derivatives.');this.extensions.derivatives=value;}}});//
-Object.assign(three_module_WebGLRenderer.prototype,{clearTarget:function clearTarget(renderTarget,color,depth,stencil){console.warn('THREE.WebGLRenderer: .clearTarget() has been deprecated. Use .setRenderTarget() and .clear() instead.');this.setRenderTarget(renderTarget);this.clear(color,depth,stencil);},animate:function animate(callback){console.warn('THREE.WebGLRenderer: .animate() is now .setAnimationLoop().');this.setAnimationLoop(callback);},getCurrentRenderTarget:function getCurrentRenderTarget(){console.warn('THREE.WebGLRenderer: .getCurrentRenderTarget() is now .getRenderTarget().');return this.getRenderTarget();},getMaxAnisotropy:function getMaxAnisotropy(){console.warn('THREE.WebGLRenderer: .getMaxAnisotropy() is now .capabilities.getMaxAnisotropy().');return this.capabilities.getMaxAnisotropy();},getPrecision:function getPrecision(){console.warn('THREE.WebGLRenderer: .getPrecision() is now .capabilities.precision.');return this.capabilities.precision;},resetGLState:function resetGLState(){console.warn('THREE.WebGLRenderer: .resetGLState() is now .state.reset().');return this.state.reset();},supportsFloatTextures:function supportsFloatTextures(){console.warn('THREE.WebGLRenderer: .supportsFloatTextures() is now .extensions.get( \'OES_texture_float\' ).');return this.extensions.get('OES_texture_float');},supportsHalfFloatTextures:function supportsHalfFloatTextures(){console.warn('THREE.WebGLRenderer: .supportsHalfFloatTextures() is now .extensions.get( \'OES_texture_half_float\' ).');return this.extensions.get('OES_texture_half_float');},supportsStandardDerivatives:function supportsStandardDerivatives(){console.warn('THREE.WebGLRenderer: .supportsStandardDerivatives() is now .extensions.get( \'OES_standard_derivatives\' ).');return this.extensions.get('OES_standard_derivatives');},supportsCompressedTextureS3TC:function supportsCompressedTextureS3TC(){console.warn('THREE.WebGLRenderer: .supportsCompressedTextureS3TC() is now .extensions.get( \'WEBGL_compressed_texture_s3tc\' ).');return this.extensions.get('WEBGL_compressed_texture_s3tc');},supportsCompressedTexturePVRTC:function supportsCompressedTexturePVRTC(){console.warn('THREE.WebGLRenderer: .supportsCompressedTexturePVRTC() is now .extensions.get( \'WEBGL_compressed_texture_pvrtc\' ).');return this.extensions.get('WEBGL_compressed_texture_pvrtc');},supportsBlendMinMax:function supportsBlendMinMax(){console.warn('THREE.WebGLRenderer: .supportsBlendMinMax() is now .extensions.get( \'EXT_blend_minmax\' ).');return this.extensions.get('EXT_blend_minmax');},supportsVertexTextures:function supportsVertexTextures(){console.warn('THREE.WebGLRenderer: .supportsVertexTextures() is now .capabilities.vertexTextures.');return this.capabilities.vertexTextures;},supportsInstancedArrays:function supportsInstancedArrays(){console.warn('THREE.WebGLRenderer: .supportsInstancedArrays() is now .extensions.get( \'ANGLE_instanced_arrays\' ).');return this.extensions.get('ANGLE_instanced_arrays');},enableScissorTest:function enableScissorTest(boolean){console.warn('THREE.WebGLRenderer: .enableScissorTest() is now .setScissorTest().');this.setScissorTest(boolean);},initMaterial:function initMaterial(){console.warn('THREE.WebGLRenderer: .initMaterial() has been removed.');},addPrePlugin:function addPrePlugin(){console.warn('THREE.WebGLRenderer: .addPrePlugin() has been removed.');},addPostPlugin:function addPostPlugin(){console.warn('THREE.WebGLRenderer: .addPostPlugin() has been removed.');},updateShadowMap:function updateShadowMap(){console.warn('THREE.WebGLRenderer: .updateShadowMap() has been removed.');},setFaceCulling:function setFaceCulling(){console.warn('THREE.WebGLRenderer: .setFaceCulling() has been removed.');},allocTextureUnit:function allocTextureUnit(){console.warn('THREE.WebGLRenderer: .allocTextureUnit() has been removed.');},setTexture:function setTexture(){console.warn('THREE.WebGLRenderer: .setTexture() has been removed.');},setTexture2D:function setTexture2D(){console.warn('THREE.WebGLRenderer: .setTexture2D() has been removed.');},setTextureCube:function setTextureCube(){console.warn('THREE.WebGLRenderer: .setTextureCube() has been removed.');},getActiveMipMapLevel:function getActiveMipMapLevel(){console.warn('THREE.WebGLRenderer: .getActiveMipMapLevel() is now .getActiveMipmapLevel().');return this.getActiveMipmapLevel();}});Object.defineProperties(three_module_WebGLRenderer.prototype,{shadowMapEnabled:{get:function get(){return this.shadowMap.enabled;},set:function set(value){console.warn('THREE.WebGLRenderer: .shadowMapEnabled is now .shadowMap.enabled.');this.shadowMap.enabled=value;}},shadowMapType:{get:function get(){return this.shadowMap.type;},set:function set(value){console.warn('THREE.WebGLRenderer: .shadowMapType is now .shadowMap.type.');this.shadowMap.type=value;}},shadowMapCullFace:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMapCullFace has been removed. Set Material.shadowSide instead.');return undefined;},set:function set()/* value */{console.warn('THREE.WebGLRenderer: .shadowMapCullFace has been removed. Set Material.shadowSide instead.');}},context:{get:function get(){console.warn('THREE.WebGLRenderer: .context has been removed. Use .getContext() instead.');return this.getContext();}},vr:{get:function get(){console.warn('THREE.WebGLRenderer: .vr has been renamed to .xr');return this.xr;}},gammaInput:{get:function get(){console.warn('THREE.WebGLRenderer: .gammaInput has been removed. Set the encoding for textures via Texture.encoding instead.');return false;},set:function set(){console.warn('THREE.WebGLRenderer: .gammaInput has been removed. Set the encoding for textures via Texture.encoding instead.');}},gammaOutput:{get:function get(){console.warn('THREE.WebGLRenderer: .gammaOutput has been removed. Set WebGLRenderer.outputEncoding instead.');return false;},set:function set(value){console.warn('THREE.WebGLRenderer: .gammaOutput has been removed. Set WebGLRenderer.outputEncoding instead.');this.outputEncoding=value===true?three_module_sRGBEncoding:three_module_LinearEncoding;}},toneMappingWhitePoint:{get:function get(){console.warn('THREE.WebGLRenderer: .toneMappingWhitePoint has been removed.');return 1.0;},set:function set(){console.warn('THREE.WebGLRenderer: .toneMappingWhitePoint has been removed.');}}});Object.defineProperties(three_module_WebGLShadowMap.prototype,{cullFace:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMap.cullFace has been removed. Set Material.shadowSide instead.');return undefined;},set:function set()/* cullFace */{console.warn('THREE.WebGLRenderer: .shadowMap.cullFace has been removed. Set Material.shadowSide instead.');}},renderReverseSided:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMap.renderReverseSided has been removed. Set Material.shadowSide instead.');return undefined;},set:function set(){console.warn('THREE.WebGLRenderer: .shadowMap.renderReverseSided has been removed. Set Material.shadowSide instead.');}},renderSingleSided:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMap.renderSingleSided has been removed. Set Material.shadowSide instead.');return undefined;},set:function set(){console.warn('THREE.WebGLRenderer: .shadowMap.renderSingleSided has been removed. Set Material.shadowSide instead.');}}});function three_module_WebGLRenderTargetCube(width,height,options){console.warn('THREE.WebGLRenderTargetCube( width, height, options ) is now WebGLCubeRenderTarget( size, options ).');return new three_module_WebGLCubeRenderTarget(width,options);}//
+Object.assign(three_module_WebGLRenderer.prototype,{clearTarget:function clearTarget(renderTarget,color,depth,stencil){console.warn('THREE.WebGLRenderer: .clearTarget() has been deprecated. Use .setRenderTarget() and .clear() instead.');this.setRenderTarget(renderTarget);this.clear(color,depth,stencil);},animate:function animate(callback){console.warn('THREE.WebGLRenderer: .animate() is now .setAnimationLoop().');this.setAnimationLoop(callback);},getCurrentRenderTarget:function getCurrentRenderTarget(){console.warn('THREE.WebGLRenderer: .getCurrentRenderTarget() is now .getRenderTarget().');return this.getRenderTarget();},getMaxAnisotropy:function getMaxAnisotropy(){console.warn('THREE.WebGLRenderer: .getMaxAnisotropy() is now .capabilities.getMaxAnisotropy().');return this.capabilities.getMaxAnisotropy();},getPrecision:function getPrecision(){console.warn('THREE.WebGLRenderer: .getPrecision() is now .capabilities.precision.');return this.capabilities.precision;},resetGLState:function resetGLState(){console.warn('THREE.WebGLRenderer: .resetGLState() is now .state.reset().');return this.state.reset();},supportsFloatTextures:function supportsFloatTextures(){console.warn('THREE.WebGLRenderer: .supportsFloatTextures() is now .extensions.get( \'OES_texture_float\' ).');return this.extensions.get('OES_texture_float');},supportsHalfFloatTextures:function supportsHalfFloatTextures(){console.warn('THREE.WebGLRenderer: .supportsHalfFloatTextures() is now .extensions.get( \'OES_texture_half_float\' ).');return this.extensions.get('OES_texture_half_float');},supportsStandardDerivatives:function supportsStandardDerivatives(){console.warn('THREE.WebGLRenderer: .supportsStandardDerivatives() is now .extensions.get( \'OES_standard_derivatives\' ).');return this.extensions.get('OES_standard_derivatives');},supportsCompressedTextureS3TC:function supportsCompressedTextureS3TC(){console.warn('THREE.WebGLRenderer: .supportsCompressedTextureS3TC() is now .extensions.get( \'WEBGL_compressed_texture_s3tc\' ).');return this.extensions.get('WEBGL_compressed_texture_s3tc');},supportsCompressedTexturePVRTC:function supportsCompressedTexturePVRTC(){console.warn('THREE.WebGLRenderer: .supportsCompressedTexturePVRTC() is now .extensions.get( \'WEBGL_compressed_texture_pvrtc\' ).');return this.extensions.get('WEBGL_compressed_texture_pvrtc');},supportsBlendMinMax:function supportsBlendMinMax(){console.warn('THREE.WebGLRenderer: .supportsBlendMinMax() is now .extensions.get( \'EXT_blend_minmax\' ).');return this.extensions.get('EXT_blend_minmax');},supportsVertexTextures:function supportsVertexTextures(){console.warn('THREE.WebGLRenderer: .supportsVertexTextures() is now .capabilities.vertexTextures.');return this.capabilities.vertexTextures;},supportsInstancedArrays:function supportsInstancedArrays(){console.warn('THREE.WebGLRenderer: .supportsInstancedArrays() is now .extensions.get( \'ANGLE_instanced_arrays\' ).');return this.extensions.get('ANGLE_instanced_arrays');},enableScissorTest:function enableScissorTest(_boolean2){console.warn('THREE.WebGLRenderer: .enableScissorTest() is now .setScissorTest().');this.setScissorTest(_boolean2);},initMaterial:function initMaterial(){console.warn('THREE.WebGLRenderer: .initMaterial() has been removed.');},addPrePlugin:function addPrePlugin(){console.warn('THREE.WebGLRenderer: .addPrePlugin() has been removed.');},addPostPlugin:function addPostPlugin(){console.warn('THREE.WebGLRenderer: .addPostPlugin() has been removed.');},updateShadowMap:function updateShadowMap(){console.warn('THREE.WebGLRenderer: .updateShadowMap() has been removed.');},setFaceCulling:function setFaceCulling(){console.warn('THREE.WebGLRenderer: .setFaceCulling() has been removed.');},allocTextureUnit:function allocTextureUnit(){console.warn('THREE.WebGLRenderer: .allocTextureUnit() has been removed.');},setTexture:function setTexture(){console.warn('THREE.WebGLRenderer: .setTexture() has been removed.');},setTexture2D:function setTexture2D(){console.warn('THREE.WebGLRenderer: .setTexture2D() has been removed.');},setTextureCube:function setTextureCube(){console.warn('THREE.WebGLRenderer: .setTextureCube() has been removed.');},getActiveMipMapLevel:function getActiveMipMapLevel(){console.warn('THREE.WebGLRenderer: .getActiveMipMapLevel() is now .getActiveMipmapLevel().');return this.getActiveMipmapLevel();}});Object.defineProperties(three_module_WebGLRenderer.prototype,{shadowMapEnabled:{get:function get(){return this.shadowMap.enabled;},set:function set(value){console.warn('THREE.WebGLRenderer: .shadowMapEnabled is now .shadowMap.enabled.');this.shadowMap.enabled=value;}},shadowMapType:{get:function get(){return this.shadowMap.type;},set:function set(value){console.warn('THREE.WebGLRenderer: .shadowMapType is now .shadowMap.type.');this.shadowMap.type=value;}},shadowMapCullFace:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMapCullFace has been removed. Set Material.shadowSide instead.');return undefined;},set:function set()/* value */{console.warn('THREE.WebGLRenderer: .shadowMapCullFace has been removed. Set Material.shadowSide instead.');}},context:{get:function get(){console.warn('THREE.WebGLRenderer: .context has been removed. Use .getContext() instead.');return this.getContext();}},vr:{get:function get(){console.warn('THREE.WebGLRenderer: .vr has been renamed to .xr');return this.xr;}},gammaInput:{get:function get(){console.warn('THREE.WebGLRenderer: .gammaInput has been removed. Set the encoding for textures via Texture.encoding instead.');return false;},set:function set(){console.warn('THREE.WebGLRenderer: .gammaInput has been removed. Set the encoding for textures via Texture.encoding instead.');}},gammaOutput:{get:function get(){console.warn('THREE.WebGLRenderer: .gammaOutput has been removed. Set WebGLRenderer.outputEncoding instead.');return false;},set:function set(value){console.warn('THREE.WebGLRenderer: .gammaOutput has been removed. Set WebGLRenderer.outputEncoding instead.');this.outputEncoding=value===true?three_module_sRGBEncoding:three_module_LinearEncoding;}},toneMappingWhitePoint:{get:function get(){console.warn('THREE.WebGLRenderer: .toneMappingWhitePoint has been removed.');return 1.0;},set:function set(){console.warn('THREE.WebGLRenderer: .toneMappingWhitePoint has been removed.');}}});Object.defineProperties(three_module_WebGLShadowMap.prototype,{cullFace:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMap.cullFace has been removed. Set Material.shadowSide instead.');return undefined;},set:function set()/* cullFace */{console.warn('THREE.WebGLRenderer: .shadowMap.cullFace has been removed. Set Material.shadowSide instead.');}},renderReverseSided:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMap.renderReverseSided has been removed. Set Material.shadowSide instead.');return undefined;},set:function set(){console.warn('THREE.WebGLRenderer: .shadowMap.renderReverseSided has been removed. Set Material.shadowSide instead.');}},renderSingleSided:{get:function get(){console.warn('THREE.WebGLRenderer: .shadowMap.renderSingleSided has been removed. Set Material.shadowSide instead.');return undefined;},set:function set(){console.warn('THREE.WebGLRenderer: .shadowMap.renderSingleSided has been removed. Set Material.shadowSide instead.');}}});function three_module_WebGLRenderTargetCube(width,height,options){console.warn('THREE.WebGLRenderTargetCube( width, height, options ) is now WebGLCubeRenderTarget( size, options ).');return new three_module_WebGLCubeRenderTarget(width,options);}//
 Object.defineProperties(three_module_WebGLRenderTarget.prototype,{wrapS:{get:function get(){console.warn('THREE.WebGLRenderTarget: .wrapS is now .texture.wrapS.');return this.texture.wrapS;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .wrapS is now .texture.wrapS.');this.texture.wrapS=value;}},wrapT:{get:function get(){console.warn('THREE.WebGLRenderTarget: .wrapT is now .texture.wrapT.');return this.texture.wrapT;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .wrapT is now .texture.wrapT.');this.texture.wrapT=value;}},magFilter:{get:function get(){console.warn('THREE.WebGLRenderTarget: .magFilter is now .texture.magFilter.');return this.texture.magFilter;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .magFilter is now .texture.magFilter.');this.texture.magFilter=value;}},minFilter:{get:function get(){console.warn('THREE.WebGLRenderTarget: .minFilter is now .texture.minFilter.');return this.texture.minFilter;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .minFilter is now .texture.minFilter.');this.texture.minFilter=value;}},anisotropy:{get:function get(){console.warn('THREE.WebGLRenderTarget: .anisotropy is now .texture.anisotropy.');return this.texture.anisotropy;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .anisotropy is now .texture.anisotropy.');this.texture.anisotropy=value;}},offset:{get:function get(){console.warn('THREE.WebGLRenderTarget: .offset is now .texture.offset.');return this.texture.offset;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .offset is now .texture.offset.');this.texture.offset=value;}},repeat:{get:function get(){console.warn('THREE.WebGLRenderTarget: .repeat is now .texture.repeat.');return this.texture.repeat;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .repeat is now .texture.repeat.');this.texture.repeat=value;}},format:{get:function get(){console.warn('THREE.WebGLRenderTarget: .format is now .texture.format.');return this.texture.format;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .format is now .texture.format.');this.texture.format=value;}},type:{get:function get(){console.warn('THREE.WebGLRenderTarget: .type is now .texture.type.');return this.texture.type;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .type is now .texture.type.');this.texture.type=value;}},generateMipmaps:{get:function get(){console.warn('THREE.WebGLRenderTarget: .generateMipmaps is now .texture.generateMipmaps.');return this.texture.generateMipmaps;},set:function set(value){console.warn('THREE.WebGLRenderTarget: .generateMipmaps is now .texture.generateMipmaps.');this.texture.generateMipmaps=value;}}});//
 Object.defineProperties(three_module_Audio.prototype,{load:{value:function value(file){console.warn('THREE.Audio: .load has been deprecated. Use THREE.AudioLoader instead.');var scope=this;var audioLoader=new three_module_AudioLoader();audioLoader.load(file,function(buffer){scope.setBuffer(buffer);});return this;}},startTime:{set:function set(){console.warn('THREE.Audio: .startTime is now .play( delay ).');}}});three_module_AudioAnalyser.prototype.getData=function(){console.warn('THREE.AudioAnalyser: .getData() is now .getFrequencyData().');return this.getFrequencyData();};//
 three_module_CubeCamera.prototype.updateCubeMap=function(renderer,scene){console.warn('THREE.CubeCamera: .updateCubeMap() is now .update().');return this.update(renderer,scene);};//
@@ -70453,20 +70455,20 @@ function three_module_CanvasRenderer(){console.error('THREE.CanvasRenderer has b
 function three_module_JSONLoader(){console.error('THREE.JSONLoader has been removed.');}//
 var three_module_SceneUtils={createMultiMaterialObject:function createMultiMaterialObject()/* geometry, materials */{console.error('THREE.SceneUtils has been moved to /examples/jsm/utils/SceneUtils.js');},detach:function detach()/* child, parent, scene */{console.error('THREE.SceneUtils has been moved to /examples/jsm/utils/SceneUtils.js');},attach:function attach()/* child, scene, parent */{console.error('THREE.SceneUtils has been moved to /examples/jsm/utils/SceneUtils.js');}};//
 function three_module_LensFlare(){console.error('THREE.LensFlare has been moved to /examples/jsm/objects/Lensflare.js');}if(typeof __THREE_DEVTOOLS__!=='undefined'){/* eslint-disable no-undef */__THREE_DEVTOOLS__.dispatchEvent(new CustomEvent('register',{detail:{revision:three_module_REVISION}}));/* eslint-enable no-undef */}
-// CONCATENATED MODULE: ./src/RGBELoader.js
+;// CONCATENATED MODULE: ./src/RGBELoader.js
 /**
  * @author Nikos M. / https://github.com/foo123/
  */
  // https://github.com/mrdoob/three.js/issues/5552
 // http://en.wikipedia.org/wiki/RGBE_image_format
 
-var RGBELoader_RGBELoader = function RGBELoader(manager) {
+var RGBELoader = function RGBELoader(manager) {
   three_module_DataTextureLoader.call(this, manager);
   this.type = three_module_UnsignedByteType;
 };
 
-RGBELoader_RGBELoader.prototype = Object.assign(Object.create(three_module_DataTextureLoader.prototype), {
-  constructor: RGBELoader_RGBELoader,
+RGBELoader.prototype = Object.assign(Object.create(three_module_DataTextureLoader.prototype), {
+  constructor: RGBELoader,
   // adapted from http://www.graphics.cornell.edu/~bjw/rgbe.html
   parse: function parse(buffer) {
     var
@@ -70921,7 +70923,7 @@ RGBELoader_RGBELoader.prototype = Object.assign(Object.create(three_module_DataT
   }
 });
 
-// CONCATENATED MODULE: ./src/HDRCubeTextureLoader.js
+;// CONCATENATED MODULE: ./src/HDRCubeTextureLoader.js
 /**
 * @author Prashant Sharma / spidersharma03
 * @author Ben Houston / http://clara.io / bhouston
@@ -70929,14 +70931,14 @@ RGBELoader_RGBELoader.prototype = Object.assign(Object.create(three_module_DataT
 
 
 
-var HDRCubeTextureLoader_HDRCubeTextureLoader = function HDRCubeTextureLoader(manager) {
+var HDRCubeTextureLoader = function HDRCubeTextureLoader(manager) {
   three_module_Loader.call(this, manager);
-  this.hdrLoader = new RGBELoader_RGBELoader();
+  this.hdrLoader = new RGBELoader();
   this.type = three_module_UnsignedByteType;
 };
 
-HDRCubeTextureLoader_HDRCubeTextureLoader.prototype = Object.assign(Object.create(three_module_Loader.prototype), {
-  constructor: HDRCubeTextureLoader_HDRCubeTextureLoader,
+HDRCubeTextureLoader.prototype = Object.assign(Object.create(three_module_Loader.prototype), {
+  constructor: HDRCubeTextureLoader,
   load: function load(urls, onLoad, onProgress, onError) {
     if (!Array.isArray(urls)) {
       console.warn('THREE.HDRCubeTextureLoader signature has changed. Use .setDataType() instead.');
@@ -71016,7 +71018,7 @@ HDRCubeTextureLoader_HDRCubeTextureLoader.prototype = Object.assign(Object.creat
   }
 });
 
-// CONCATENATED MODULE: ./src/RoughnessMipmapper.js
+;// CONCATENATED MODULE: ./src/RoughnessMipmapper.js
 /**
  * @author Emmett Lalish / elalish
  *
@@ -71151,9 +71153,9 @@ function _getMipmapMaterial() {
 }
 
 
-// CONCATENATED MODULE: ./src/royal_esplanade_1k.hdr
-/* harmony default export */ var royal_esplanade_1k = (__webpack_require__.p + "a1d22329f1a4dca02b9f2fd059096fbc.hdr");
-// CONCATENATED MODULE: ./src/stats.module.js
+;// CONCATENATED MODULE: ./src/royal_esplanade_1k.hdr
+/* harmony default export */ const royal_esplanade_1k = (__webpack_require__.p + "a1d22329f1a4dca02b9f2fd059096fbc.hdr");
+;// CONCATENATED MODULE: ./src/stats.module.js
 /**
  * @author mrdoob / http://mrdoob.com/
  */
@@ -71273,8 +71275,8 @@ Stats.Panel = function (name, fg, bg) {
   };
 };
 
-/* harmony default export */ var stats_module = (Stats);
-// CONCATENATED MODULE: ./node_modules/dat.gui/build/dat.gui.module.js
+/* harmony default export */ const stats_module = (Stats);
+;// CONCATENATED MODULE: ./node_modules/dat.gui/build/dat.gui.module.js
 /**
  * dat-gui JavaScript Controller Library
  * http://code.google.com/p/dat-gui
@@ -73786,21 +73788,21 @@ var controllers = {
   ColorController: ColorController
 };
 var dom$1 = { dom: dom };
-var dat_gui_module_gui = { GUI: GUI };
+var gui = { GUI: GUI };
 var GUI$1 = GUI;
 var index = {
   color: color,
   controllers: controllers,
   dom: dom$1,
-  gui: dat_gui_module_gui,
+  gui: gui,
   GUI: GUI$1
 };
 
 
-/* harmony default export */ var dat_gui_module = (index);
+/* harmony default export */ const dat_gui_module = ((/* unused pure expression or super */ null && (index)));
 //# sourceMappingURL=dat.gui.module.js.map
 
-// CONCATENATED MODULE: ./src/index.js
+;// CONCATENATED MODULE: ./src/index.js
 
 
 
@@ -73811,20 +73813,23 @@ var index = {
 
 
 
-var world, scene, camera, renderer, src_pmremGenerator;
+var world, scene, camera, renderer, pmremGenerator;
 var stats;
-var timeStep = 1.0 / 60.0;
+var envMap;
 var balls = [];
 var guiData = {
   isRunning: false,
-  timeStep: timeStep
+  timeStep: 1.0 / 72.0,
+  hdr: true
 };
-var isRunning = false;
+var isRunning = guiData.isRunning;
+var hdrBg = guiData.hdr;
+var timeStep = guiData.timeStep;
 window['t'] = three_module_namespaceObject;
 
 function init() {
   // STATS
-  stats = new stats_module();
+  stats = stats_module();
   document.body.appendChild(stats.dom);
   window.addEventListener('resize', onWindowResize, false);
   var gui = new GUI$1();
@@ -73834,16 +73839,27 @@ function init() {
   gui.add(guiData, 'timeStep').min(0).max(0.030).step(0.001).onChange(function (val) {
     return timeStep = val;
   });
+  gui.add(guiData, 'hdr').onChange(function () {
+    hdrBg = !hdrBg;
+
+    if (hdrBg && envMap) {
+      scene.background = envMap;
+      scene.environment = envMap;
+    } else {
+      scene.background = new Color('gray');
+      scene.environment = null;
+    }
+  });
   gui.open();
-  src_initGraphics();
-  src_initPhysics();
+  initGraphics();
+  initPhysics();
   createBalls();
 }
 
 function createBalls() {
   var _loop = function _loop(i) {
     setTimeout(function () {
-      var b = new Ball_Ball(i + 1);
+      var b = new Ball(i + 1);
       balls.push(b);
       scene.add(b.sphere);
       world.add(b.sphereBody);
@@ -73855,7 +73871,7 @@ function createBalls() {
   }
 }
 
-function src_initGraphics() {
+function initGraphics() {
   scene = new Scene();
   camera = new PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(20, 20, 20);
@@ -73885,10 +73901,11 @@ function src_initGraphics() {
   // spotLight.position.set(-10, 30, 20)
   // scene.add(spotLight)
 
-  var pointLight = new PointLight(0xccffcc, 4, 30);
+  var pointLight = new PointLight(0xccffcc, 3, 30);
   pointLight.castShadow = true;
   pointLight.position.set(0, 10, 0);
-  scene.add(pointLight);
+  scene.add(pointLight); // Ground
+
   var groundGeometry = new PlaneGeometry(200, 200, 32);
   var groundMaterial = new MeshPhysicalMaterial({
     side: DoubleSide,
@@ -73905,9 +73922,10 @@ function src_initGraphics() {
   });
   var ground = new Mesh(groundGeometry, groundMaterial);
   ground.rotation.x = -Math.PI / 2;
-  ground.position.y = -16;
+  ground.position.y = -46;
   ground.receiveShadow = true;
-  scene.add(ground);
+  scene.add(ground); // Glass
+
   var glassGeo = new SphereGeometry(12, 32, 32);
   var glassMat = new MeshPhysicalMaterial({
     side: DoubleSide,
@@ -73922,19 +73940,77 @@ function src_initGraphics() {
     clearcoatRoughness: .5 // wireframe: true
 
   });
-  var glassMesh = new Mesh(glassGeo, glassMat);
-  glassMesh.castShadow = true;
-  scene.add(glassMesh);
+  var glassMesh = new Mesh(glassGeo, glassMat); // glassMesh.castShadow = true;
+
+  scene.add(glassMesh); // Axes Helper
+
   var axesHelper = new AxesHelper(5);
-  scene.add(axesHelper);
+  scene.add(axesHelper); // Base Cylinder
+
+  var cylinderGeo = new CylinderGeometry(8, 11, 38, 32, 3, true);
+  var material = new MeshPhysicalMaterial({
+    side: DoubleSide,
+    color: new Color('rgb(60,60,60)'),
+    // emissive: new THREE.Color('rgb(78,0,0)'),
+    // emissiveIntensity: .1,
+    roughness: .1,
+    metalness: .6,
+    reflectivity: 1,
+    clearcoat: 1,
+    clearcoatRoughness: .3
+  });
+  var base = new Mesh(cylinderGeo, material);
+  base.position.y -= 31.5;
+  scene.add(base); // Base Circle
+
+  var circleGeo = new CircleGeometry(8, 18);
+  var circle = new Mesh(circleGeo, material);
+  circle.receiveShadow = true;
+  circle.rotation.x = 1.6;
+  circle.position.y = -12;
+  scene.add(circle); // Hollow Circle
+
+  var arcShape = new Shape().moveTo(0, 0).absarc(0, 0, 60, 0, Math.PI * 2, false);
+  var holePath = new Path().moveTo(-0, 0).absarc(0, 0, 50, 0, Math.PI * 2, true);
+  arcShape.holes.push(holePath);
+  var hcGeometry = new ExtrudeBufferGeometry(arcShape, {
+    depth: 18,
+    bevelEnabled: true,
+    bevelSegments: 2,
+    steps: 2,
+    bevelSize: 1,
+    bevelThickness: 1
+  });
+  var hcMesh = new Mesh(hcGeometry, material);
+  hcMesh.position.set(0, -10, 0);
+  hcMesh.rotation.set(1.6, 0, 0);
+  hcMesh.scale.set(.1, .1, .1);
+  hcMesh.receiveShadow = true;
+  scene.add(hcMesh); // Solid Circle
+
+  arcShape = new Shape().moveTo(0, 0).absarc(0, 0, 120, 0, Math.PI * 2, false);
+  var scGeo = new ExtrudeBufferGeometry(arcShape, {
+    depth: 4,
+    bevelEnabled: true,
+    bevelSegments: 2,
+    steps: 2,
+    bevelSize: 1,
+    bevelThickness: 1
+  });
+  var scMesh = new Mesh(scGeo, material);
+  scMesh.position.set(0, -12, 0);
+  scMesh.rotation.set(1.6, 0, 0);
+  scMesh.scale.set(.1, .1, .1);
+  scMesh.receiveShadow = true;
+  scene.add(scMesh);
 }
 
-function src_initPhysics() {
-  world = new cannon["World"]();
+function initPhysics() {
+  world = new cannon.World();
   world.gravity.set(0, -60, 0);
-  world.broadphase = new cannon["NaiveBroadphase"](); // let sphereShape = new CANNON.Sphere(1)
+  world.broadphase = new cannon.NaiveBroadphase(); // let sphereShape = new CANNON.Sphere(1)
 
-  Ball_Ball.sphereCM = new cannon["Material"](); // sphereBody = new CANNON.Body({
+  Ball.sphereCM = new cannon.Material(); // sphereBody = new CANNON.Body({
   //     mass: 5,
   //     shape: sphereShape,
   //     position: new CANNON.Vec3(0, 10, 0),
@@ -73942,14 +74018,14 @@ function src_initPhysics() {
   // })
   // world.addBody(sphereBody)
 
-  var groundShape = new cannon["Plane"]();
-  var groundCM = new cannon["Material"]();
-  var groundBody = new cannon["Body"]({
+  var groundShape = new cannon.Plane();
+  var groundCM = new cannon.Material();
+  var groundBody = new cannon.Body({
     mass: 0,
     shape: groundShape,
     material: groundCM
   });
-  groundBody.quaternion.setFromAxisAngle(new cannon["Vec3"](1, 0, 0), -Math.PI / 2); // world.addBody(groundBody)
+  groundBody.quaternion.setFromAxisAngle(new cannon.Vec3(1, 0, 0), -Math.PI / 2); // world.addBody(groundBody)
   // let sphereGroundContact = new CANNON.ContactMaterial(groundCM, Ball.sphereCM, {
   //     friction: 0,
   //     restitution: .7
@@ -73964,16 +74040,17 @@ function intersect(sphere, other) {
 }
 
 function loadENV(pmremGenerator) {
-  new RGBELoader_RGBELoader().setDataType(UnsignedByteType).load(royal_esplanade_1k, function (texture) {
-    var envMap = pmremGenerator.fromEquirectangular(texture).texture;
-    scene.background = envMap;
-    scene.environment = envMap;
+  new RGBELoader().setDataType(UnsignedByteType).load(royal_esplanade_1k, function (texture) {
+    envMap = pmremGenerator.fromEquirectangular(texture).texture;
+
+    if (hdrBg) {
+      scene.background = envMap; // scene.background = new THREE.Color('rgb(45,45,90)');
+
+      scene.environment = envMap;
+    }
+
     texture.dispose();
     pmremGenerator.dispose();
-    render(); // model
-    // use of RoughnessMipmapper is optional
-
-    var roughnessMipmapper = new RoughnessMipmapper(renderer);
   });
 }
 
@@ -73993,10 +74070,10 @@ function render() {
         // console.log(1);
         var v = ball.sphereBody.velocity;
         var p = ball.sphereBody.position;
-        ball.sphereBody.velocity.copy(new cannon["Vec3"](-p.x, -p.y, -p.z));
+        ball.sphereBody.velocity.copy(new cannon.Vec3(-p.x, -p.y, -p.z));
       } else {
         var speed = isRunning ? 80 : 20;
-        if (ball.sphereBody.position.y < -9) ball.sphereBody.velocity.copy(new cannon["Vec3"](Math.random() - 0.5, Math.random() * speed, Math.random() - 0.5));
+        if (ball.sphereBody.position.y < -9) ball.sphereBody.velocity.copy(new cannon.Vec3(Math.random() - 0.5, Math.random() * speed, Math.random() - 0.5));
       }
 
       ball.sphere.position.copy(ball.sphereBody.position);
@@ -74017,6 +74094,7 @@ function onWindowResize() {
 
 init();
 render();
+})();
 
-/***/ })
-/******/ ]);
+/******/ })()
+;
